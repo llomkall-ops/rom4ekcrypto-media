@@ -1,6 +1,7 @@
 """Turn a carousel folder (slide_N.jpg, 1080x1350) into a vertical 9:16 Reel/Short (silent MP4).
 
-Usage: python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 [seconds_per_slide]
+Usage: python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 [seconds_per_slide] [hook.mp4]
+If hook.mp4 (from tools/make_hook.py) is given, it is prepended with a quick 0.3 s fade into the slides.
 
 Layout: dark #1b1b1b canvas 1080x1920, slide centered (y=285), static header "@romchekcrypto"
 and a red "Telegram: @romchekcrypto" pill at the bottom; slides change with a slide-left transition.
@@ -10,7 +11,7 @@ import glob, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont
 
 src, out = sys.argv[1], sys.argv[2]
-D = float(sys.argv[3]) if len(sys.argv) > 3 else 3.5
+D = float(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3] else 3.5
 T = 0.4  # transition
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
@@ -44,7 +45,18 @@ args += ["-loop", "1", "-i", ovp]
 filt += f"[{prev}][{n}:v]overlay=0:0,format=yuv420p[out]"
 total = round(n * D - (n - 1) * T, 2)
 os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+hook = sys.argv[4] if len(sys.argv) > 4 else None
+body = os.path.join(tmp, "body.mp4") if hook else out
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *args, "-filter_complex", filt, "-map", "[out]",
                 "-t", str(total), "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-r", "30",
-                "-movflags", "+faststart", out], check=True)
+                "-movflags", "+faststart", body], check=True)
+if hook:
+    hd = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                        "-of", "csv=p=0", hook]).strip())
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", hook, "-i", body, "-filter_complex",
+                    f"[0:v]fps=30,format=yuv420p,setsar=1[h];[1:v]fps=30,format=yuv420p,setsar=1[b];"
+                    f"[h][b]xfade=transition=fade:duration=0.3:offset={hd-0.3:.2f}[out]",
+                    "-map", "[out]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
+                    "-movflags", "+faststart", out], check=True)
+    total = round(total + hd - 0.3, 2)
 print(out, total, "s")
