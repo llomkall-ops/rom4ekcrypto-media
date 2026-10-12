@@ -50,7 +50,7 @@ Only post images go here. Nothing else.
 - Schedule with createScheduledPost: providers [{"network":"instagram"}], instagramData {"type":"POST"},
   autoPublish true, media = list of raw.githubusercontent URLs in slide order.
 
-## Reels (added 2026-10-12)
+## Reels (added 2026-10-12) — format APPROVED by the owner: animated cover + slides 2..N at 4.5 s; base for all Reels and Shorts
 - Every carousel also becomes an Instagram Reel, published 2 hours after the carousel (10:00 → 12:00, 18:00 → 20:00).
 - Build (2 steps):
   1. Animated cover (hook) with the SAME text as carousel slide 1:
