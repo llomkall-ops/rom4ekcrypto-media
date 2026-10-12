@@ -49,3 +49,20 @@ Only post images go here. Nothing else.
 - Brand (blogId) 7337792, Instagram @romchekcrypto, timezone Europe/Moscow.
 - Schedule with createScheduledPost: providers [{"network":"instagram"}], instagramData {"type":"POST"},
   autoPublish true, media = list of raw.githubusercontent URLs in slide order.
+
+## Reels (added 2026-10-12)
+- Every carousel also becomes an Instagram Reel, published 2 hours after the carousel (10:00 → 12:00, 18:00 → 20:00).
+- Build: `python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4` (9:16 silent MP4, ~20 s). Commit/push the MP4.
+- Schedule with createScheduledPost: media = [raw URL of the MP4], instagramData
+  {"type":"REEL","showReelOnFeed":true,"audioConfiguration":{"audioId":"<id>","audioVolume":25,"videoVolume":100}}.
+- Background music = calm instrumental tracks from the Instagram catalog, rotate in this order
+  (pick the next one after the most recently used; check recent scheduled Reels):
+  1. 2477944699150252 — Peaceful Piano (Dr. Pheel)
+  2. 2697378737086947 — Floods (Trout Recording)
+  3. 1704551184273568 — Waves (Instrumental) (Giulio Cercato)
+  4. 5513486825393122 — Hidden Beneath (Sam Marshall)
+  5. 976299230340697 — Someday (Instrumental) (Cy Curnin)
+  6. 592271352837708 — Beautiful (Giulio Cercato)
+  If an audioId is rejected, use the next one in the list.
+- Reel caption: shorter — title line, hook, 1–2 sentences, "Полный разбор — в карусели в профиле 👆",
+  Telegram @romchekcrypto line, "Не является финансовой рекомендацией.", 5–8 hashtags.
