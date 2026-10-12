@@ -1,6 +1,6 @@
 """Turn a carousel folder (slide_N.jpg, 1080x1350) into a vertical 9:16 Reel/Short (silent MP4).
 
-Usage: python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 [seconds_per_slide] [hook.mp4]
+Usage: python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 ["first,others" seconds, default 3.2,4.5] [hook.mp4]
 If hook.mp4 (from tools/make_hook.py) is given, it is prepended with a quick 0.3 s fade into the slides.
 
 Layout: dark #1b1b1b canvas 1080x1920, slide centered (y=285), static header "@romchekcrypto"
@@ -11,7 +11,8 @@ import glob, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont
 
 src, out = sys.argv[1], sys.argv[2]
-D = float(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3] else 3.5
+DS = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "3.2,4.5"  # first slide, other slides (seconds)
+D1, D = (float(x) for x in (DS.split(',') + DS.split(','))[:2])
 T = 0.4  # transition
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
@@ -33,17 +34,17 @@ ovp = os.path.join(tmp, "overlay.png"); ov.save(ovp)
 
 args, filt = [], ""
 for i, f in enumerate(frames):
-    args += ["-loop", "1", "-framerate", "30", "-t", str(D), "-i", f]
+    args += ["-loop", "1", "-framerate", "30", "-t", str(D1 if i == 0 else D), "-i", f]
     filt += f"[{i}:v]setsar=1,format=yuv420p[v{i}];"
 prev = "v0"
 for i in range(1, len(frames)):
-    off = round(i * (D - T), 3)
+    off = round(D1 + (i - 1) * D - i * T, 3)
     filt += f"[{prev}][v{i}]xfade=transition=slideleft:duration={T}:offset={off}[x{i}];"
     prev = f"x{i}"
 n = len(frames)
 args += ["-loop", "1", "-i", ovp]
 filt += f"[{prev}][{n}:v]overlay=0:0,format=yuv420p[out]"
-total = round(n * D - (n - 1) * T, 2)
+total = round(D1 + (n - 1) * D - (n - 1) * T, 2)
 os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
 hook = sys.argv[4] if len(sys.argv) > 4 else None
 body = os.path.join(tmp, "body.mp4") if hook else out
