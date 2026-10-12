@@ -1,6 +1,6 @@
 # rom4ekcrypto-media — Instagram content pipeline
 
-This repo hosts images for the Instagram account **@rom4ekcrypto** (crypto / trading).
+This repo hosts images for the Instagram account **@romchekcrypto** (crypto / trading).
 Images are public via `https://raw.githubusercontent.com/llomkall-ops/rom4ekcrypto-media/main/<path>`
 and are passed by URL to Metricool, which publishes them to Instagram.
 
@@ -20,7 +20,7 @@ Only post images go here. Nothing else.
   uppercase (Inter Display Black, scaleX .8), white + red (#d03a3e) words; a short subtitle line;
   a candlestick chart (green/red candles, optional blue MA line) in the lower half; a pill tag top-left
   that makes the crypto topic obvious ("₿ Разбор биткоина", "Ξ Эфириум", "Новости крипты" …);
-  "@rom4ekcrypto" bottom-left, "Листай →" bottom-right.
+  "@romchekcrypto" bottom-left, "Листай →" bottom-right.
 - **Middle slides:** light cream background (#f6f1eb), pill tag top-left ("База 🧠", "История 📜",
   "Шпаргалка ✅", "Сделка 🎯" …), big bold headline black + red, infographic content: cards, timelines,
   tables, checklists, schematic candle charts. End cheat-sheet slides with "Сохрани это."
@@ -46,6 +46,6 @@ Only post images go here. Nothing else.
 - Russian language, energetic but credible tone.
 
 ## Metricool
-- Brand (blogId) 7337792, Instagram @rom4ekcrypto, timezone Europe/Moscow.
+- Brand (blogId) 7337792, Instagram @romchekcrypto, timezone Europe/Moscow.
 - Schedule with createScheduledPost: providers [{"network":"instagram"}], instagramData {"type":"POST"},
   autoPublish true, media = list of raw.githubusercontent URLs in slide order.

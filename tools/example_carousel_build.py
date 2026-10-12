@@ -25,7 +25,7 @@ h1{font-family:'Inter Display','Inter';font-weight:900;letter-spacing:-2px;line-
 def page(n, inner):
     return f"""<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>
 <div class='cnt'>{n}/{N}</div>{inner}
-<div class='foot'><span>@rom4ekcrypto</span><span>{'Листай →' if n < N else ''}</span></div></body></html>"""
+<div class='foot'><span>@romchekcrypto</span><span>{'Листай →' if n < N else ''}</span></div></body></html>"""
 
 def chart_svg(w, h, last_above=3, seed=4):
     random.seed(seed)
@@ -98,7 +98,7 @@ s1 = f"""<html><head><meta charset='utf-8'><style>{CSS}{COVER_CSS}</style></head
  <div class='row' style='margin-top:26px'><div class='big cw' style='font-size:70px;letter-spacing:-1px'>BTC 3 недели выше</div></div>
  <div class='row'><div class='big cw' style='font-size:70px;letter-spacing:-1px'>50-недельной средней</div></div>
 </div>
-<div class='dfoot'><span>@rom4ekcrypto</span><span>Листай →</span></div>
+<div class='dfoot'><span>@romchekcrypto</span><span>Листай →</span></div>
 </body></html>"""
 
 # ---------- slide 2 ----------
