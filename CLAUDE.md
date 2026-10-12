@@ -66,3 +66,15 @@ Only post images go here. Nothing else.
   If an audioId is rejected, use the next one in the list.
 - Reel caption: shorter — title line, hook, 1–2 sentences, "Полный разбор — в карусели в профиле 👆",
   Telegram @romchekcrypto line, "Не является финансовой рекомендацией.", 5–8 hashtags.
+
+## YouTube Shorts (added 2026-10-12)
+- The same video as each Reel is also published as a YouTube Short at the same time (12:00 and 20:00), WITH music.
+- Music lives in the PRIVATE repo llomkall-ops/rom4ekcrypto-assets (music/*.mp3, rotation order in its README).
+  Never copy the mp3 files into this public repo.
+- Build: `python3 tools/add_music.py videos/<folder>.mp4 <assets>/music/<track>.mp3 shorts/<folder>.mp4`, commit/push the MP4.
+- Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
+  youtubeData {"title": "<≤90 chars, intriguing, Russian, end with #shorts>", "type":"short", "privacy":"public",
+  "madeForKids": false, "category":"EDUCATION", "tags":["криптовалюта","биткоин","трейдинг","crypto","bitcoin"]}.
+- Description (text): 2–3 sentences, "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
+  "Instagram: @romchekcrypto", "Не является финансовой рекомендацией.",
+  "Музыка: <Title> — <Artist> (YouTube Audio Library)", 3–5 hashtags incl. #shorts.
