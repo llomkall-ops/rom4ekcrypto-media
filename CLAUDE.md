@@ -99,3 +99,12 @@ Only post images go here. Nothing else.
   last line = hashtags, MAXIMUM 3–5 in total (owner's rule — don't overdo it): #shorts #биткоин #альтсезон
   + at most 2 topic hashtags (e.g. #обзорбиткоина, #эфириум, #трейдинг).
 - Instagram Reels and carousels: also always include #биткоин #обзорбиткоина #альтсезон among their hashtags.
+
+## TikTok carousels (added 2026-10-12)
+- TikTok account @romchekcrypto is connected in the same Metricool brand. Every carousel is ALSO published to TikTok
+  as a photo carousel at the same time as on Instagram (10:00 and 18:00), same slide JPGs in the same order.
+- Separate createScheduledPost call: providers [{"network":"tiktok"}], media = same raw slide URLs,
+  tiktokData {"title": "<≤90 chars, the intriguing headline>", "autoAddMusic": true, "privacyOption": "PUBLIC_TO_EVERYONE",
+  "photoCoverIndex": 0, "disableComment": false}, autoPublish true, draft false.
+- TikTok caption (text): title line, hook, 1–3 short sentences, "Больше аналитики — Telegram @romchekcrypto",
+  "Не является финансовой рекомендацией.", then 3–5 hashtags (#биткоин #альтсезон #криптовалюта + 1–2 by topic).
