@@ -1,4 +1,5 @@
-"""Render an animated 9:16 hook intro (~2.2 s) for Reels/Shorts.
+"""Render the animated 9:16 cover (~3.8 s) that opens every Reel/Short. Use the SAME text as carousel slide 1
+(tag, headline line 1 white, line 2 red, subtitle) so the video does not repeat the cover twice.
 
 Usage:
   python3 tools/make_hook.py out.mp4 --tag "₿ BTC" --l1 "МИНУС" --l2 "$1,25 МЛРД" --sub "Кто сливает крипту?" [--trend down|up]

@@ -1,7 +1,8 @@
 """Turn a carousel folder (slide_N.jpg, 1080x1350) into a vertical 9:16 Reel/Short (silent MP4).
 
 Usage: python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 ["first,others" seconds, default 3.2,4.5] [hook.mp4]
-If hook.mp4 (from tools/make_hook.py) is given, it is prepended with a quick 0.3 s fade into the slides.
+If hook.mp4 (the animated cover from tools/make_hook.py, built with the SAME text as slide 1) is given,
+it REPLACES slide 1: the video starts with the animated cover and continues from slide 2.
 
 Layout: dark #1b1b1b canvas 1080x1920, slide centered (y=285), static header "@romchekcrypto"
 and a red "Telegram: @romchekcrypto" pill at the bottom; slides change with a slide-left transition.
@@ -13,11 +14,18 @@ from PIL import Image, ImageDraw, ImageFont
 src, out = sys.argv[1], sys.argv[2]
 DS = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "3.2,4.5"  # first slide, other slides (seconds)
 D1, D = (float(x) for x in (DS.split(',') + DS.split(','))[:2])
+if len(sys.argv) > 4 and sys.argv[4]:
+    D1 = D  # with an animated cover every remaining slide gets the 'others' duration
 T = 0.4  # transition
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
 slides = sorted(glob.glob(os.path.join(src, "slide_*.jpg")), key=lambda p: int(p.rsplit("_", 1)[1].split(".")[0]))
 assert slides, "no slides found"
+if len(sys.argv) > 4 and sys.argv[4]:
+    slides = slides[1:]  # animated cover replaces the static cover
+    DS_FIRST_OVERRIDE = True
+else:
+    DS_FIRST_OVERRIDE = False
 tmp = tempfile.mkdtemp()
 frames = []
 for i, p in enumerate(slides, 1):

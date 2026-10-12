@@ -52,7 +52,12 @@ Only post images go here. Nothing else.
 
 ## Reels (added 2026-10-12)
 - Every carousel also becomes an Instagram Reel, published 2 hours after the carousel (10:00 → 12:00, 18:00 → 20:00).
-- Build: `python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4` (9:16 silent MP4, ~20 s). Commit/push the MP4.
+- Build (2 steps):
+  1. Animated cover (hook) with the SAME text as carousel slide 1:
+     `python3 tools/make_hook.py <scratch>/cover.mp4 --tag "<slide-1 tag>" --l1 "<white line>" --l2 "<red line>" --sub "<subtitle / intriguing question>" --trend down|up`
+     (trend = direction of the topic: down for falls/outflows/risks, up for growth). Look at frames 0 s and 3.5 s.
+  2. `python3 tools/make_reel.py posts/<folder> videos/<folder>.mp4 "3.2,4.5" <scratch>/cover.mp4`
+     — the animated cover replaces slide 1, other slides 4.5 s each (~25–30 s total, silent MP4). Commit/push the MP4.
 - Schedule with createScheduledPost: media = [raw URL of the MP4], instagramData
   {"type":"REEL","showReelOnFeed":true,"audioConfiguration":{"audioId":"<id>","audioVolume":25,"videoVolume":100}}.
 - Background music = calm instrumental tracks from the Instagram catalog, rotate in this order
