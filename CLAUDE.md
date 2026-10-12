@@ -78,8 +78,15 @@ Only post images go here. Nothing else.
   Never copy the mp3 files into this public repo.
 - Build: `python3 tools/add_music.py videos/<folder>.mp4 <assets>/music/<track>.mp3 shorts/<folder>.mp4`, commit/push the MP4.
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
-  youtubeData {"title": "<≤90 chars, intriguing, Russian, end with #shorts>", "type":"short", "privacy":"public",
-  "madeForKids": false, "category":"EDUCATION", "tags":["криптовалюта","биткоин","трейдинг","crypto","bitcoin"]}.
-- Description (text): 2–3 sentences, "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
+  youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
+  "type":"short", "privacy":"public", "madeForKids": false, "category":"EDUCATION", "tags": [...]}.
+- TAGS (owner's requirement, fill every time): 12–20 tags =
+  ALWAYS: "биткоин", "обзор биткоина", "альтсезон", "криптовалюта", "bitcoin", "крипта", "трейдинг"
+  + 5–12 topic-specific tags from this video (coins, events, terms: e.g. "эфириум", "ETF", "ФРС", "инфляция США",
+  "ордер блок", "ликвидность", "smart money", "прогноз биткоина", "btc", "eth"). No duplicates, keep each tag short.
+- Description (text): 2–3 sentences on the topic that naturally include the key words «биткоин», «обзор биткоина»
+  and «альтсезон» where it makes sense; then "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
   "Instagram: @romchekcrypto", "Не является финансовой рекомендацией.",
-  "Музыка: <Title> — <Artist> (YouTube Audio Library)", 3–5 hashtags incl. #shorts.
+  "Музыка: <Title> — <Artist> (YouTube Audio Library)";
+  last line = 5–8 hashtags: ALWAYS #shorts #биткоин #обзорбиткоина #альтсезон #криптовалюта + 1–3 topic hashtags.
+- Instagram Reels and carousels: also always include #биткоин #обзорбиткоина #альтсезон among their hashtags.
