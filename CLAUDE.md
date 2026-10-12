@@ -80,13 +80,17 @@ Only post images go here. Nothing else.
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
   youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
   "type":"short", "privacy":"public", "madeForKids": false, "category":"EDUCATION", "tags": [...]}.
-- TAGS (owner's requirement, fill every time): 12–20 tags =
-  ALWAYS: "биткоин", "обзор биткоина", "альтсезон", "криптовалюта", "bitcoin", "крипта", "трейдинг"
-  + 5–12 topic-specific tags from this video (coins, events, terms: e.g. "эфириум", "ETF", "ФРС", "инфляция США",
-  "ордер блок", "ликвидность", "smart money", "прогноз биткоина", "btc", "eth"). No duplicates, keep each tag short.
+- TAGS (owner's requirement — fill the YouTube tags field COMPLETELY every time): use as much of YouTube's
+  500-character tag limit as possible (aim for 450–500 characters total, ~25–40 tags), only crypto/trading keywords.
+  ALWAYS include: "биткоин", "обзор биткоина", "альтсезон", "трейдинг", "обучение трейдингу", "криптовалюта",
+  "bitcoin", "крипта", "btc", "прогноз биткоина", "новости крипты", "криптотрейдинг", "crypto".
+  Then fill the rest with topic-specific keywords (coins, events, terms: e.g. "эфириум", "eth", "ETF", "ФРС",
+  "инфляция США", "ордер блок", "ликвидность", "smart money", "SMC", "технический анализ", "фьючерсы", "альткоины").
+  No duplicates; count the characters before scheduling.
 - Description (text): 2–3 sentences on the topic that naturally include the key words «биткоин», «обзор биткоина»
   and «альтсезон» where it makes sense; then "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
   "Instagram: @romchekcrypto", "Не является финансовой рекомендацией.",
   "Музыка: <Title> — <Artist> (YouTube Audio Library)";
-  last line = 5–8 hashtags: ALWAYS #shorts #биткоин #обзорбиткоина #альтсезон #криптовалюта + 1–3 topic hashtags.
+  last line = hashtags, MAXIMUM 3–5 in total (owner's rule — don't overdo it): #shorts #биткоин #альтсезон
+  + at most 2 topic hashtags (e.g. #обзорбиткоина, #эфириум, #трейдинг).
 - Instagram Reels and carousels: also always include #биткоин #обзорбиткоина #альтсезон among their hashtags.
