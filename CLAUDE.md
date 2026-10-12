@@ -80,13 +80,18 @@ Only post images go here. Nothing else.
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
   youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
   "type":"short", "privacy":"public", "madeForKids": false, "category":"EDUCATION", "tags": [...]}.
-- TAGS (owner's requirement — fill the YouTube tags field COMPLETELY every time): use as much of YouTube's
-  500-character tag limit as possible (aim for 450–500 characters total, ~25–40 tags), only crypto/trading keywords.
-  ALWAYS include: "биткоин", "обзор биткоина", "альтсезон", "трейдинг", "обучение трейдингу", "криптовалюта",
-  "bitcoin", "крипта", "btc", "прогноз биткоина", "новости крипты", "криптотрейдинг", "crypto".
-  Then fill the rest with topic-specific keywords (coins, events, terms: e.g. "эфириум", "eth", "ETF", "ФРС",
-  "инфляция США", "ордер блок", "ликвидность", "smart money", "SMC", "технический анализ", "фьючерсы", "альткоины").
-  No duplicates; count the characters before scheduling.
+- TAGS (owner's requirement — fill the YouTube tags field COMPLETELY every time, up to YouTube's 500-character limit).
+  Count length the YouTube way: tags joined by commas, and every tag that contains a space counts +2 (quotes).
+  Build the list in this order and stop adding when the next tag would exceed 500:
+  1) MUST tags (always): биткоин, обзор биткоина, альтсезон, трейдинг, обучение трейдингу, криптовалюта, bitcoin
+  2) 3–5 topic-specific tags for this video (coins/events/terms: эфириум, ETF, ФРС, инфляция США, ордер блок,
+     ликвидность, smart money, технический анализ, альткоины …)
+  3) Owner's base pool of popular tags, in this priority order (replace 2026 with the current year when it changes):
+     биткоин прогноз, биткоин сегодня, биткоин новости, когда альтсезон, альткоины, биткоин цена, биткоин обзор,
+     биткоин когда рост, биткоин когда покупать, биткоин когда продавать, bitcoin прогноз, биткоин прогноз 2026,
+     биткоин 2026, криптовалюта 2026, альткоины 2026, альткоины сегодня, альткоины новости, альткоины для иксов,
+     альткоины на долгосрок, биткоин прямо сейчас, биткоин криптовалюта, криптовалюта bitcoin
+  Never add other channels' or people's names as tags (YouTube treats that as misleading metadata). No duplicates.
 - Description (text): 2–3 sentences on the topic that naturally include the key words «биткоин», «обзор биткоина»
   and «альтсезон» where it makes sense; then "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
   "Instagram: @romchekcrypto", "Не является финансовой рекомендацией.",
