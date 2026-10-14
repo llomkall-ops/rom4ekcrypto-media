@@ -75,7 +75,15 @@ Only post images go here. Nothing else.
 ## YouTube Shorts (added 2026-10-12)
 - The same video as each Reel is also published as a YouTube Short at the same time (12:00 and 20:00), WITH music.
 - Music lives in the PRIVATE repo llomkall-ops/rom4ekcrypto-assets (music/*.mp3, rotation order in its README).
-  Never copy the mp3 files into this public repo.
+  Never copy the plain mp3 files into this public repo.
+- BACKUP (use whenever the private repo can't be attached/cloned): the same 3 tracks are stored ENCRYPTED in this repo
+  as music_enc/<track>.mp3.enc (AES-256-CBC, pbkdf2). The passphrase is given ONLY in the scheduled-task prompt —
+  never write it into this repo. Decrypt to scratch (not into the repo):
+  `openssl enc -d -aes-256-cbc -pbkdf2 -in music_enc/<track>.mp3.enc -out <scratch>/<track>.mp3 -pass pass:<KEY>`.
+  Rotation and credits are the same as in the private repo README:
+  1. 01_Lofi_Mallet-Kwon — "Lofi Mallet" — Kwon; 2. 02_Glass_Chinchilla-The_Mini_Vandals — "Glass Chinchilla" — The Mini Vandals;
+  3. 03_Chilltronic-RKVC — "Chilltronic" — RKVC.
+- A Short WITHOUT music is a failure: verify with ffprobe that shorts/<folder>.mp4 has an audio stream before scheduling.
 - Build: `python3 tools/add_music.py videos/<folder>.mp4 <assets>/music/<track>.mp3 shorts/<folder>.mp4`, commit/push the MP4.
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
   youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
