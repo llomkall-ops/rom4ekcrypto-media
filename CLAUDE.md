@@ -100,7 +100,7 @@ Only post images go here. Nothing else.
   + at most 2 topic hashtags (e.g. #обзорбиткоина, #эфириум, #трейдинг).
 - Instagram Reels and carousels: also always include #биткоин #обзорбиткоина #альтсезон among their hashtags.
 
-## TikTok carousels (added 2026-10-12)
+## TikTok carousels — ⏸ PAUSED by the owner on 2026-10-14 (do not schedule anything on TikTok until he re-enables). Format (added 2026-10-12):
 - TikTok account @romchekcrypto is connected in the same Metricool brand. Every carousel is ALSO published to TikTok
   as a photo carousel at the same time as on Instagram (10:00 and 18:00), same slide JPGs in the same order.
 - Separate createScheduledPost call: providers [{"network":"tiktok"}], media = same raw slide URLs,
