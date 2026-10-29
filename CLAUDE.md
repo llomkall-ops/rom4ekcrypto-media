@@ -72,7 +72,7 @@ Only post images go here. Nothing else.
 - Reel caption: shorter — title line, hook, 1–2 sentences, "Полный разбор — в карусели в профиле 👆",
   Telegram @romchekcrypto line, "Не является финансовой рекомендацией.", 5–8 hashtags.
 
-## YouTube Shorts (added 2026-10-12)
+## YouTube Shorts — ⏸ PAUSED by the owner on 2026-10-29 (do not build or schedule YouTube Shorts until he re-enables). Format (added 2026-10-12):
 - The same video as each Reel is also published as a YouTube Short at the same time (12:00 and 20:00), WITH music.
 - Music lives in the PRIVATE repo llomkall-ops/rom4ekcrypto-assets (music/*.mp3, rotation order in its README).
   Never copy the plain mp3 files into this public repo.
