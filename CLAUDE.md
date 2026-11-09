@@ -72,7 +72,20 @@ Only post images go here. Nothing else.
 - Reel caption: shorter — title line, hook, 1–2 sentences, "Полный разбор — в карусели в профиле 👆",
   Telegram @romchekcrypto line, "Не является финансовой рекомендацией.", 5–8 hashtags.
 
-## YouTube Shorts — ⏸ PAUSED by the owner on 2026-10-29 (do not build or schedule YouTube Shorts until he re-enables). Format (added 2026-10-12):
+
+## Shorts from long YouTube reviews (owner's rule since 2026-11-09)
+- After each long review video Claude edits, cut 4 vertical Shorts (1080x1920, 25–60 s, complete thoughts) from it:
+  hook title on top, chart crop in a frame, karaoke subtitles, camera + Telegram CTA box; all content inside the
+  phone safe zone (x 40–900, y 220–1490) so YouTube/Instagram UI never covers chart, camera or subtitles.
+- Store in shorts/YYYY-MM-DD/<n>-<slug>.mp4, push, then schedule in Metricool every 2 hours after the review goes out
+  (first Short at the review time): YouTube Short + the same file as an Instagram Reel (showReelOnFeed true;
+  if an IG carousel is in the same slot, move the Reel by 30 min).
+- YouTube: SHORT CAPS title of 2–4 words (e.g. «ГДЕ Я КУПЛЮ БИТКОИН»), 2–3 SEO sentences with «обзор биткоина»/«альтсезон»,
+  Telegram line, disclaimer, «Музыка: …», 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
+  The «related video» link to the latest long video can't be set via Metricool — the owner sets it in YouTube Studio.
+- TikTok stays off.
+
+## YouTube Shorts (auto, from carousels) — ⏸ PAUSED by the owner on 2026-10-29 (do not build or schedule YouTube Shorts until he re-enables). Format (added 2026-10-12):
 - The same video as each Reel is also published as a YouTube Short at the same time (12:00 and 20:00), WITH music.
 - Music lives in the PRIVATE repo llomkall-ops/rom4ekcrypto-assets (music/*.mp3, rotation order in its README).
   Never copy the plain mp3 files into this public repo.
