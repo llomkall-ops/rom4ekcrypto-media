@@ -74,7 +74,7 @@ Only post images go here. Nothing else.
 
 
 ## Shorts from long YouTube reviews (owner's rule since 2026-11-09)
-- After each long review video Claude edits, cut 4 vertical Shorts (1080x1920, 25–60 s, complete thoughts) from it:
+- After each long review video Claude edits, cut 2 vertical Shorts (owner's rule 2026-11-10; was 4) (1080x1920, 25–60 s, complete thoughts) from it:
   hook title on top, chart crop in a frame, karaoke subtitles, camera + Telegram CTA box; all content inside the
   phone safe zone (x 40–900, y 220–1490) so YouTube/Instagram UI never covers chart, camera or subtitles.
 - Store in shorts/YYYY-MM-DD/<n>-<slug>.mp4, push, then schedule in Metricool every 2 hours after the review goes out
