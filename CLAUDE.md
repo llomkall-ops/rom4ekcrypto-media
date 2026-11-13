@@ -88,6 +88,14 @@ Only post images go here. Nothing else.
   Загрузка видео по умолчанию → Язык видео = русский); if a Short still shows no language, set it in Studio.
 - TikTok stays off.
 
+## Long review editing — quality rules (owner's feedback 2026-11-13)
+- Re-recorded thoughts: when the owner says the same idea twice (often with different numbers, e.g. "-10%… / -7%…"),
+  he is re-recording it — keep ONLY the last take and cut the earlier one completely. Read the transcript for such
+  restatements, not just word-level stutters, before rendering.
+- After cutting, re-listen (ASR the final audio) around every manual cut to make sure no fragment of a dropped word remains.
+- Shorts must end on a COMPLETE thought: never stop right before an explanation ("да то есть посмотрите…").
+  End at the end of the sentence that closes the idea; check the last subtitle line before publishing.
+
 ## YouTube Shorts (auto, from carousels) — ⏸ PAUSED by the owner on 2026-10-29 (do not build or schedule YouTube Shorts until he re-enables). Format (added 2026-10-12):
 - The same video as each Reel is also published as a YouTube Short at the same time (12:00 and 20:00), WITH music.
 - Music lives in the PRIVATE repo llomkall-ops/rom4ekcrypto-assets (music/*.mp3, rotation order in its README).
