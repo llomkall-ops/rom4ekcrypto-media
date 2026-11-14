@@ -81,11 +81,12 @@ Only post images go here. Nothing else.
   (first Short at the review time): YouTube Short + the same file as an Instagram Reel (showReelOnFeed true;
   if an IG carousel is in the same slot, move the Reel by 30 min).
 - YouTube: SHORT CAPS title of 2–4 words (e.g. «ГДЕ Я КУПЛЮ БИТКОИН»), 2–3 SEO sentences with «обзор биткоина»/«альтсезон»,
-  Telegram line, disclaimer, «Музыка: …», 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
+  Telegram line, disclaimer, 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
   The «related video» link to the latest long video can't be set via Metricool — the owner sets it in YouTube Studio.
 - YouTube category for these Shorts = PEOPLE_BLOGS («Люди и блоги»), video language = Russian (owner's rule 2026-11-09).
   Metricool has no language field: language comes from the channel's upload defaults (YouTube Studio → Настройки →
   Загрузка видео по умолчанию → Язык видео = русский); if a Short still shows no language, set it in Studio.
+- NO MUSIC in these Shorts (owner's rule 2026-11-14): voice only — run mkshort.py without the music argument and drop the «Музыка: …» line from the description.
 - TikTok stays off.
 
 ## Long review editing — quality rules (owner's feedback 2026-11-13)
