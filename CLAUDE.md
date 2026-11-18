@@ -66,7 +66,7 @@ caption/hashtag rules below where they conflict.**
   Instagram 3–5 hashtags; YouTube title 40–70 chars without hashtags, description 2–3 sentences + 3 hashtags.**
 - Reel caption: title line with emoji + keywords, hook, 2 short paragraphs, «💾 Сохрани…», «📤 Перешли другу, который…»,
   «💬 Напиши «обучение» — пришлю 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества», «Подписывайся…»,
-  Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #обзорбиткоина #альтсезон + 2).
+  Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #альтсезон #трейдинг + 1–2 topic; NO #обзорбиткоина in education reels — owner 2026-11-18).
 
 ## Visual style (approved by the owner; accent changed to LIME on 2026-11-18 — owner finds red off-putting)
 - ACCENT COLORS: dark slides → lime #c6f432 for accent words/numbers; cream slides → NO green text (owner dislikes it):
@@ -195,7 +195,7 @@ caption/hashtag rules below where they conflict.**
   "Музыка: <Title> — <Artist> (YouTube Audio Library)";
   last line = hashtags, MAXIMUM 3–5 in total (owner's rule — don't overdo it): #shorts #биткоин #альтсезон
   + at most 2 topic hashtags (e.g. #обзорбиткоина, #эфириум, #трейдинг).
-- Instagram Reels and carousels: also always include #биткоин #обзорбиткоина #альтсезон among their hashtags.
+- Instagram carousels (news): always include #биткоин #обзорбиткоина #альтсезон. Education reels: #биткоин #альтсезон #трейдинг + topic (no #обзорбиткоина).
 
 ## TikTok carousels — ⏸ PAUSED by the owner on 2026-10-14 (do not schedule anything on TikTok until he re-enables). Format (added 2026-10-12):
 - TikTok account @romchekcrypto is connected in the same Metricool brand. Every carousel is ALSO published to TikTok

@@ -106,8 +106,9 @@ Rules (apply every time):
 2. Instagram caption: line 1 = keyword + hook in ≤ 110 chars (e.g. «🎯 Ликвидность в трейдинге: почему выбивает твой стоп»);
    then 1–2 SHORT lines with the key takeaway (NOT the voice script retold); then CTAs (save / send to a friend /
    «обучение»), subscribe line, Telegram line, disclaimer. Whole caption ≤ ~600 chars.
-3. Instagram hashtags: 3–5 total, specific: #биткоин #обзорбиткоина #альтсезон (owner's standing set) + 1–2 exact topic
-   tags (#ликвидность, #стоплосс, #смартмани…). Never generic ones.
+3. Instagram hashtags: 3–5 total, specific, never generic. Morning NEWS carousel: #биткоин #обзорбиткоина #альтсезон + 1–2 topic.
+   Evening EDUCATION reel (owner approved 2026-11-18): #биткоин #альтсезон #трейдинг + 1–2 exact topic tags
+   (#ликвидность, #стоплосс, #ордерблок…) — no #обзорбиткоина (it's not a BTC review).
 4. YouTube title: 40–70 chars, keyword first, then the pain/question; at most one CAPS word; no hashtags in the title
    (they go in the description); no clickbait the video doesn't answer.
 5. YouTube description: first sentence = keyword + what the viewer learns (2–3 sentences total, no full script), CTA
