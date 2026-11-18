@@ -22,15 +22,16 @@ body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f4efe7;position:re
 .tile .n{font-weight:800;font-size:22px;color:#bdb6aa;letter-spacing:1px}
 </style></head><body>
 <div id="bg"></div><div id="grid"></div>
-<svg id="chart" class="a" style="left:0;top:930px" width="1080" height="420"></svg>
+<svg id="chart" class="a" style="left:0;top:1000px" width="1080" height="360"></svg>
 
 <!-- persistent brand -->
 <div id="brand" class="a pill" style="left:60px;top:250px">🎓 Обучение трейдингу</div>
 
 <!-- Scene A -->
-<div id="a1" class="a H" style="left:60px;top:390px;font-size:178px;transform:scaleX(.84)">Хочешь</div>
-<div id="a2" class="a H" style="left:60px;top:565px;font-size:178px">Научиться</div>
-<div id="a3" class="a H r" style="left:60px;top:740px;font-size:178px">Торговать?</div>
+<div id="a1" class="a H" style="left:60px;top:390px;font-size:100px">Хочешь научиться</div>
+<div id="a2" class="a H r" style="left:60px;top:490px;font-size:172px">торговать</div>
+<div id="a3" class="a H" style="left:60px;top:680px;font-size:100px">или усилить свои</div>
+<div id="a4" class="a H r" style="left:60px;top:785px;font-size:172px">навыки?</div>
 
 <!-- Scene B -->
 <div id="b1" class="a H" style="left:60px;top:370px;font-size:118px">Напиши в</div>
@@ -87,9 +88,12 @@ body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f4efe7;position:re
 
 <script>
 const VO=0.3; // voice offset in video
-const W=[["Хочешь",0,.4],["научиться",.44,.88],["торговать?",.96,1.64],["Напиши",1.84,2.16],["в",2.2,2.24],["комментариях",2.28,2.8],["слово",2.88,3.2],["«обучение»",3.28,4.16],["и",4.4,4.44],["я",4.48,4.56],["пришлю",4.64,4.96],["тебе",5.0,5.2],["13",5.28,5.84],["авторских",5.92,6.4],["видеоуроков",6.48,7.12],["по",7.16,7.2],["трейдингу",7.28,7.84],["и",7.92,8.0],["добавлю",8.08,8.48],["в",8.52,8.56],["чат",8.64,8.8],["сообщества",8.88,9.76]].map(w=>[w[0],w[1]+VO,w[2]+VO]);
-const GROUPS=[[0,3],[3,6],[6,8],[8,12],[12,15],[15,17],[17,21],[21,22]];
-const T=w=>W[w][1];
+const W=[["Хочешь", 0, 0.4], ["научиться", 0.44, 0.88], ["торговать", 0.96, 1.52], ["или", 1.6, 1.84], ["усилить", 2.0, 2.4], ["свои", 2.453, 2.64], ["навыки?", 2.68, 3.36], ["Напиши", 3.6, 3.92], ["в", 3.96, 4.0], ["комментариях", 4.04, 4.56], ["слово", 4.64, 4.88], ["«обучение»", 5.04, 5.76], ["и", 6.0, 6.08], ["я", 6.24, 6.32], ["пришлю", 6.4, 6.64], ["тебе", 6.72, 6.96], ["13", 7.04, 7.52], ["авторских", 7.68, 8.16], ["видеоуроков", 8.2, 8.88], ["по", 8.92, 8.96], ["трейдингу", 9.04, 9.6], ["и", 9.68, 9.76], ["добавлю", 9.84, 10.24], ["в", 10.28, 10.32], ["чат", 10.4, 10.56], ["сообщества", 10.64, 11.52]].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=[[0, 3], [3, 7], [7, 10], [10, 12], [12, 16], [16, 19], [19, 21], [21, 25], [25, 26]];
+const norm=x=>x.toLowerCase().replace(/[«»?.,!—]/g,'');
+function I(txt,occ=0){let k=0;for(let i=0;i<W.length;i++){if(norm(W[i][0])===txt){if(k===occ)return i;k++;}}throw 'no word '+txt;}
+const T=w=>W[typeof w==='string'?I(w):w][1]; const E=w=>W[typeof w==='string'?I(w):w][2];
+const aOutG=T('напиши')-.16;
 const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
 const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
 const $=id=>document.getElementById(id);
@@ -106,10 +110,10 @@ const C=[];{let pr=200,seed=3;const rnd=()=>{seed=(seed*9301+49297)%233280;retur
  for(let i=0;i<26;i++){const d=(i<10?-2:i<14?1:6)+ (rnd()-.4)*12;const o=pr,c=pr+d;C.push([o,Math.max(o,c)+rnd()*8+2,Math.min(o,c)-rnd()*8-2,c]);pr=c;}}
 function drawChart(t,vis){
   const svg=$('chart'); const vals=C.flat(); const mn=Math.min(...vals),mx=Math.max(...vals);
-  const sy=v=>20+(mx-v)/(mx-mn)*380; let h='';
-  const n=Math.min(C.length,Math.floor((t-0.15)/0.065)+1);
+  const sy=v=>20+(mx-v)/(mx-mn)*320; let h='';
+  const SP=Math.max(.065,(aOutG-.4)/C.length);const n=Math.min(C.length,Math.floor((t-0.15)/SP)+1);
   for(let i=0;i<Math.max(0,n);i++){const [o,hi,lo,c]=C[i];const x=70+i*36;const col=c>=o?'#3e9a5a':'#e5484d';
-    const age=Math.min(1,(t-0.15-i*.065)/.12);const y1=Math.min(sy(o),sy(c)),y2=Math.max(sy(o),sy(c));const mid=(y1+y2)/2;
+    const age=Math.min(1,(t-0.15-i*SP)/.12);const y1=Math.min(sy(o),sy(c)),y2=Math.max(sy(o),sy(c));const mid=(y1+y2)/2;
     const hh=Math.max(y2-y1,4)*age;
     h+=`<line x1="${x}" x2="${x}" y1="${mid-(mid-sy(hi))*age}" y2="${mid+(sy(lo)-mid)*age}" stroke="${col}" stroke-width="4" opacity=".9"/>`;
     h+=`<rect x="${x-12}" y="${mid-hh/2}" width="24" height="${hh}" rx="3" fill="${col}"/>`;}
@@ -122,19 +126,20 @@ function render(t){
   // brand pill
   show($('brand'),t,0.05,null,{dy:-30});
   // Scene A 0..2.0
-  const aOut=1.98;
+  const aOut=aOutG;
   show($('a1'),t,T(0)-.05,aOut,{base:'scaleX(.84)'});
-  show($('a2'),t,T(1)-.05,aOut,{base:'scaleX(.84)'});
-  show($('a3'),t,T(2)-.05,aOut,{base:'scaleX(.84)'});
+  show($('a2'),t,T('торговать')-.05,aOut,{base:'scaleX(.84)'});
+  show($('a3'),t,T('или')-.05,aOut,{base:'scaleX(.84)'});
+  show($('a4'),t,T('навыки')-.05,aOut,{base:'scaleX(.84)'});
   const chartVis=t<aOut?1:Math.max(0,1-(t-aOut)/.25);
   drawChart(Math.min(t,aOut),chartVis);
   // Scene B 2.05..4.6
-  const bIn=2.05,bOut=4.62;
-  show($('b1'),t,Math.max(bIn,T(3)-.05),bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
-  show($('b2'),t,T(5)-.08,bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
-  show($('b3'),t,T(7)-.05,bOut,{s0:.6,dy:0,ex:-200,ey:0,dur:.28});
+  const bIn=aOut+.07,bOut=T('пришлю')-.32;
+  show($('b1'),t,Math.max(bIn,T('напиши')-.05),bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
+  show($('b2'),t,T('комментариях')-.08,bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
+  show($('b3'),t,T('обучение')-.05,bOut,{s0:.6,dy:0,ex:-200,ey:0,dur:.28});
   show($('bc'),t,bIn+.05,bOut,{dy:160,ex:-200,ey:0,dur:.4});
-  const ts=T(7),te=W[7][2]-.25; const word='обучение';
+  const ts=T('обучение'),te=E('обучение')-.25; const word='обучение';
   const k=Math.max(0,Math.min(word.length,Math.floor((t-ts)/((te-ts-.1)/word.length))));
   $('typed').textContent=t>=ts?word.slice(0,k):''; $('ph').style.opacity=t>=ts?0:1;
   $('caret').style.opacity=(Math.floor(t*3)%2===0||t>ts&&t<te)?1:0;
@@ -143,15 +148,15 @@ function render(t){
   if(t>=sent){$('typed').textContent='';$('ph').style.opacity=1;}
   const pp=ease((t-sent)/.3); $('posted').style.opacity=pp; $('posted').style.transform=`translateY(${(1-pp)*40}px)`;
   // Scene C 4.6..8.15
-  const cIn=4.68,cOut=8.12;
+  const cIn=bOut+.06,cOut=T('добавлю')-.26;
   show($('c0'),t,cIn+.05,cOut,{dy:60});
-  const cnt=t<T(12)?0:Math.min(13,Math.round(13*ease((t-T(12))/(W[12][2]-T(12)))));
-  $('c1').textContent=cnt; show($('c1'),t,T(12)-.25,cOut,{s0:.7,dy:30});
-  const pop=t>W[12][2]&&t<W[12][2]+.25?1+.08*Math.sin((t-W[12][2])/.25*Math.PI):1;
+  const cnt=t<T('13')?0:Math.min(13,Math.round(13*ease((t-T('13'))/(E('13')-T('13')))));
+  $('c1').textContent=cnt; show($('c1'),t,T('13')-.25,cOut,{s0:.7,dy:30});
+  const pop=t>E('13')&&t<E('13')+.25?1+.08*Math.sin((t-E('13'))/.25*Math.PI):1;
   $('c1').style.transform+=` scale(${pop})`;
-  show($('c2'),t,T(13)-.05,cOut,{base:'scaleX(.9)'});
-  show($('c3'),t,T(14)-.05,cOut,{base:'scaleX(.9)'});
-  show($('c4'),t,T(16)-.05,cOut,{s0:.5,dy:0,dur:.25});
+  show($('c2'),t,T('авторских')-.05,cOut,{base:'scaleX(.9)'});
+  show($('c3'),t,T('видеоуроков')-.05,cOut,{base:'scaleX(.9)'});
+  show($('c4'),t,T('трейдингу')-.05,cOut,{s0:.5,dy:0,dur:.25});
   for(let i=0;i<13;i++){const el=$('t'+i);const c=i%4,r=Math.floor(i/4);el.style.top=(1080+r*0)+'px';
     // grid 4 cols x 4 rows but compact: place in 2 rows region? use rows
   }
@@ -161,16 +166,16 @@ function render(t){
   for(let i=0;i<13;i++){const el=$('t'+i);const r=i<7?0:1,c=i<7?i:i-7;
     el.style.width='112px';el.style.height='112px';el.style.left=(60+c*122+(r?61:0))+'px';el.style.top=(1100+r*122)+'px';
     el.querySelector('.n').textContent=String(i+1).padStart(2,'0');
-    show(el,t,T(14)+i*.07,cOut,{s0:.4,dy:20,dur:.22});}
+    show(el,t,T('видеоуроков')+i*.07,cOut,{s0:.4,dy:20,dur:.22});}
   // Scene D 8.15..9.95
-  const dIn=8.15,dOut=10.0;
-  show($('d1'),t,Math.max(dIn,T(17)-.05),dOut,{dx:120,dy:0,base:'scaleX(.78)'});
-  show($('d2'),t,T(20)-.1,dOut,{dx:120,dy:0,base:'scaleX(.78)'});
+  const dIn=cOut+.03,dOut=E('сообщества')-.06;
+  show($('d1'),t,Math.max(dIn,T(I('и',1))-.05),dOut,{dx:120,dy:0,base:'scaleX(.78)'});
+  show($('d2'),t,T('чат')-.1,dOut,{dx:120,dy:0,base:'scaleX(.78)'});
   show($('dc'),t,dIn+.05,dOut,{dy:180,dur:.4});
-  const sp=ease((t-T(20))/.3); $('sys').style.opacity=sp; $('sys').style.transform=`scale(${.8+.2*sp})`;
-  const yp=ease((t-T(21)-.3)/.3); $('you').style.opacity=yp; $('you').style.transform=`translateY(${(1-yp)*40}px)`;
+  const sp=ease((t-T('чат'))/.3); $('sys').style.opacity=sp; $('sys').style.transform=`scale(${.8+.2*sp})`;
+  const yp=ease((t-T('сообщества')-.3)/.3); $('you').style.opacity=yp; $('you').style.transform=`translateY(${(1-yp)*40}px)`;
   // Final 10.0..end
-  const fIn=10.02;
+  const fIn=dOut+.02;
   show($('f1'),t,fIn,null,{base:'scaleX(.86)'});
   show($('f2'),t,fIn+.12,null,{s0:.6,dy:0,dur:.3});
   show($('f3'),t,fIn+.25,null,{});
