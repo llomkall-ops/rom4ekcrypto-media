@@ -179,7 +179,7 @@ cs=[]; p=1000; x=600
 for i in range(21):
     o=p; c=o-random.uniform(-14,40); p=c
     hi=min(o,c)-random.uniform(6,18); lo=max(o,c)+random.uniform(6,18)
-    col="#c62a2f" if c<o else "#141414"
+    col="#141414" if c<o else "#c62a2f"
     xx=x+i*20
     cs.append(f"<line x1='{xx}' y1='{hi}' x2='{xx}' y2='{lo}' stroke='{col}' stroke-width='2.5'/><rect x='{xx-6.5}' y='{min(o,c)}' width='13' height='{max(abs(o-c),3)}' fill='{col}'/>")
 icons = [("📊","АНАЛИТИКА<br>РЫНКА"),("🎯","РАЗБОРЫ<br>СДЕЛОК"),("🎓","ОБУЧЕНИЕ<br>ТРЕЙДИНГУ"),("🔖","СОХРАНИ<br>И ПРИМЕНЯЙ")]
