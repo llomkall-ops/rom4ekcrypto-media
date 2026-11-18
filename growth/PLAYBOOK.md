@@ -55,6 +55,15 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
    "биткоин прогноз", "биткоин новости", "как торговать", the indicator's name, etc.
 7. Morning digest must say *what it means for the reader today* (levels + scenarios), not only news.
 8. Evening education: one idea per post, practical ("как найти / где вход / где стоп"), schematic charts.
+9a. **Owner's reference covers (2026-11-18, @therea.ai screenshots) — copy the PRINCIPLES, never the text:**
+   - The headline is a complete thought you want to finish reading, not a term: paradox («Дейтрейдинг — единственная
+     работа, где самое сложное — ничего не делать»), concrete practical promise («Стратегия на 4-часовой свече» +
+     subline «Простая модель для внутридневной торговли» — most SENDS, 24), ratio («80% психология / 20% стратегия»),
+     pain («Что делать после крупного убытка»), list + curiosity («5 фаз рынка, о которых ты не знал»).
+   - ONE accent phrase only (the emotional or concrete part), everything else white.
+   - Minimalism: dark background, lots of empty space, ONE simple big visual (2 candles, one chart, a "?" , a person).
+     No clutter, no small text on the cover except one subline.
+   - Practical "save & try it" posts (a strategy / model / checklist) get the most sends → do them often.
 9. **Evening covers use proven hook formulas** (from @therea.ai, see below), rotate them:
    - stat claim: "90% трейдеров пропускают лучший вход", "80% психология — 20% стратегия";
    - numbered list: "5 фаз рынка, о которых ты не знал", "5 индикаторов для новичка";
