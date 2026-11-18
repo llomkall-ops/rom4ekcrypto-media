@@ -52,6 +52,15 @@ caption/hashtag rules below where they conflict.**
   `python3 tools/make_edu_reel.py <dir> videos/<date>-1800-<slug>.mp4`. Commit + push (not the _build folder).
 - Schedule: createScheduledPost, providers [{"network":"instagram"}], instagramData {"type":"REEL","showReelOnFeed":true},
   media = [raw URL of the mp4], autoPublish true. NO audioConfiguration (music is inside the video).
+- **YouTube Short (owner's rule 2026-11-18): the SAME mp4 is also published as a YouTube Short at the same time (18:00).**
+  Separate createScheduledPost: providers [{"network":"youtube"}], media = [same raw mp4 URL], youtubeData {"title": "<CAPS hook
+  word(s) + topic, ≤90 chars, ends with #shorts>", "type":"short", "privacy":"public", "madeForKids":false, "category":"EDUCATION",
+  "tags":[…filled to 500 chars by the TAGS rule in the «YouTube Shorts» section below: MUST tags + 3–5 topic tags + base pool…]}.
+  Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «Напиши в комментариях «обучение» — пришлю
+  13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»; «Полный разбор и аналитика каждый день — Telegram
+  @romchekcrypto»; «Instagram: @romchekcrypto»; «Не является финансовой рекомендацией.»; last line 3–5 hashtags
+  (#shorts #биткоин #альтсезон + ≤2 topic). No «Музыка:» line (music is our own ElevenLabs track). Check getScheduledPosts so
+  the Short is not scheduled twice.
 - Reel caption: title line with emoji + keywords, hook, 2 short paragraphs, «💾 Сохрани…», «📤 Перешли другу, который…»,
   «💬 Напиши «обучение» — пришлю 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества», «Подписывайся…»,
   Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #обзорбиткоина #альтсезон + 2).
