@@ -38,6 +38,8 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 2. **Cover = the reader's PAIN or trigger, never a term.** (Owner, 2026-11-18: «ИМБАЛАНС / FVG» has no trigger,
    nobody wants to read it.) Describe a painful situation the reader has lived: «Купил на импульсе, а цена вниз?»,
    «Стоп выбило — и цена пошла в твою сторону?», «Ликвидировали на шпильке?». The term goes to slide 2.
+   **SHORT: 2 lines, 2–4 words total, huge type** (owner: long headline is bad) — e.g. «КУПИЛ / НА ХАЯХ?» + one
+   short subline. Check the cover is centred and nothing overflows (wide nowrap lines need negative side margins).
    **Cover = hook, not a title.** 3–7 words, a concrete number or conflict, a curiosity gap
    ("Почему биткоин не растёт, хотя Nvidia взлетела?", "90% трейдеров ставят стоп сюда — и теряют").
    No jargon a beginner won't understand on the cover; jargon goes on slide 2.
