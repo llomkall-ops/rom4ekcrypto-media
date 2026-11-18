@@ -134,7 +134,10 @@ caption/hashtag rules below where they conflict.**
   phone safe zone (x 40–900, y 220–1490) so YouTube/Instagram UI never covers chart, camera or subtitles.
 - Store in shorts/YYYY-MM-DD/<n>-<slug>.mp4, push, then schedule in Metricool every 2 hours after the review goes out
   (first Short at the review time): YouTube Short + the same file as an Instagram Reel (showReelOnFeed true;
-  if an IG carousel is in the same slot, move the Reel by 30 min).
+  avoid the daily slots: never within ±60 min of the 10:00 carousel or the 18:00 education reel/Short on EITHER platform —
+  if a slot collides, shift that review Short to the next free time ≥60 min away; check getScheduledPosts first).
+- These 2 review Shorts are ON TOP of the daily 10:00 carousel and 18:00 education reel (owner reminded 2026-11-18);
+  quality first: each must be a complete, valuable thought with a strong hook in the first 2 s.
 - YouTube: SHORT CAPS title of 2–4 words (e.g. «ГДЕ Я КУПЛЮ БИТКОИН»), 2–3 SEO sentences with «обзор биткоина»/«альтсезон»,
   Telegram line, disclaimer, 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
   The «related video» link to the latest long video can't be set via Metricool — the owner sets it in YouTube Studio.
