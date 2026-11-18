@@ -71,7 +71,9 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 15. **Designed for sending**: every post has one line/slide that is natural to forward
     ("Отправь тому, кто торгует с плечом x50") — a checklist, a mistake, a myth vs fact.
 
-## Experiments queue (try one at a time, note the result in the weekly log)
+## Experiments queue
+- [x] RUNNING from 2026-11-19: brand accent red → lime (carousels + reels). Weekly review: compare reach/saves/follows
+      of lime posts vs the previous red weeks; report to the owner. (try one at a time, note the result in the weekly log)
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
 - [ ] 5 slides vs 7 slides.
 - [x] Posting times moved to audience peaks: 10:00 and 18:00 (owner approved 2026-11-18). Compare reach vs the 09:00/19:00 plan in the next weekly review.

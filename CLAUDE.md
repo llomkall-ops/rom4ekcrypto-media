@@ -26,15 +26,18 @@ caption/hashtag rules below where they conflict.**
     Before choosing a topic list `posts/*-1800-*` and `posts/*-1900-*`; don't repeat a topic from the last 30 days.
 - Before scheduling, check getScheduledPosts for that slot so a post is never scheduled twice.
 
-## Visual style (approved by the owner)
+## Visual style (approved by the owner; accent changed to LIME on 2026-11-18 — owner finds red off-putting)
+- ACCENT COLORS: dark slides → lime #c6f432 for accent words/numbers; cream slides → green #4a8a00 for accent
+  text and lime #c6f432 for plaques/labels/highlights (text on lime = #141414). Red #c62a2f ONLY for negative
+  meaning (falling candles, losses, "ошибка", "стоп", "не делай так") — class `.neg` in the reference builder.
 - Format: Instagram carousel, 4:5, 1080×1350, usually 5–7 slides. Counter "N/total" top-right.
 - **Slide 1 (cover):** dark background (#1b1b1b), huge full-width intriguing headline in heavy condensed
-  uppercase (Inter Display Black, scaleX .8), white + red (#d03a3e) words; a short subtitle line;
+  uppercase (Inter Display Black, scaleX .8), white + lime (#c6f432) words; a short subtitle line;
   a candlestick chart (green/red candles, optional blue MA line) in the lower half; a pill tag top-left
   that makes the crypto topic obvious ("₿ Разбор биткоина", "Ξ Эфириум", "Новости крипты" …);
   "@romchekcrypto" bottom-left, "Листай →" bottom-right.
 - **Middle slides:** light cream background (#f6f1eb), pill tag top-left ("База 🧠", "История 📜",
-  "Шпаргалка ✅", "Сделка 🎯" …), big bold headline black + red, infographic content: cards, timelines,
+  "Шпаргалка ✅", "Сделка 🎯" …), big bold headline black + green (#4a8a00), infographic content: cards, timelines,
   tables, checklists, schematic candle charts. End cheat-sheet slides with "Сохрани это."
 - **Last slide — ALWAYS:** "ВСТУПАЙ В ТГ-КАНАЛ" CTA with @romchekcrypto and "ССЫЛКА В ПРОФИЛЕ",
   four round icons row, rising candle chart (copy slide 5 from the example as is).
