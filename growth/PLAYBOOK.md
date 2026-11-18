@@ -63,6 +63,9 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
    - ONE accent phrase only (the emotional or concrete part), everything else white.
    - Minimalism: dark background, lots of empty space, ONE simple big visual (2 candles, one chart, a "?" , a person).
      No clutter, no small text on the cover except one subline.
+   - APPROVED by the owner (2026-11-18): posts/2026-11-18-1800-fvg-trade-setup-btc/slide_1.jpg — «СТРАТЕГИЯ ВХОДА
+     ПОСЛЕ ИМПУЛЬСА» + subline, left-aligned 128px uppercase, one lime phrase, one big simple diagram, no tag pill.
+     Template: tools/cover_minimal.html (replace /*T*/, /*SUB*/, positions; draw a correct schematic for the topic).
    - Practical "save & try it" posts (a strategy / model / checklist) get the most sends → do them often.
 9. **Evening covers use proven hook formulas** (from @therea.ai, see below), rotate them:
    - stat claim: "90% трейдеров пропускают лучший вход", "80% психология — 20% стратегия";
