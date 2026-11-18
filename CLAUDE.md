@@ -14,6 +14,14 @@ Only post images go here. Nothing else.
   Run: `python3 tools/example_carousel_build.py <out_dir>`.
 - `posts/2026-10-10-btc-ma50w/` — approved reference carousel. Match its look.
 
+## Schedule (owner's rule since 2026-11-18)
+- Two Instagram carousels every day, published automatically (no review by the owner):
+  - **09:00 MSK** — crypto market news digest (folder `posts/YYYY-MM-DD-0900-<slug>`).
+  - **19:00 MSK** — trading education (folder `posts/YYYY-MM-DD-1900-<slug>`): imbalance/FVG, gaps, order blocks,
+    trend break (BOS/CHoCH), support/resistance lines, breakouts, liquidation maps, RSI and other indicators, etc.
+    Before choosing a topic list `posts/*-1800-*` and `posts/*-1900-*`; don't repeat a topic from the last 30 days.
+- Before scheduling, check getScheduledPosts for that slot so a post is never scheduled twice.
+
 ## Visual style (approved by the owner)
 - Format: Instagram carousel, 4:5, 1080×1350, usually 5–7 slides. Counter "N/total" top-right.
 - **Slide 1 (cover):** dark background (#1b1b1b), huge full-width intriguing headline in heavy condensed
