@@ -35,7 +35,10 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 ## Current rules
 1. **Hashtags: max 5** (Instagram limit since late 2025; extra ones hurt). Always #биткоин #обзорбиткоина
    #альтсезон + 2 by topic.
-2. **Cover = hook, not a title.** 3–7 words, a concrete number or conflict, a curiosity gap
+2. **Cover = the reader's PAIN or trigger, never a term.** (Owner, 2026-11-18: «ИМБАЛАНС / FVG» has no trigger,
+   nobody wants to read it.) Describe a painful situation the reader has lived: «Купил на импульсе, а цена вниз?»,
+   «Стоп выбило — и цена пошла в твою сторону?», «Ликвидировали на шпильке?». The term goes to slide 2.
+   **Cover = hook, not a title.** 3–7 words, a concrete number or conflict, a curiosity gap
    ("Почему биткоин не растёт, хотя Nvidia взлетела?", "90% трейдеров ставят стоп сюда — и теряют").
    No jargon a beginner won't understand on the cover; jargon goes on slide 2.
 3. **Slide 2 pays off the cover immediately** (the answer in one line), then details.
