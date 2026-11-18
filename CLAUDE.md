@@ -4,7 +4,10 @@ This repo hosts images for the Instagram account **@romchekcrypto** (crypto / tr
 Images are public via `https://raw.githubusercontent.com/llomkall-ops/rom4ekcrypto-media/main/<path>`
 and are passed by URL to Metricool, which publishes them to Instagram.
 
-Only post images go here. Nothing else.
+Only post images go here (plus the growth notes in `growth/`). Nothing else.
+
+**Before making any post, read `growth/PLAYBOOK.md` and apply its "Current rules" — they override the older
+caption/hashtag rules below where they conflict.**
 
 ## Layout
 - `posts/YYYY-MM-DD-HHMM-<slug>/slide_N.jpg` — one folder per carousel, JPG, 1080×1350.
@@ -41,10 +44,10 @@ Only post images go here. Nothing else.
 2. Line 2: intriguing hook/headline question
 3. 2–4 short paragraphs with the substance
 4. "Листай карусель 👉 …" line
-5. "💾 Сохрани…" and "💬 <question to the audience>"
+5. "💾 Сохрани…", "📤 Отправь другу, который…" and "💬 <easy question to the audience>"
 6. "Больше аналитики каждый день — в Telegram @romchekcrypto (ссылка в профиле)"
 7. "Не является финансовой рекомендацией."
-8. 8–12 Russian/English hashtags (#биткоин #криптовалюта #трейдинг #btc …)
+8. MAX 5 hashtags (Instagram limit): #биткоин #обзорбиткоина #альтсезон + 2 by topic
 
 ## Content rules
 - Topics: crypto market news (BTC, ETH, ETF flows, Fed, regulation, big players) and trading
