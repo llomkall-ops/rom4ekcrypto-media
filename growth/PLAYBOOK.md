@@ -37,8 +37,7 @@ moves proven ideas into "Current rules" and drops what didn't work.
 ## Experiments queue (try one at a time, note the result in the weekly log)
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
 - [ ] 5 slides vs 7 slides.
-- [ ] Morning post at 10:00 instead of 09:00 (needs owner's OK — schedule change).
-- [ ] Evening post at 18:00 instead of 19:00 (needs owner's OK).
+- [x] Posting times moved to audience peaks: 10:00 and 18:00 (owner approved 2026-11-18). Compare reach vs the 09:00/19:00 plan in the next weekly review.
 - [ ] Re-enable Reels from carousels (needs owner's OK — Reels are paused in CLAUDE.md).
 - [ ] Collab posts with a similar account (needs owner to agree a partner).
 
@@ -47,4 +46,4 @@ moves proven ideas into "Current rules" and drops what didn't work.
 formats, covers, hooks, posting frequency. Fill from research; owner can also add them in Metricool → Competitors.)
 
 ## Weekly log
-- 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5 starting with the 19:00 FVG post.
+- 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5; schedule set to 10:00 / 18:00 (FVG post moved to 18:00).
