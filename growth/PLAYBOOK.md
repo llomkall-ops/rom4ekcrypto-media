@@ -4,6 +4,23 @@ Read this before making ANY post (morning or evening). Apply every rule in "Curr
 The weekly analysis task updates this file: it adds a dated entry to "Weekly log",
 moves proven ideas into "Current rules" and drops what didn't work.
 
+## GOAL (owner, 2026-11-18)
+**≈100 new followers per week**, then move them to the Telegram channel. Until the goal is reached, every weekly
+review must change something (content, format, rules) — never "keep as is".
+KPIs tracked weekly: followers gained (IGEV43) − lost (IGEV44); follows per post (IGPO29); reach per post;
+sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower reach; saves per reach.
+
+## How Instagram recommends (checked 2026-11-18)
+- Ranking is per-reach: **sends per reach** (strongest for non-followers), **watch time / swipe-through**,
+  likes per reach (stronger for followers). Raw totals don't matter, rates do.
+- Only original content is recommended; aggregators and reposts are excluded. Our own designs are fine.
+  Reels must have no watermarks and no borders, 9:16, hook in the first 3 seconds, ≤3 min.
+- Reels reach ~2× more non-followers than other formats; carousels get ~2× more engagement per person reached.
+  → Reels bring new people, carousels convert and get saved. We need BOTH.
+- A skipped carousel can be shown again starting from slide 2 → slide 2 must work as a second cover.
+- Trial Reels (shown only to non-followers) need ≥1,000 followers — not available to us yet.
+- Search: keywords in profile name, bio and the first caption line make the account findable.
+
 ## Baseline (2026-11-18, Metricool, posts 2026-10-10 … 2026-11-15)
 - Followers: 48 → 70 in 5 weeks. New follows attributed to posts: 0.
 - Avg reach per carousel ≈ 15 people (≈ 20% of followers) → posts barely reach non-followers.
@@ -36,7 +53,8 @@ moves proven ideas into "Current rules" and drops what didn't work.
 9. **Evening covers use proven hook formulas** (from @therea.ai, see below), rotate them:
    - stat claim: "90% трейдеров пропускают лучший вход", "80% психология — 20% стратегия";
    - numbered list: "5 фаз рынка, о которых ты не знал", "5 индикаторов для новичка";
-   - first person: "Как я ищу сделки на 1ч и 5м", "Уже 8 лет я не нарушаю эти правила";
+   - first person: "Как я ищу сделки на 1ч и 5м", "5 правил, которые я не нарушаю" (never invent experience,
+     years or results about Ромчик — only general first-person framing);
    - pain / emotion: "Что делать после крупного убытка";
    - time promise: "Разберём за 60 секунд".
    The cover tells the BENEFIT or the PAIN, not the indicator's name ("RSI" alone is a weak cover).
@@ -44,6 +62,14 @@ moves proven ideas into "Current rules" and drops what didn't work.
     neutral textbook tone is what everyone else does.
 11. **Psychology, mistakes and stories perform** — at least 2 evening posts a week should be about trader psychology,
     typical mistakes, or a crypto story (e.g. "CZ продал квартиру ради биткоина в 2014") instead of a pure indicator lesson.
+
+12. **Slide 2 is a second cover**: its headline must hook on its own (Instagram re-serves carousels from slide 2).
+13. **Ask to FOLLOW, not only to join Telegram.** Cheat-sheet slide and caption get a follow line with a reason:
+    "Подпишись — каждый день в 10:00 разбор рынка, в 18:00 урок трейдинга". Telegram CTA stays on the last slide.
+14. **Recurring rubrics** give a reason to follow: evening posts are numbered "Урок #N" (continue the count in the
+    weekly log), morning posts keep a constant "Крипто-утро" tag.
+15. **Designed for sending**: every post has one line/slide that is natural to forward
+    ("Отправь тому, кто торгует с плечом x50") — a checklist, a mistake, a myth vs fact.
 
 ## Experiments queue (try one at a time, note the result in the weekly log)
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
@@ -74,4 +100,5 @@ formats, covers, hooks, posting frequency. Fill from research; owner can also ad
 
 ## Weekly log
 - 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5; schedule set to 10:00 / 18:00 (FVG post moved to 18:00).
+- 2026-11-18 — owner set the goal ≈100 followers/week; recommendation research added; rules 12–15 added; Урок #1 = FVG (18.11).
 - 2026-11-18 — owner named @therea.ai as competitor; analysed its grid; rules 9–11 added (hook formulas, first-person voice, psychology/stories).
