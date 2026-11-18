@@ -33,6 +33,17 @@ moves proven ideas into "Current rules" and drops what didn't work.
    "биткоин прогноз", "биткоин новости", "как торговать", the indicator's name, etc.
 7. Morning digest must say *what it means for the reader today* (levels + scenarios), not only news.
 8. Evening education: one idea per post, practical ("как найти / где вход / где стоп"), schematic charts.
+9. **Evening covers use proven hook formulas** (from @therea.ai, see below), rotate them:
+   - stat claim: "90% трейдеров пропускают лучший вход", "80% психология — 20% стратегия";
+   - numbered list: "5 фаз рынка, о которых ты не знал", "5 индикаторов для новичка";
+   - first person: "Как я ищу сделки на 1ч и 5м", "Уже 8 лет я не нарушаю эти правила";
+   - pain / emotion: "Что делать после крупного убытка";
+   - time promise: "Разберём за 60 секунд".
+   The cover tells the BENEFIT or the PAIN, not the indicator's name ("RSI" alone is a weak cover).
+10. **Write in Ромчик's first-person voice** ("я", "мой стоп", "как я делаю") — personality builds trust;
+    neutral textbook tone is what everyone else does.
+11. **Psychology, mistakes and stories perform** — at least 2 evening posts a week should be about trader psychology,
+    typical mistakes, or a crypto story (e.g. "CZ продал квартиру ради биткоина в 2014") instead of a pure indicator lesson.
 
 ## Experiments queue (try one at a time, note the result in the weekly log)
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
@@ -45,5 +56,22 @@ moves proven ideas into "Current rules" and drops what didn't work.
 (Weekly task: keep 5–10 Russian-language crypto/trading accounts here with what works for them —
 formats, covers, hooks, posting frequency. Fill from research; owner can also add them in Metricool → Competitors.)
 
+### @therea.ai — named by the owner as the main competitor (checked 2026-11-18)
+- 15.6K followers (we have ~70). Bio: "Трейдер со стажем 8+ лет", Telegram link, CTA "все прибыльные стратегии по ссылке".
+- Content is EVERGREEN education + psychology + stories; no daily news digests in the grid.
+- Mix of carousels and Reels; 2 of the 3 newest posts are Reels.
+- Covers: dark background, 3–6 lines of huge bold white text with ONE red accent phrase (same palette as ours),
+  sentence-case text covers or an emotional AI-style image (person, brain, Fibonacci board, money pile).
+  Almost no numbers/data on covers — the hook is the promise or the pain.
+- Recent cover hooks: "CZ продал квартиру ради биткоина в 2014 году"; "3 концепции, которые объясняют движение рынка";
+  "90% трейдеров пропускают лучший вход — OTE-зону"; "Стратегия на 4-часовой свече"; "80% психология / 20% стратегия";
+  "Что делать после крупного убытка в трейдинге"; "Проблема не во входе в сделку"; "5 фаз рынка, о которых ты не знал";
+  "Многие называют себя дейтрейдерами, но не могут объяснить… Нужно всего 60 секунд";
+  "Как я ищу сделки для быстрого результата: 1 час / 5 минут"; "5 индикаторов, которые стоит знать начинающему";
+  "Уже 10 лет я не нарушаю эти правила в трейдинге".
+- Takeaways for us: hooks about the reader's pain/benefit, numbered lists, first-person authority, psychology,
+  stories; Reels as a reach engine. Avoid copying their income promises ("прибыльные стратегии") — our rule forbids it.
+
 ## Weekly log
 - 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5; schedule set to 10:00 / 18:00 (FVG post moved to 18:00).
+- 2026-11-18 — owner named @therea.ai as competitor; analysed its grid; rules 9–11 added (hook formulas, first-person voice, psychology/stories).
