@@ -1,6 +1,7 @@
 # rom4ekcrypto-media — Instagram content pipeline
 
 This repo hosts images for the Instagram account **@romchekcrypto** (crypto / trading).
+The Telegram channel is called **«РОМЧЕК И КРИПТА»** (link @romchekcrypto) — never write «Ромчик Крипто» as the channel name.
 Images are public via `https://raw.githubusercontent.com/llomkall-ops/rom4ekcrypto-media/main/<path>`
 and are passed by URL to Metricool, which publishes them to Instagram.
 
