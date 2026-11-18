@@ -75,7 +75,8 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
 - [ ] 5 slides vs 7 slides.
 - [x] Posting times moved to audience peaks: 10:00 and 18:00 (owner approved 2026-11-18). Compare reach vs the 09:00/19:00 plan in the next weekly review.
-- [ ] Re-enable Reels from carousels (needs owner's OK — Reels are paused in CLAUDE.md).
+- [ ] Reels: owner decided (2026-11-18) to do them LATER in a different format (not from carousels). Don't propose
+      carousel-to-Reel again; until then squeeze maximum non-follower reach out of carousels (sends, slide-2 hook, follow CTA).
 - [ ] Collab posts with a similar account (needs owner to agree a partner).
 
 ## Competitors / reference accounts
