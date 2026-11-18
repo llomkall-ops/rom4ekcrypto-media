@@ -94,8 +94,7 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 - [ ] Cover style A/B: question cover vs. bold-claim cover (alternate for a week, compare reach/saves).
 - [ ] 5 slides vs 7 slides.
 - [x] Posting times moved to audience peaks: 10:00 and 18:00 (owner approved 2026-11-18). Compare reach vs the 09:00/19:00 plan in the next weekly review.
-- [ ] Reels: owner decided (2026-11-18) to do them LATER in a different format (not from carousels). Don't propose
-      carousel-to-Reel again; until then squeeze maximum non-follower reach out of carousels (sends, slide-2 hook, follow CTA).
+- [x] 2026-11-18: owner switched to 1 carousel + 1 reel a day: 10:00 news CAROUSEL, 18:00 education REEL (motion infographics, cloned voice, subtitles, >1 min). Weekly review: compare reel reach/non-follower reach/follows vs carousels.
 - [ ] Collab posts with a similar account (needs owner to agree a partner).
 
 ## Competitors / reference accounts
@@ -119,6 +118,7 @@ formats, covers, hooks, posting frequency. Fill from research; owner can also ad
   stories; Reels as a reach engine. Avoid copying their income promises ("прибыльные стратегии") — our rule forbids it.
 
 ## Weekly log
+- 2026-11-18 — first education reel (liquidity hunt, 1:07) at 18:00 instead of the FVG carousel; evening slot is now reels.
 - 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5; schedule set to 10:00 / 18:00 (FVG post moved to 18:00).
 - 2026-11-18 — owner set the goal ≈100 followers/week; recommendation research added; rules 12–15 added; Урок #1 = FVG (18.11).
 - 2026-11-18 — owner named @therea.ai as competitor; analysed its grid; rules 9–11 added (hook formulas, first-person voice, psychology/stories).

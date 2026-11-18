@@ -1,3 +1,5 @@
+> **Статус 2026-11-18: ОДОБРЕНО владельцем, рилсы — каждый день в 18:00. Рилс всегда длиннее 1 минуты. Пайплайн и правила — CLAUDE.md «Educational Reels», эталон reels/lessons/2026-11-18-liquidity-hunt, сборка tools/make_edu_reel.py.**
+
 # Reels format — motion-graphics infographic reels (owner's references, 2026-11-18)
 
 STATUS: not started. Do NOT make or schedule Reels until the owner says so.

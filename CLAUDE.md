@@ -18,13 +18,43 @@ caption/hashtag rules below where they conflict.**
   Run: `python3 tools/example_carousel_build.py <out_dir>`.
 - `posts/2026-10-10-btc-ma50w/` — approved reference carousel. Match its look.
 
-## Schedule (owner's rule since 2026-11-18; times moved to audience peaks the same day)
-- Two Instagram carousels every day, published automatically (no review by the owner):
-  - **10:00 MSK** — crypto market news digest (folder `posts/YYYY-MM-DD-1000-<slug>`).
-  - **18:00 MSK** — trading education (folder `posts/YYYY-MM-DD-1800-<slug>`): imbalance/FVG, gaps, order blocks,
-    trend break (BOS/CHoCH), support/resistance lines, breakouts, liquidation maps, RSI and other indicators, etc.
-    Before choosing a topic list `posts/*-1800-*` and `posts/*-1900-*`; don't repeat a topic from the last 30 days.
+## Schedule (owner's rule since 2026-11-18 evening: 1 carousel + 1 reel per day)
+- Published automatically (no review by the owner):
+  - **10:00 MSK** — crypto market news digest CAROUSEL (folder `posts/YYYY-MM-DD-1000-<slug>`).
+  - **18:00 MSK** — trading education REEL (see «Educational Reels» below; video `videos/YYYY-MM-DD-1800-<slug>.mp4`,
+    sources `reels/lessons/YYYY-MM-DD-<slug>/`): imbalance/FVG, gaps, order blocks, trend break (BOS/CHoCH),
+    support/resistance, breakouts, liquidity, liquidation maps, RSI and other indicators, risk management, psychology…
+    Before choosing a topic list `reels/lessons/*`, `posts/*-1800-*` and `posts/*-1900-*`; don't repeat a topic from the last 30 days.
 - Before scheduling, check getScheduledPosts for that slot so a post is never scheduled twice.
+
+## Educational Reels — 18:00 (APPROVED by the owner 2026-11-18; reference: reels/lessons/2026-11-18-liquidity-hunt)
+- **LENGTH: the whole reel MUST be longer than 1 minute** (owner's rule — such reels get more views): lesson voice
+  ~50–55 s (~120–135 words) + standard outro 13.3 s ≈ 63–70 s. make_edu_reel.py warns if < 61 s — then extend the script.
+- Motion infographics (lime #c6f432 on dark #141414, red #e5484d only for negative), 1080×1920, 30 fps, everything inside
+  the safe zone (x 60–1010, headline from y≈360, subtitles at y≈1385). Word-by-word subtitles (current word on lime). Copy
+  `reels/lessons/2026-11-18-liquidity-hunt/page.html`, keep the engine (W, GROUPS, I/T/E, show, candles, line, subtitles),
+  rewrite the scenes. T('word') / T('two words', occurrence) finds the time of a spoken word.
+- Script structure: 1) hook = pain of the viewer in 1 sentence (+ «Знакомо?»); 2) the twist/name of the concept;
+  3) how it works on a candle schematic (animated); 4) consequence for the viewer; 5) «Как защититься / Как использовать?»
+  with 3 numbered tips (#1/#2/#3 header with progress dots), each with its own animated schematic; 6) «Сохрани… и перешли
+  другу, который…». Then the standard outro (appended automatically: «напиши „обучение“ — 13 видеоуроков + чат»).
+  No promises of income, no invented experience/results of Ромчик, schematic charts have no price numbers.
+- Voice: ElevenLabs creative_generate_speech, model eleven_v4, voice_id dePhkRzAG2xmWcT92bn3 («romchek»),
+  generations_count 1, prompt starts with «[confident, energetic] ». Then creative_transcribe_audio (eleven_scribe_v1,
+  connect_from = the speech node, same flow). Download content_url (voice.mp3) and words_download_url (words.json) with curl
+  (elevenlabsusercontent.com is allowed). Never re-run a generation to "retry" — it charges again.
+- SFX: reels/sfx/* (owner's sounds) — quiet (volume 0.08–0.15), only at scene changes and when a plaque/marker appears
+  (whoosh/swipe on scene change, pop on plaques, ding on ✓, impact_short on «стоп»/key number). Music: reels/music/edu_bg_01.mp3
+  (looped, −18 dB under voice) — added by the script.
+- Build: put page.html, voice.mp3, words.json, phrases.json (subtitle groups 1–4 words, covering every word in order),
+  sfx.json ([[t, "pop/pop_soft", 0.14], …], t = word start + 0.25) into reels/lessons/<date>-<slug>/; check stills with
+  `python3 tools/make_edu_reel.py <dir> x --stills 1.0,5.0,…` (Read them! fix overflowing/overlapping text), then
+  `python3 tools/make_edu_reel.py <dir> videos/<date>-1800-<slug>.mp4`. Commit + push (not the _build folder).
+- Schedule: createScheduledPost, providers [{"network":"instagram"}], instagramData {"type":"REEL","showReelOnFeed":true},
+  media = [raw URL of the mp4], autoPublish true. NO audioConfiguration (music is inside the video).
+- Reel caption: title line with emoji + keywords, hook, 2 short paragraphs, «💾 Сохрани…», «📤 Перешли другу, который…»,
+  «💬 Напиши «обучение» — пришлю 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества», «Подписывайся…»,
+  Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #обзорбиткоина #альтсезон + 2).
 
 ## Visual style (approved by the owner; accent changed to LIME on 2026-11-18 — owner finds red off-putting)
 - ACCENT COLORS: dark slides → lime #c6f432 for accent words/numbers; cream slides → NO green text (owner dislikes it):
@@ -66,7 +96,7 @@ caption/hashtag rules below where they conflict.**
 - Schedule with createScheduledPost: providers [{"network":"instagram"}], instagramData {"type":"POST"},
   autoPublish true, media = list of raw.githubusercontent URLs in slide order.
 
-## Reels — ⏸ PAUSED by the owner on 2026-10-13 (do not schedule Instagram Reels until he re-enables). Format (added 2026-10-12) APPROVED by the owner: animated cover + slides 2..N at 4.5 s; base for all Reels and Shorts
+## OLD carousel→Reel conversion — ⏸ PAUSED since 2026-10-13 (replaced by «Educational Reels» above; do not use). Format (added 2026-10-12) APPROVED by the owner: animated cover + slides 2..N at 4.5 s; base for all Reels and Shorts
 - Every carousel also becomes an Instagram Reel, published 2 hours after the carousel (10:00 → 12:00, 18:00 → 20:00).
 - Build (2 steps):
   1. Animated cover (hook) with the SAME text as carousel slide 1:
