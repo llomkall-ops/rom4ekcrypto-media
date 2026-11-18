@@ -2,6 +2,16 @@
 
 STATUS: not started. Do NOT make or schedule Reels until the owner says so.
 
+## Standard outro (made 2026-11-18, v1 — awaiting owner's feedback)
+- `reels/outro/romchek_outro.mp4` (11.4 s, 1080×1920, voice + subtitles + SFX, NO music — the reel's music runs under it
+  at final assembly so it stays continuous). Source: `reels/outro/outro.html` (window.render(t)), frames via
+  `tools/render_frames.py`, voice = ElevenLabs "romchek", text: «Хочешь научиться торговать? Напиши в комментариях
+  слово „обучение“ — и я пришлю тебе 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»
+- Append it to the end of EVERY reel.
+- Getting ElevenLabs audio out: container and Mac shell can't reach elevenlabsusercontent.com; working path =
+  open the content_url in the built-in browser on the owner's Mac, fetch → blob → <a download> into ~/Downloads,
+  then device_stage_files.
+
 ## Owner's decisions
 - Topic: crypto / trading only. Vertical 1080×1920, ~15–45 s.
 - Voiceover: owner's ElevenLabs voice clone "romchek" (voice_id dePhkRzAG2xmWcT92bn3) via the ElevenLabs connector.

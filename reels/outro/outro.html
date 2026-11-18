@@ -1,0 +1,187 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121212}
+body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f4efe7;position:relative}
+#bg{position:absolute;inset:0;background:
+  radial-gradient(900px 700px at 0% 0%,rgba(208,58,62,.30),transparent 60%),
+  radial-gradient(900px 800px at 100% 100%,rgba(62,154,90,.20),transparent 60%),#141414}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:90px 90px}
+.a{position:absolute;will-change:transform,opacity,filter}
+.H{font-family:'Inter Display','Inter';font-weight:900;text-transform:uppercase;letter-spacing:-3px;line-height:.95;transform-origin:left center;white-space:nowrap}
+.r{color:#e5484d}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:40px;padding:12px 30px;font-weight:800;font-size:34px;background:#232323;border:2px solid #3a3a3a;color:#efe9df}
+.card{background:#f6f1eb;color:#161616;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+#sub{position:absolute;left:60px;width:840px;top:1385px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:62px;line-height:1.12;text-transform:uppercase;letter-spacing:-1px}
+#sub span{display:inline-block;padding:2px 12px;margin:4px 3px;border-radius:14px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sub span.on{background:#e5484d;text-shadow:none}
+#sub span.off{opacity:.55}
+.tile{position:absolute;width:196px;height:128px;border-radius:24px;background:#1f1f1f;border:2px solid #3a3a3a;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px}
+.tile .pl{width:0;height:0;border-left:34px solid #e5484d;border-top:21px solid transparent;border-bottom:21px solid transparent;margin-left:8px}
+.tile .n{font-weight:800;font-size:22px;color:#bdb6aa;letter-spacing:1px}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<svg id="chart" class="a" style="left:0;top:930px" width="1080" height="420"></svg>
+
+<!-- persistent brand -->
+<div id="brand" class="a pill" style="left:60px;top:250px">🎓 Обучение трейдингу</div>
+
+<!-- Scene A -->
+<div id="a1" class="a H" style="left:60px;top:390px;font-size:178px;transform:scaleX(.84)">Хочешь</div>
+<div id="a2" class="a H" style="left:60px;top:565px;font-size:178px">Научиться</div>
+<div id="a3" class="a H r" style="left:60px;top:740px;font-size:178px">Торговать?</div>
+
+<!-- Scene B -->
+<div id="b1" class="a H" style="left:60px;top:370px;font-size:118px">Напиши в</div>
+<div id="b2" class="a H r" style="left:60px;top:490px;font-size:118px">комментариях</div>
+<div id="b3" class="a" style="left:60px;top:650px;background:#e5484d;color:#fff;border-radius:28px;padding:14px 40px;font-family:'Inter Display';font-weight:900;font-size:96px;letter-spacing:-2px">«ОБУЧЕНИЕ»</div>
+<div id="bc" class="a card" style="left:60px;top:850px;width:860px;height:420px;padding:36px 40px">
+  <div style="font-weight:800;font-size:34px;text-align:center;color:#555">Комментарии</div>
+  <div style="height:2px;background:#e3ddd3;margin:24px 0 28px"></div>
+  <div id="posted" style="display:flex;gap:22px;align-items:flex-start;opacity:0">
+    <div style="width:74px;height:74px;border-radius:50%;background:#2b2b2b;color:#fff;font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center;flex:none">Ты</div>
+    <div><div style="font-size:26px;color:#777;font-weight:700">ты · только что</div><div style="font-size:42px;font-weight:800">обучение</div></div>
+    <div style="margin-left:auto;font-size:38px;color:#e5484d">♥</div>
+  </div>
+  <div id="inrow" style="position:absolute;left:40px;right:40px;bottom:36px;height:96px;border-radius:48px;background:#fff;border:3px solid #e3ddd3;display:flex;align-items:center;padding:0 16px 0 34px;gap:12px">
+    <div id="typed" style="font-size:40px;font-weight:700;color:#161616"></div><div id="caret" style="width:4px;height:46px;background:#e5484d"></div>
+    <div id="ph" style="font-size:36px;color:#aaa;position:absolute;left:34px">Добавьте комментарий…</div>
+    <div id="send" style="margin-left:auto;width:66px;height:66px;border-radius:50%;background:#cfc8bd;color:#fff;font-size:34px;display:flex;align-items:center;justify-content:center">↑</div>
+  </div>
+</div>
+
+<!-- Scene C -->
+<div id="c0" class="a H" style="left:60px;top:370px;font-size:84px">Я пришлю тебе</div>
+<div id="c1" class="a" style="left:40px;top:430px;font-family:'Inter Display';font-weight:900;font-size:420px;letter-spacing:-20px;color:#e5484d;line-height:1">0</div>
+<div id="c2" class="a H" style="left:60px;top:850px;font-size:92px">авторских</div>
+<div id="c3" class="a H r" style="left:60px;top:945px;font-size:92px">видеоуроков</div>
+<div id="c4" class="a pill" style="left:620px;top:600px;font-size:40px;background:#3e9a5a;border-color:#3e9a5a;color:#fff">по трейдингу</div>
+<div id="tiles"></div>
+
+<!-- Scene D -->
+<div id="d1" class="a H" style="left:60px;top:370px;font-size:118px">и добавлю в</div>
+<div id="d2" class="a H r" style="left:60px;top:490px;font-size:118px">чат сообщества</div>
+<div id="dc" class="a card" style="left:60px;top:690px;width:860px;height:560px;overflow:hidden">
+  <div style="display:flex;align-items:center;gap:24px;padding:30px 36px;background:#ebe4d9">
+    <div style="width:96px;height:96px;border-radius:50%;background:#1b1b1b;display:flex;align-items:center;justify-content:center">
+      <svg width="56" height="56" viewBox="0 0 56 56"><rect x="8" y="22" width="10" height="22" fill="#3e9a5a"/><line x1="13" y1="14" x2="13" y2="50" stroke="#3e9a5a" stroke-width="3"/><rect x="24" y="14" width="10" height="20" fill="#e5484d"/><line x1="29" y1="8" x2="29" y2="40" stroke="#e5484d" stroke-width="3"/><rect x="40" y="8" width="10" height="26" fill="#3e9a5a"/><line x1="45" y1="4" x2="45" y2="42" stroke="#3e9a5a" stroke-width="3"/></svg>
+    </div>
+    <div><div style="font-weight:900;font-size:42px">Ромчик Крипто</div><div style="font-size:28px;color:#777;font-weight:600">чат сообщества</div></div>
+    <div style="margin-left:auto;width:64px;height:64px;border-radius:50%;background:#2aabee;display:flex;align-items:center;justify-content:center">
+      <svg width="34" height="34" viewBox="0 0 24 24"><path fill="#fff" d="M21.9 3.4 2.6 10.9c-1 .4-1 1.8 0 2.1l4.8 1.6 1.9 5.9c.2.7 1.1.9 1.6.4l2.7-2.5 4.9 3.6c.6.4 1.4.1 1.6-.6l3.3-16.2c.2-1-.7-1.7-1.5-1.3z"/></svg>
+    </div>
+  </div>
+  <div id="sys" style="margin:60px auto 0;width:max-content;background:#ded6c9;border-radius:30px;padding:14px 34px;font-size:32px;font-weight:700;color:#444;opacity:0">Ты присоединился к чату 🎉</div>
+  <div id="you" style="position:absolute;right:36px;bottom:44px;background:#e5484d;color:#fff;border-radius:34px 34px 8px 34px;padding:22px 34px;font-size:38px;font-weight:700;opacity:0">Привет! 👋</div>
+</div>
+
+<!-- Final CTA -->
+<div id="f1" class="a H" style="left:60px;top:380px;font-size:150px">Пиши</div>
+<div id="f2" class="a" style="left:60px;top:545px;background:#e5484d;color:#fff;border-radius:34px;padding:16px 44px;font-family:'Inter Display';font-weight:900;font-size:120px;letter-spacing:-3px">«ОБУЧЕНИЕ»</div>
+<div id="f3" class="a H" style="left:60px;top:735px;font-size:80px;color:#bdb6aa">в комментариях</div>
+<svg id="arrow" class="a" style="left:620px;top:900px" width="360" height="460" viewBox="0 0 360 460"><path d="M40 20 C 60 220, 200 300, 300 400" fill="none" stroke="#e5484d" stroke-width="16" stroke-linecap="round" stroke-dasharray="620" id="ap"/><path d="M250 410 L305 405 L300 350" fill="none" stroke="#e5484d" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" id="ah"/></svg>
+<div id="f4" class="a" style="left:60px;top:1130px;font-weight:800;font-size:40px;color:#8f897f">@romchekcrypto</div>
+
+<div id="sub"></div>
+
+<script>
+const VO=0.3; // voice offset in video
+const W=[["Хочешь",0,.4],["научиться",.44,.88],["торговать?",.96,1.64],["Напиши",1.84,2.16],["в",2.2,2.24],["комментариях",2.28,2.8],["слово",2.88,3.2],["«обучение»",3.28,4.16],["и",4.4,4.44],["я",4.48,4.56],["пришлю",4.64,4.96],["тебе",5.0,5.2],["13",5.28,5.84],["авторских",5.92,6.4],["видеоуроков",6.48,7.12],["по",7.16,7.2],["трейдингу",7.28,7.84],["и",7.92,8.0],["добавлю",8.08,8.48],["в",8.52,8.56],["чат",8.64,8.8],["сообщества",8.88,9.76]].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=[[0,3],[3,6],[6,8],[8,12],[12,15],[15,17],[17,21],[21,22]];
+const T=w=>W[w][1];
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const $=id=>document.getElementById(id);
+// element enter/exit: from offset (dx,dy), blur in; exit to (ex,ey)
+function show(el,t,tin,tout,o={}){
+  const dur=o.dur||.32, dy=o.dy??60, dx=o.dx??0, s0=o.s0??1, base=o.base||'';
+  let p=ease((t-tin)/dur), q=tout==null?0:easeIO((t-tout)/(o.odur||.25));
+  const op=p*(1-q), x=dx*(1-p)+(o.ex||0)*q, y=dy*(1-p)+(o.ey??-80)*q, s=s0+(1-s0)*p;
+  const bl=(1-p)*14+q*14;
+  el.style.opacity=op; el.style.transform=`translate(${x}px,${y}px) scale(${s}) ${base}`; el.style.filter=bl>.3?`blur(${bl}px)`:'none';
+}
+// chart candles
+const C=[];{let pr=200,seed=3;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
+ for(let i=0;i<26;i++){const d=(i<10?-2:i<14?1:6)+ (rnd()-.4)*12;const o=pr,c=pr+d;C.push([o,Math.max(o,c)+rnd()*8+2,Math.min(o,c)-rnd()*8-2,c]);pr=c;}}
+function drawChart(t,vis){
+  const svg=$('chart'); const vals=C.flat(); const mn=Math.min(...vals),mx=Math.max(...vals);
+  const sy=v=>20+(mx-v)/(mx-mn)*380; let h='';
+  const n=Math.min(C.length,Math.floor((t-0.15)/0.065)+1);
+  for(let i=0;i<Math.max(0,n);i++){const [o,hi,lo,c]=C[i];const x=70+i*36;const col=c>=o?'#3e9a5a':'#e5484d';
+    const age=Math.min(1,(t-0.15-i*.065)/.12);const y1=Math.min(sy(o),sy(c)),y2=Math.max(sy(o),sy(c));const mid=(y1+y2)/2;
+    const hh=Math.max(y2-y1,4)*age;
+    h+=`<line x1="${x}" x2="${x}" y1="${mid-(mid-sy(hi))*age}" y2="${mid+(sy(lo)-mid)*age}" stroke="${col}" stroke-width="4" opacity=".9"/>`;
+    h+=`<rect x="${x-12}" y="${mid-hh/2}" width="24" height="${hh}" rx="3" fill="${col}"/>`;}
+  svg.innerHTML=h; svg.style.opacity=vis;
+}
+// tiles
+(function(){let h='';for(let i=0;i<13;i++){const c=i%4,r=Math.floor(i/4);h+=`<div class="tile a" id="t${i}" style="left:${60+c*218}px;top:${1050-0+r*0}px"><div class="pl"></div><div class="n">УРОК ${String(i+1).padStart(2,'0')}</div></div>`}$('tiles').innerHTML=h;})();
+
+function render(t){
+  // brand pill
+  show($('brand'),t,0.05,null,{dy:-30});
+  // Scene A 0..2.0
+  const aOut=1.98;
+  show($('a1'),t,T(0)-.05,aOut,{base:'scaleX(.84)'});
+  show($('a2'),t,T(1)-.05,aOut,{base:'scaleX(.84)'});
+  show($('a3'),t,T(2)-.05,aOut,{base:'scaleX(.84)'});
+  const chartVis=t<aOut?1:Math.max(0,1-(t-aOut)/.25);
+  drawChart(Math.min(t,aOut),chartVis);
+  // Scene B 2.05..4.6
+  const bIn=2.05,bOut=4.62;
+  show($('b1'),t,Math.max(bIn,T(3)-.05),bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
+  show($('b2'),t,T(5)-.08,bOut,{dx:120,dy:0,ex:-200,ey:0,base:'scaleX(.78)'});
+  show($('b3'),t,T(7)-.05,bOut,{s0:.6,dy:0,ex:-200,ey:0,dur:.28});
+  show($('bc'),t,bIn+.05,bOut,{dy:160,ex:-200,ey:0,dur:.4});
+  const ts=T(7),te=W[7][2]-.25; const word='обучение';
+  const k=Math.max(0,Math.min(word.length,Math.floor((t-ts)/((te-ts-.1)/word.length))));
+  $('typed').textContent=t>=ts?word.slice(0,k):''; $('ph').style.opacity=t>=ts?0:1;
+  $('caret').style.opacity=(Math.floor(t*3)%2===0||t>ts&&t<te)?1:0;
+  const sent=te+.08; $('send').style.background=t>=te-.1?'#e5484d':'#cfc8bd';
+  $('send').style.transform=`scale(${t>=sent&&t<sent+.15?0.85:1})`;
+  if(t>=sent){$('typed').textContent='';$('ph').style.opacity=1;}
+  const pp=ease((t-sent)/.3); $('posted').style.opacity=pp; $('posted').style.transform=`translateY(${(1-pp)*40}px)`;
+  // Scene C 4.6..8.15
+  const cIn=4.68,cOut=8.12;
+  show($('c0'),t,cIn+.05,cOut,{dy:60});
+  const cnt=t<T(12)?0:Math.min(13,Math.round(13*ease((t-T(12))/(W[12][2]-T(12)))));
+  $('c1').textContent=cnt; show($('c1'),t,T(12)-.25,cOut,{s0:.7,dy:30});
+  const pop=t>W[12][2]&&t<W[12][2]+.25?1+.08*Math.sin((t-W[12][2])/.25*Math.PI):1;
+  $('c1').style.transform+=` scale(${pop})`;
+  show($('c2'),t,T(13)-.05,cOut,{base:'scaleX(.9)'});
+  show($('c3'),t,T(14)-.05,cOut,{base:'scaleX(.9)'});
+  show($('c4'),t,T(16)-.05,cOut,{s0:.5,dy:0,dur:.25});
+  for(let i=0;i<13;i++){const el=$('t'+i);const c=i%4,r=Math.floor(i/4);el.style.top=(1080+r*0)+'px';
+    // grid 4 cols x 4 rows but compact: place in 2 rows region? use rows
+  }
+  for(let i=0;i<13;i++){const el=$('t'+i);const c=i%4,r=Math.floor(i/4);
+    el.style.left=(60+c*214)+'px'; el.style.top=(1075+r*0)+'px';}
+  // tiles: cascade into a 7x2 strip actually: two rows of 7/6 small
+  for(let i=0;i<13;i++){const el=$('t'+i);const r=i<7?0:1,c=i<7?i:i-7;
+    el.style.width='112px';el.style.height='112px';el.style.left=(60+c*122+(r?61:0))+'px';el.style.top=(1100+r*122)+'px';
+    el.querySelector('.n').textContent=String(i+1).padStart(2,'0');
+    show(el,t,T(14)+i*.07,cOut,{s0:.4,dy:20,dur:.22});}
+  // Scene D 8.15..9.95
+  const dIn=8.15,dOut=10.0;
+  show($('d1'),t,Math.max(dIn,T(17)-.05),dOut,{dx:120,dy:0,base:'scaleX(.78)'});
+  show($('d2'),t,T(20)-.1,dOut,{dx:120,dy:0,base:'scaleX(.78)'});
+  show($('dc'),t,dIn+.05,dOut,{dy:180,dur:.4});
+  const sp=ease((t-T(20))/.3); $('sys').style.opacity=sp; $('sys').style.transform=`scale(${.8+.2*sp})`;
+  const yp=ease((t-T(21)-.3)/.3); $('you').style.opacity=yp; $('you').style.transform=`translateY(${(1-yp)*40}px)`;
+  // Final 10.0..end
+  const fIn=10.02;
+  show($('f1'),t,fIn,null,{base:'scaleX(.86)'});
+  show($('f2'),t,fIn+.12,null,{s0:.6,dy:0,dur:.3});
+  show($('f3'),t,fIn+.25,null,{});
+  show($('f4'),t,fIn+.45,null,{dy:20});
+  const ap=easeIO((t-fIn-.35)/.5); $('arrow').style.opacity=t>fIn+.35?1:0;
+  $('ap').style.strokeDashoffset=620*(1-ap); $('ah').style.opacity=ap>.95?1:0;
+  const bob=t>fIn+.9?Math.sin((t-fIn)*6)*8:0; $('arrow').style.transform=`translate(${bob}px,${bob}px)`;
+  // subtitles
+  let gi=-1; for(let g=0;g<GROUPS.length;g++){const [a,b]=GROUPS[g];const st=W[a][1]-.05,en=g+1<GROUPS.length?W[GROUPS[g+1][0]][1]-.05:W[b-1][2]+.25;if(t>=st&&t<en)gi=g;}
+  const sub=$('sub');
+  if(gi<0){sub.innerHTML='';}else{const [a,b]=GROUPS[gi];let h='';for(let i=a;i<b;i++){const on=t>=W[i][1]-.03&&(i+1<b?t<W[i+1][1]-.03:true);const past=t>=W[i][1];h+=`<span class="${on?'on':past?'':'off'}">${W[i][0]}</span>`}sub.innerHTML=h;}
+}
+window.render=render;
+</script></body></html>
