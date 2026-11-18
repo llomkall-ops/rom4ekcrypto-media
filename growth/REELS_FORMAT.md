@@ -2,7 +2,9 @@
 
 STATUS: not started. Do NOT make or schedule Reels until the owner says so.
 
-## Standard outro (made 2026-11-18, v1 — awaiting owner's feedback)
+## Standard outro (2026-11-18, v4 — LIME accent on dark, owner's pick)
+- Owner finds red off-putting: reels use accent LIME #c6f432 on dark #141414 (text on lime chips = #161616);
+  red stays only for falling candles. Carousels keep their current colors until the owner decides.
 - `reels/outro/romchek_outro.mp4` (13.3 s, 1080×1920, voice + subtitles + SFX, NO music — the reel's music runs under it
   at final assembly so it stays continuous). Source: `reels/outro/outro.html` (window.render(t)), frames via
   `tools/render_frames.py`, voice = ElevenLabs "romchek", text: «Хочешь научиться торговать или усилить свои навыки? Напиши в комментариях
