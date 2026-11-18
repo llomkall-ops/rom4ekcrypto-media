@@ -13,7 +13,7 @@ body{width:1080px;height:1350px;background:#f6f1eb;font-family:'Inter',sans-seri
 .tag{display:inline-flex;align-items:center;gap:10px;border:3px solid #141414;border-radius:40px;padding:10px 26px;font-weight:800;font-size:30px;background:#fff}
 .cnt{position:absolute;top:52px;right:56px;background:#7a7a7a;color:#fff;border-radius:40px;padding:12px 26px;font-size:30px;font-weight:600}
 h1{font-family:'Inter Display','Inter';font-weight:900;letter-spacing:-2px;line-height:.98;margin-top:34px}
-.red{color:#4a8a00}
+.red{color:#141414;background:linear-gradient(transparent 52%,#c6f432 52%,#c6f432 92%,transparent 92%);padding:0 6px}
 .neg{color:#c62a2f}
 .lime{background:#c6f432;color:#141414;padding:0 12px;border-radius:12px}
 .sub{font-size:34px;font-weight:600;margin-top:22px;line-height:1.25}
@@ -122,7 +122,7 @@ s2 = page(2, f"""<div class='pad'>
 # ---------- slide 3 ----------
 def hist(year, move, res, hl=False):
     bg = "#fbf1d6" if hl else "#fff"; bd = "#e2c36a" if hl else "#e2d9cf"
-    col = "#b8860b" if hl else "#1f9d5a"
+    col = "#b8860b" if hl else "#141414"
     return f"""<div style='display:grid;grid-template-columns:150px 1fr 170px;align-items:center;background:{bg};border:2px solid {bd};border-radius:20px;padding:28px 32px;margin-top:18px'>
 <div style='font-weight:900;font-size:44px'>{year}</div><div style='font-size:34px;font-weight:600;color:#4a4642'>{move}</div>
 <div style='font-weight:900;font-size:46px;color:{col};text-align:right'>{res}</div></div>"""
@@ -145,7 +145,7 @@ s3 = page(3, f"""<div class='pad'>
 def chk(t):
     return f"<div style='display:flex;gap:16px;align-items:flex-start;font-size:28px;margin-top:16px;line-height:1.3'><div style='width:34px;height:34px;border:3px solid #141414;border-radius:6px;flex:none;margin-top:2px'></div><div>{t}</div></div>"
 s4 = page(4, f"""<div class='pad'>
-<div class='tag' style='border-color:#4a8a00'>Шпаргалка ✅</div>
+<div class='tag'>Шпаргалка ✅</div>
 <h1 style='font-size:92px'>Как не попасть<br><span class='red'>в ловушку</span></h1>
 <div style='display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px'>
  <div style='border:2px solid #e2d9cf;border-radius:22px;overflow:hidden;background:#fff'>
@@ -179,24 +179,24 @@ cs=[]; p=1000; x=600
 for i in range(21):
     o=p; c=o-random.uniform(-14,40); p=c
     hi=min(o,c)-random.uniform(6,18); lo=max(o,c)+random.uniform(6,18)
-    col="#141414" if c<o else "#4a8a00"
+    col="#c62a2f" if c<o else "#141414"
     xx=x+i*20
     cs.append(f"<line x1='{xx}' y1='{hi}' x2='{xx}' y2='{lo}' stroke='{col}' stroke-width='2.5'/><rect x='{xx-6.5}' y='{min(o,c)}' width='13' height='{max(abs(o-c),3)}' fill='{col}'/>")
 icons = [("📊","АНАЛИТИКА<br>РЫНКА"),("🎯","РАЗБОРЫ<br>СДЕЛОК"),("🎓","ОБУЧЕНИЕ<br>ТРЕЙДИНГУ"),("🔖","СОХРАНИ<br>И ПРИМЕНЯЙ")]
-ic = "".join(f"<div style='text-align:center;flex:1'><div style='width:110px;height:110px;border:3px solid #4a8a00;border-radius:50%;background:#f6f1eb;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:50px'>{a}</div><div style='font-weight:800;font-size:22px;margin-top:14px;line-height:1.25'>{b}</div></div>" for a,b in icons)
+ic = "".join(f"<div style='text-align:center;flex:1'><div style='width:110px;height:110px;border:3px solid #141414;border-radius:50%;background:#f6f1eb;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:50px'>{a}</div><div style='font-weight:800;font-size:22px;margin-top:14px;line-height:1.25'>{b}</div></div>" for a,b in icons)
 s5 = page(5, f"""
 <svg width='1080' height='1350' style='position:absolute;left:0;top:0'>
 
 {''.join(cs)}
-<path d='M590 1020 Q 900 960 1010 620' fill='none' stroke='#4a8a00' stroke-width='3' stroke-dasharray='10 8'/>
+<path d='M590 1020 Q 900 960 1010 620' fill='none' stroke='#141414' stroke-width='3' stroke-dasharray='10 8'/>
 </svg>
 <div class='pad' style='position:relative'>
-<div style='width:130px;height:130px;border:3px solid #4a8a00;border-radius:50%;display:flex;align-items:center;justify-content:center'>
-<svg width='64' height='64' viewBox='0 0 24 24'><path d='M21.5 3.5 2.8 10.7c-1 .4-1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8L23 4.9c.3-1.3-.5-1.9-1.5-1.4z' fill='#4a8a00'/></svg></div>
+<div style='width:130px;height:130px;border:3px solid #141414;border-radius:50%;display:flex;align-items:center;justify-content:center'>
+<svg width='64' height='64' viewBox='0 0 24 24'><path d='M21.5 3.5 2.8 10.7c-1 .4-1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8L23 4.9c.3-1.3-.5-1.9-1.5-1.4z' fill='#141414'/></svg></div>
 <h1 style='font-size:150px;margin-top:40px;font-family:Inter Display;letter-spacing:-4px'>ВСТУПАЙ<br><span class='red'>В ТГ-КАНАЛ</span></h1>
 <div style='width:110px;height:10px;background:#c6f432;border-radius:5px;margin:34px 0'></div>
 <div style='font-weight:900;font-size:38px;line-height:1.3;width:520px;text-transform:uppercase'>Каждый день: <span class='red'>аналитика рынка,</span> разборы сделок и <span class='red'>обучение</span> трейдингу.</div>
-<div style='margin-top:38px;display:inline-flex;align-items:center;gap:20px;border:3px solid #4a8a00;border-radius:20px;padding:20px 30px;background:#fff'>
+<div style='margin-top:38px;display:inline-flex;align-items:center;gap:20px;border:3px solid #141414;border-radius:20px;padding:20px 30px;background:#fff'>
 <div style='font-size:40px'>🔗</div><div><div style='font-weight:900;font-size:38px' class='red'>@romchekcrypto</div><div style='font-weight:700;font-size:26px;color:#4a4642'>ССЫЛКА В ПРОФИЛЕ</div></div></div>
 </div>
 <div style='position:absolute;left:40px;right:40px;bottom:100px;display:flex'>{ic}</div>
