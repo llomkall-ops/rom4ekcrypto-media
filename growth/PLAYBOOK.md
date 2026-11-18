@@ -88,6 +88,35 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 15. **Designed for sending**: every post has one line/slide that is natural to forward
     ("Отправь тому, кто торгует с плечом x50") — a checklist, a mistake, a myth vs fact.
 
+## Titles, captions, hashtags, keywords — Instagram Reels & YouTube Shorts (researched 2026-11-18; owner: «не борщи с хэштегами, не повторяй весь текст ролика»)
+Facts:
+- Instagram: max 5 hashtags per post/Reel since 2025-12-19; hashtags only help categorise, they barely affect reach (Mosseri).
+  Keywords in the caption (esp. the first ~125 visible chars), on-screen text and spoken words are the main relevance/search
+  signals. Display name and bio are searched too. Generic tags (#reels #explore #viral) can hurt.
+- YouTube (Help Center): title, thumbnail and description matter most; «tags play a minimal role» (useful mainly for
+  misspellings); up to 3 hashtags from the description are shown above the title; >60 hashtags → all ignored; #shorts is
+  not required. YouTube auto-transcribes the voice, so the spoken keyword counts.
+- Competitors (YouTube search «трейдинг ликвидность», 2026-11-18): the best Shorts (31k, 19k, 10k, 5k views) start the
+  title with the search keyword + a pain/question («Что такое ликвидность в трейдинге и почему её постоянно собирают?»,
+  «Ликвидность в трейдинге: как маркетмейкер забирает твои стопы»); weak ones are vague («Ликвидность двигает рынок»)
+  or stuffed with 5+ hashtags/«#short #шортс».
+Rules (apply every time):
+1. ONE primary search keyword per video (e.g. «ликвидность в трейдинге», «стоп лосс», «ордер блок», «RSI»), 1–2 secondary.
+   It must appear: in the first words of the title/first caption line, on screen in the first seconds, and in the voice.
+2. Instagram caption: line 1 = keyword + hook in ≤ 110 chars (e.g. «🎯 Ликвидность в трейдинге: почему выбивает твой стоп»);
+   then 1–2 SHORT lines with the key takeaway (NOT the voice script retold); then CTAs (save / send to a friend /
+   «обучение»), subscribe line, Telegram line, disclaimer. Whole caption ≤ ~600 chars.
+3. Instagram hashtags: 3–5 total, specific: #биткоин #обзорбиткоина #альтсезон (owner's standing set) + 1–2 exact topic
+   tags (#ликвидность, #стоплосс, #смартмани…). Never generic ones.
+4. YouTube title: 40–70 chars, keyword first, then the pain/question; at most one CAPS word; no hashtags in the title
+   (they go in the description); no clickbait the video doesn't answer.
+5. YouTube description: first sentence = keyword + what the viewer learns (2–3 sentences total, no full script), CTA
+   «обучение», Telegram/Instagram lines, disclaimer, then 3 hashtags (#shorts #трейдинг + 1 topic, or #биткоин when the
+   video is about BTC) — 3 is enough, they show above the title.
+6. YouTube tags: owner wants the field filled (keep the 500-char rule), but they barely matter — never spend time on them
+   instead of the title/hook, and never add unrelated tags.
+7. Review in the weekly analysis: compare views/search traffic of videos with different title patterns and adjust these rules.
+
 ## Experiments queue
 - [x] RUNNING from 2026-11-19: brand accent red → lime (carousels + reels). Weekly review: compare reach/saves/follows
       of lime posts vs the previous red weeks; report to the owner. (try one at a time, note the result in the weekly log)

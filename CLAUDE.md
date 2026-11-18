@@ -58,9 +58,12 @@ caption/hashtag rules below where they conflict.**
   "tags":[…filled to 500 chars by the TAGS rule in the «YouTube Shorts» section below: MUST tags + 3–5 topic tags + base pool…]}.
   Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «Напиши в комментариях «обучение» — пришлю
   13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»; «Полный разбор и аналитика каждый день — Telegram
-  @romchekcrypto»; «Instagram: @romchekcrypto»; «Не является финансовой рекомендацией.»; last line 3–5 hashtags
-  (#shorts #биткоин #альтсезон + ≤2 topic). No «Музыка:» line (music is our own ElevenLabs track). Check getScheduledPosts so
+  @romchekcrypto»; «Instagram: @romchekcrypto»; «Не является финансовой рекомендацией.»; last line 3 hashtags
+  (#shorts #трейдинг + 1 topic, see PLAYBOOK). No «Музыка:» line (music is our own ElevenLabs track). Check getScheduledPosts so
   the Short is not scheduled twice.
+- **Titles/captions/hashtags/keywords: follow growth/PLAYBOOK.md «Titles, captions, hashtags, keywords» (overrides the lines
+  below): one primary keyword first in title/caption + on screen + in voice; short caption, never retell the script;
+  Instagram 3–5 hashtags; YouTube title 40–70 chars without hashtags, description 2–3 sentences + 3 hashtags.**
 - Reel caption: title line with emoji + keywords, hook, 2 short paragraphs, «💾 Сохрани…», «📤 Перешли другу, который…»,
   «💬 Напиши «обучение» — пришлю 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества», «Подписывайся…»,
   Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #обзорбиткоина #альтсезон + 2).
