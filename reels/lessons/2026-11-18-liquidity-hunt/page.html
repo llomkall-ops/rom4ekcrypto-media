@@ -1,0 +1,194 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#141414}
+body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f2eee6;position:relative}
+#bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 0% 0%,rgba(198,244,50,.16),transparent 60%),radial-gradient(900px 800px at 100% 100%,rgba(62,154,90,.16),transparent 60%),#141414}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:90px 90px}
+.a{position:absolute;will-change:transform,opacity,filter;opacity:0}
+.H{font-family:'Inter Display','Inter';font-weight:900;text-transform:uppercase;letter-spacing:-3px;line-height:.95;white-space:nowrap;transform-origin:left center}
+.L{color:#c6f432}.R{color:#e5484d}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:40px;padding:12px 30px;font-weight:800;font-size:34px;background:#232323;border:2px solid #3a3a3a;color:#efe9df}
+.chip{font-family:'Inter Display';font-weight:900;border-radius:24px;padding:12px 30px;font-size:64px;letter-spacing:-1px;white-space:nowrap}
+#sub{position:absolute;left:60px;width:840px;top:1385px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:62px;line-height:1.12;text-transform:uppercase;letter-spacing:-1px}
+#sub span{display:inline-block;padding:2px 12px;margin:4px 3px;border-radius:14px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sub span.on{background:#c6f432;color:#161616;text-shadow:none}
+#sub span.off{opacity:.55}
+.hdr{position:absolute;left:60px;top:250px;display:flex;gap:16px;align-items:center}
+.dots{display:flex;gap:10px;margin-left:10px}.dots i{width:44px;height:10px;border-radius:5px;background:#3a3a3a;display:block}.dots i.on{background:#c6f432}
+svg text{font-family:Inter;font-weight:800}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<div id="brand" class="a pill" style="left:60px;top:250px;opacity:1">🎓 Урок трейдинга</div>
+<svg id="chart" class="a" style="left:0;top:760px;opacity:1" width="1080" height="560"></svg>
+
+<!-- S1 hook -->
+<div id="h1" class="a H" style="left:60px;top:360px;font-size:124px">Стоп выбило —</div>
+<div id="h2" class="a H L" style="left:60px;top:485px;font-size:124px">а цена пошла</div>
+<div id="h3" class="a H L" style="left:60px;top:610px;font-size:124px">в твою сторону?</div>
+<div id="stopx" class="a chip" style="left:600px;top:1180px;background:#e5484d;color:#fff;font-size:52px">СТОП ✕</div>
+
+<!-- S2 -->
+<div id="s2a" class="a H" style="left:60px;top:520px;font-size:150px">Это не</div>
+<div id="s2b" class="a H R" style="left:60px;top:670px;font-size:150px;position:absolute">невезение<div id="strike" style="position:absolute;left:-10px;top:68px;height:16px;background:#e5484d;width:0;border-radius:8px"></div></div>
+<div id="s2c" class="a chip" style="left:60px;top:900px;background:#c6f432;color:#161616;font-size:66px">🎯 охота за ликвидностью</div>
+
+<!-- S3/S4 -->
+<div id="s3a" class="a H" style="left:60px;top:360px;font-size:92px">Большинство ставит</div>
+<div id="s3b" class="a H L" style="left:60px;top:455px;font-size:92px">стоп под минимумом</div>
+<div id="fuel" class="a chip" style="left:60px;top:600px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:50px">🔥 топливо для крупных игроков 🐋</div>
+<div id="s4a" class="a chip" style="left:60px;top:380px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:52px">1 · прокол</div>
+<div id="s4b" class="a chip" style="left:60px;top:480px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:52px">2 · сбор стопов</div>
+<div id="s4c" class="a chip" style="left:60px;top:580px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:52px">3 · разворот</div>
+<div id="taken" class="a chip" style="left:520px;top:600px;background:#c6f432;color:#161616;font-size:46px">ликвидность снята ✓</div>
+
+<div id="q5" class="a H" style="left:60px;top:560px;font-size:150px">Как</div><div id="q5b" class="a H L" style="left:60px;top:710px;font-size:150px">защититься?</div>
+<!-- protect header -->
+<div id="ph" class="a hdr"><span class="pill" style="background:#c6f432;color:#161616;border-color:#c6f432">🛡 Как защититься</span><div class="dots"><i id="d1"></i><i id="d2"></i><i id="d3"></i></div></div>
+<div id="p1" class="a H" style="left:60px;top:370px;font-size:96px">#1 Стоп <span class="L">с запасом</span></div>
+<div id="p1b" class="a H" style="left:60px;top:470px;font-size:96px">за зоной</div>
+<div id="p2" class="a H" style="left:60px;top:370px;font-size:96px">#2 Дождись</div>
+<div id="p2b" class="a H L" style="left:60px;top:470px;font-size:84px">прокола и возврата</div>
+<div id="p3" class="a H" style="left:60px;top:370px;font-size:96px">#3 Риск на сделку</div>
+<div id="p3n" class="a" style="left:40px;top:560px;font-family:'Inter Display';font-weight:900;font-size:300px;letter-spacing:-6px;color:#c6f432;line-height:1;white-space:nowrap">≤1–2%</div>
+<div id="bar" class="a" style="left:60px;top:1020px;width:860px">
+  <div style="font-weight:800;font-size:34px;color:#bdb6aa;margin-bottom:16px">твой депозит</div>
+  <div style="height:90px;border-radius:24px;background:#2a2a2a;border:3px solid #3a3a3a;overflow:hidden;position:relative">
+    <div id="barf" style="position:absolute;left:0;top:0;bottom:0;width:0;background:#e5484d"></div></div>
+  <div id="barl" style="font-weight:900;font-size:34px;margin-top:18px;color:#f2eee6;opacity:0;white-space:nowrap">риск в сделке — <span style="color:#e5484d">1–2%</span>, остальное — в безопасности</div>
+</div>
+
+<div id="whale" class="a chip" style="left:60px;top:700px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:40px">🐋 киту нужны встречные ордера</div>
+<div id="you" class="a chip" style="left:60px;top:380px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:56px">😣 тебя выбило <span style="color:#e5484d">✕</span></div>
+<div id="big" class="a chip" style="left:60px;top:490px;background:#c6f432;color:#161616;font-size:56px">🐋 кит вошёл по лучшей цене ✓</div>
+<div id="ser" class="a chip" style="left:60px;top:1290px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:38px">серия из 5 стопов ≈ −5–10%, а не весь депозит</div>
+<div id="sv1" class="a H" style="left:60px;top:560px;font-size:150px">💾 Сохрани</div>
+<div id="sv2" class="a H L" style="left:60px;top:740px;font-size:112px">📤 Перешли другу</div>
+<div id="sub"></div>
+
+<script>
+const VO=0.25;
+const W=[["Стоп", 0.16, 0.48], ["выбило", 0.56, 0.96], ["а", 1.253, 1.28], ["цена", 1.36, 1.6], ["сразу", 1.68, 2.08], ["пошла", 2.16, 2.32], ["в", 2.4, 2.427], ["твою", 2.453, 2.64], ["сторону?", 2.72, 3.28], ["Знакомо?", 3.44, 4.16], ["Это", 4.4, 4.64], ["не", 4.68, 4.72], ["невезение", 4.8, 5.68], ["Это", 5.84, 6.16], ["охота", 6.24, 6.64], ["за", 6.68, 6.72], ["ликвидностью", 6.8, 7.64], ["Смотри", 7.84, 8.133], ["как", 8.16, 8.24], ["это", 8.32, 8.44], ["работает", 8.48, 9.16], ["Большинство", 9.36, 9.84], ["ставит", 9.92, 10.24], ["стоп", 10.32, 10.56], ["прямо", 10.64, 10.96], ["под", 11.04, 11.12], ["очевидным", 11.2, 11.68], ["минимумом", 11.76, 12.507], ["Там", 12.533, 12.64], ["скапливаются", 12.72, 13.44], ["сотни", 13.52, 13.84], ["стопов", 13.92, 14.48], ["и", 14.54, 14.56], ["это", 14.64, 14.88], ["топливо", 15.0, 15.28], ["для", 15.36, 15.44], ["крупных", 15.52, 15.84], ["игроков", 15.92, 16.76], ["Им", 16.8, 16.88], ["нужно", 16.92, 17.2], ["много", 17.28, 17.52], ["встречных", 17.56, 18.0], ["ордеров", 18.08, 18.44], ["чтобы", 18.48, 18.64], ["набрать", 18.72, 19.04], ["большую", 19.16, 19.44], ["позицию", 19.52, 20.347], ["Поэтому", 20.373, 20.64], ["цена", 20.72, 20.96], ["прокалывает", 21.0, 21.6], ["минимум", 21.68, 22.12], ["забирает", 22.16, 22.64], ["эти", 22.72, 22.88], ["стопы", 22.96, 23.36], ["и", 23.4, 23.44], ["разворачивается", 23.52, 24.68], ["Тебя", 24.72, 24.92], ["выбило", 24.96, 25.52], ["а", 25.64, 25.68], ["крупный", 25.72, 26.0], ["игрок", 26.08, 26.32], ["вошёл", 26.4, 26.64], ["по", 26.72, 26.8], ["лучшей", 26.88, 27.12], ["цене", 27.2, 28.0], ["Как", 28.08, 28.16], ["защититься?", 28.32, 29.2], ["Первое", 29.32, 29.6], ["ставь", 29.92, 30.2], ["стоп", 30.24, 30.48], ["не", 30.56, 30.64], ["под", 30.72, 30.8], ["самым", 30.88, 31.12], ["минимумом", 31.2, 31.72], ["а", 31.76, 31.8], ["с", 31.84, 31.92], ["запасом", 31.96, 32.68], ["за", 32.72, 32.8], ["зоной", 32.88, 33.6], ["Второе", 33.64, 34.0], ["не", 34.373, 34.4], ["спеши", 34.48, 34.8], ["со", 34.88, 34.96], ["входом", 35.0, 35.52], ["дождись", 35.573, 35.92], ["прокола", 35.96, 36.4], ["и", 36.44, 36.48], ["возврата", 36.56, 36.96], ["цены", 37.04, 37.36], ["выше", 37.44, 37.68], ["уровня", 37.76, 38.427], ["Именно", 38.453, 38.72], ["после", 38.76, 38.96], ["снятия", 39.04, 39.4], ["ликвидности", 39.44, 40.08], ["часто", 40.2, 40.4], ["начинается", 40.48, 41.04], ["сильное", 41.12, 41.44], ["движение", 41.56, 42.4], ["Третье", 42.453, 42.8], ["риск", 43.2, 43.44], ["не", 43.52, 43.6], ["больше", 43.68, 43.92], ["одного-двух", 44.0, 44.6], ["процентов", 44.64, 45.12], ["на", 45.2, 45.28], ["сделку", 45.36, 46.06], ["Тогда", 46.12, 46.24], ["даже", 46.28, 46.48], ["серия", 46.56, 46.8], ["стопов", 46.88, 47.28], ["не", 47.32, 47.36], ["убьёт", 47.44, 47.68], ["депозит", 47.72, 48.507], ["Сохрани", 48.533, 48.92], ["чтобы", 48.96, 49.12], ["не", 49.2, 49.28], ["забыть", 49.32, 49.733], ["и", 49.787, 49.84], ["перешли", 49.88, 50.24], ["другу", 50.28, 50.6], ["которого", 50.64, 51.04], ["постоянно", 51.2, 51.68], ["выбивает", 51.76, 52.16], ["по", 52.24, 52.32], ["стопам", 52.36, 52.96]].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=[[0, 2], [2, 6], [6, 9], [9, 10], [10, 13], [13, 15], [15, 17], [17, 21], [21, 24], [24, 27], [27, 28], [28, 30], [30, 32], [32, 35], [35, 38], [38, 41], [41, 43], [43, 45], [45, 47], [47, 50], [50, 51], [51, 54], [54, 56], [56, 58], [58, 61], [61, 65], [65, 67], [67, 68], [68, 70], [70, 74], [74, 77], [77, 79], [79, 80], [80, 84], [84, 86], [86, 89], [89, 91], [91, 94], [94, 95], [95, 97], [97, 99], [99, 100], [100, 103], [103, 105], [105, 107], [107, 109], [109, 111], [111, 114], [114, 115], [115, 118], [118, 121], [121, 123], [123, 126]];
+const END=33.6;
+const norm=x=>x.toLowerCase().replace(/[«»?.,!—:;]/g,'');
+function I(txt,occ=0){const p=txt.split(' ');let k=0;for(let i=0;i<W.length;i++){let ok=true;for(let j=0;j<p.length;j++){if(!W[i+j]||norm(W[i+j][0])!==p[j]){ok=false;break}}if(ok){if(k===occ)return i;k++;}}throw 'no word '+txt;}
+const T=(w,o=0)=>W[typeof w==='string'?I(w,o):w][1]; const E=(w,o=0)=>W[typeof w==='string'?I(w,o):w][2];
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const cl=x=>Math.min(Math.max(x,0),1);
+const $=id=>document.getElementById(id);
+function show(el,t,tin,tout,o={}){
+  const dur=o.dur||.3, dy=o.dy??50, dx=o.dx??0, s0=o.s0??1, base=o.base||'';
+  let p=ease((t-tin)/dur), q=tout==null?0:easeIO((t-tout)/(o.odur||.22));
+  const op=p*(1-q), x=dx*(1-p)+(o.ex||0)*q, y=dy*(1-p)+(o.ey??-70)*q, s=s0+(1-s0)*p;
+  const bl=(1-p)*14+q*14;
+  el.style.opacity=op; el.style.transform=`translate(${x}px,${y}px) scale(${s}) ${base}`; el.style.filter=bl>.3?`blur(${bl}px)`:'none';
+}
+// scene boundaries
+const S2=T('это'), S3=T('большинство'), S4=T('поэтому'), S5=T('как защититься'), S8=T('сохрани'), SB=T('тебя'), S6=T('второе'), S7=T('третье');
+const sc=(t,a,b)=>t>=a-.05&&t<b+.25;
+
+// candle chart helper. cs=[[o,h,l,c],...], appear from t0 every st sec
+function candles(cs,t0,st,mn,mx,opt={}){
+  const H=560,top=30,bot=530,sy=v=>top+(mx-v)/(mx-mn)*(bot-top);
+  const left=opt.left||70, sp=opt.sp||40, cw=opt.cw||24; let h='';
+  cs.forEach((c,i)=>{const ta=t0+i*st; const age=cl((T_now-ta)/.14); if(age<=0)return;
+    const [o,hi,lo,cc]=c; const x=left+i*sp; const col=c[4]||(cc>=o?'#3e9a5a':'#e5484d');
+    const y1=Math.min(sy(o),sy(cc)),y2=Math.max(sy(o),sy(cc)),mid=(y1+y2)/2,hh=Math.max(y2-y1,5)*age;
+    h+=`<line x1="${x}" x2="${x}" y1="${mid-(mid-sy(hi))*age}" y2="${mid+(sy(lo)-mid)*age}" stroke="${col}" stroke-width="5"/>`;
+    h+=`<rect x="${x-cw/2}" y="${mid-hh/2}" width="${cw}" height="${hh}" rx="3" fill="${col}"/>`;});
+  return {h,sy,left,sp};
+}
+function line(y,x1,x2,col,dash,label,lx,ly,op=1){return `<g opacity="${op}"><line x1="${x1}" x2="${x2}" y1="${y}" y2="${y}" stroke="${col}" stroke-width="5" ${dash?'stroke-dasharray="16 11"':''}/>${label?`<text x="${lx??x2}" y="${ly??y-14}" text-anchor="end" font-size="30" fill="${col}">${label}</text>`:''}</g>`}
+let T_now=0;
+// data
+const RANGE=[[100,104,96,98],[98,101,93,95],[95,99,92,97],[97,103,95,102],[102,105,98,99],[99,101,94,95],[95,98,92.5,96],[96,102,95,101],[101,104,97,98],[98,100,93,94]];
+const SWEEP=[[94,96,86,93,'#e5484d'],[93,102,92,101],[101,106,100,105],[105,110,104,109],[109,111,106,110]];
+function render(t){
+  T_now=t; let svg='';
+  // ---- S1 hook: candles drop, wick hits stop, rally
+  const s1=t<S2+.2;
+  show($('h1'),t,T(0)-.05,S2-.05,{base:'scaleX(.84)'});
+  show($('h2'),t,T('а')-.05,S2-.05,{base:'scaleX(.84)'});
+  show($('h3'),t,T('в')-.05,S2-.05,{base:'scaleX(.84)'});
+  if(s1){
+    const hook=[[110,112,104,105],[105,107,99,100],[100,102,95,96],[96,97,78,94,'#e5484d'],[94,104,93,103],[103,112,102,111],[111,121,110,120],[120,130,119,129]];
+    const r=candles(hook,0.05,(T('выбило')-0.05)/3.2,74,132,{left:220,sp:80,cw:40});
+    const ys=r.sy(86);
+    svg+=line(ys,120,1000,'#e5484d',true,'',0,0,1)+`<text x="120" y="${ys+44}" font-size="30" fill="#e5484d">твой стоп</text>`;
+    svg+=r.h;
+    const hit=T('выбило')+.05;
+    if(t>hit&&t<hit+.25){svg+=`<rect x="0" y="0" width="1080" height="560" fill="#e5484d" opacity="${.12*(1-(t-hit)/.25)}"/>`}
+    show($('stopx'),t,hit,S2-.05,{s0:.4,dy:0,dur:.18});
+  } else $('stopx').style.opacity=0;
+  // ---- S2
+  show($('s2a'),t,S2,S3-.08,{base:'scaleX(.86)'});
+  show($('s2b'),t,T('невезение')-.05,S3-.08,{base:'scaleX(.86)'});
+  $('strike').style.width=(ease((t-E('невезение'))/.25)*720)+'px';
+  show($('s2c'),t,T('охота')-.05,S3-.08,{s0:.5,dy:0,dur:.28});
+  // ---- S3 + S4 shared chart
+  if(t>=S3-.05&&t<S5+.2){
+    const mn=84,mx=112; const r=candles(RANGE,S3,.1,mn,mx,{left:90,sp:62,cw:30});
+    svg+=r.h; const yl=r.sy(92);
+    const lop=cl((t-T('очевидным'))/.25);
+    svg+=line(yl,60,1010,'#f2eee6',true,'',0,0,lop)+`<text x="60" y="${yl+150}" font-size="32" fill="#f2eee6" opacity="${lop}">⬆ очевидный минимум — тут все ставят стоп</text>`;
+    // stop chips
+    const nChips=18, tc=T('скапливаются'); let taken=t>T('забирает')?cl((t-T('забирает'))/.4):0;
+    for(let i=0;i<nChips;i++){const ap=cl((t-tc-i*.045)/.15); if(ap<=0)continue;
+      const cx=110+(i%9)*96, cy=yl+40+Math.floor(i/9)*52;
+      const fade=taken>0? cl(1-(taken*(nChips+3)-i)/1.5):1;
+      svg+=`<g opacity="${ap*fade}" transform="translate(${cx},${cy}) scale(${.6+.4*ap})"><rect x="-38" y="-20" width="76" height="40" rx="12" fill="#e5484d"/><text x="0" y="11" text-anchor="middle" font-size="24" fill="#fff">SL</text></g>`;}
+    // sweep candles in S4
+    if(t>=S4-.05){const sw=candles(SWEEP,T('прокалывает')-.05,(E('разворачивается')-T('прокалывает'))/5.2,mn,mx,{left:90+RANGE.length*62,sp:62,cw:30});svg+=sw.h;}
+  }
+  show($('s3a'),t,S3,S4-.05,{base:'scaleX(.86)'});
+  show($('s3b'),t,T('стоп',1)-.05,S4-.05,{base:'scaleX(.86)'});
+  show($('fuel'),t,T('топливо')-.05,S4-.05,{s0:.6,dy:0});show($('whale'),t,T('им')-.05,S4-.05,{s0:.6,dy:0});
+  const lit=(el,w)=>{show(el,t,S4,SB-.05,{dx:-60,dy:0});const on=t>=T(w)-.05;el.style.background=on?'#c6f432':'#232323';el.style.color=on?'#161616':'#f2eee6';el.style.borderColor=on?'#c6f432':'#3a3a3a';};
+  lit($('s4a'),'прокалывает');lit($('s4b'),'забирает');lit($('s4c'),'разворачивается');
+  show($('taken'),t,T('забирает')+.35,SB-.05,{s0:.5,dy:0});show($('you'),t,SB-.05,S5-.05,{dx:-60,dy:0});show($('big'),t,T('крупный')-.05,S5-.05,{dx:-60,dy:0});
+  // ---- protect
+  show($('ph'),t,S5,S8-.05,{dy:-30});
+  $('brand').style.opacity=t<S5?1:Math.max(0,1-(t-S5)/.2);
+  [['d1',S5],['d2',S6],['d3',S7]].forEach(([d,s])=>$(d).className=t>=s?'on':'');
+  show($('q5'),t,S5,T('первое')-.1,{base:'scaleX(.86)'});show($('q5b'),t,T('защититься')-.05,T('первое')-.1,{base:'scaleX(.86)',s0:.8});
+  show($('p1'),t,T('первое')-.05,S6-.05,{});
+  show($('p1b'),t,T('за',1)-.05,S6-.05,{});
+  if(t>=T('первое')-.05&&t<S6+.2){
+    const mn=84,mx=108; const r=candles(RANGE.slice(0,8),T('первое')-.05,.06,mn,mx,{left:120,sp:90,cw:40});
+    const op=t<S6?1:Math.max(0,1-(t-S6)/.2);
+    let g=r.h; const yl=r.sy(92), yz1=r.sy(94), yz2=r.sy(90.5), ybad=r.sy(91.5), ygood=r.sy(86.5);
+    const zp=cl((t-T('зоной'))/.25), bp=cl((t-T('минимумом',1))/.25), gp=cl((t-T('запасом'))/.25);
+    g+=`<rect x="80" y="${yz1}" width="920" height="${yz2-yz1}" rx="10" fill="#c6f432" fill-opacity="${.15*Math.max(zp,bp)}" stroke="#c6f432" stroke-opacity="${Math.max(zp,bp)}" stroke-width="4" stroke-dasharray="14 10"/>`;
+    g+=line(ybad,80,1000,'#e5484d',true,'✕ стоп прямо под минимумом',1000,ybad+42,bp);
+    g+=line(ygood,80,1000,'#c6f432',false,'✓ стоп с запасом за зоной',1000,ygood+44,gp);
+    g+=`<g opacity="${gp}"><line x1="150" x2="150" y1="${yz2+6}" y2="${ygood-6}" stroke="#c6f432" stroke-width="4"/><text x="170" y="${(yz2+ygood)/2+10}" font-size="30" fill="#c6f432">запас</text></g>`;
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  show($('p2'),t,S6,S7-.05,{});
+  show($('p2b'),t,T('дождись')-.05,S7-.05,{});
+  if(t>=S6-.05&&t<S7+.2){
+    const mn=78,mx=124; const cs=[[104,106,99,100],[100,102,95,96],[96,98,93,95],[95,97,82,96,'#e5484d'],[96,103,95,102],[102,108,101,107]];
+    const r=candles(cs,S6,(T('выше')-S6)/5.5,mn,mx,{left:120,sp:110,cw:50});const r2=candles([[107,113,106,112],[112,118,111,117],[117,123,116,122]],T('именно'),.35,mn,mx,{left:120+6*110,sp:110,cw:50});
+    const op=t<S7?1:Math.max(0,1-(t-S7)/.2); const yl=r.sy(92);
+    let g=line(yl,60,1010,'#f2eee6',true,'уровень',1010,yl-16)+r.h+r2.h;const mp=cl((t-T('сильное'))/.25);g+=`<g opacity="${mp}"><rect x="120" y="${r.sy(123)-10}" width="370" height="62" rx="18" fill="#c6f432"/><text x="305" y="${r.sy(123)+32}" text-anchor="middle" font-size="32" fill="#161616">🚀 сильное движение</text></g>`;
+    const pp=cl((t-T('прокола'))/.2), ep=cl((t-T('выше'))/.25);
+    g+=`<g opacity="${pp}"><text x="${120+3*110}" y="${r.sy(80)+40}" text-anchor="middle" font-size="34" fill="#e5484d">прокол</text></g>`;
+    g+=`<g opacity="${ep}"><circle cx="${120+4*110}" cy="${r.sy(102)}" r="34" fill="none" stroke="#c6f432" stroke-width="6"/><rect x="${120+4*110-90}" y="${r.sy(110)-70}" width="180" height="62" rx="18" fill="#c6f432"/><text x="${120+4*110}" y="${r.sy(110)-28}" text-anchor="middle" font-size="34" fill="#161616">ВХОД ✓</text></g>`;
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  show($('p3'),t,S7,S8-.05,{});show($('ser'),t,T('тогда')-.05,S8-.05,{dy:40});show($('sv1'),t,S8-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'});show($('sv2'),t,T('перешли')-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'});
+  show($('p3n'),t,T('одного-двух')-.1,S8-.05,{s0:.6,dy:0});
+  show($('bar'),t,S7+.1,S8-.05,{dy:40});
+  $('barf').style.width=(ease((t-T('одного-двух'))/.5)*1.5)+'%';
+  $('barl').style.opacity=cl((t-T('сделку'))/.3);
+  $('chart').innerHTML=svg;
+  // subtitles
+  let gi=-1; for(let g=0;g<GROUPS.length;g++){const [a,b]=GROUPS[g];const st=W[a][1]-.05,en=g+1<GROUPS.length?W[GROUPS[g+1][0]][1]-.05:W[b-1][2]+.3;if(t>=st&&t<en)gi=g;}
+  const sub=$('sub');
+  if(gi<0){sub.innerHTML='';}else{const [a,b]=GROUPS[gi];let h='';for(let i=a;i<b;i++){const on=t>=W[i][1]-.03&&(i+1<b?t<W[i+1][1]-.03:true);const past=t>=W[i][1];h+=`<span class="${on?'on':past?'':'off'}">${W[i][0]}</span>`}sub.innerHTML=h;}
+}
+window.render=render;
+</script></body></html>
