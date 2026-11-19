@@ -55,7 +55,7 @@ caption/hashtag rules below where they conflict.**
 - **YouTube Short (owner's rule 2026-11-18): the SAME mp4 is also published as a YouTube Short at the same time (18:00).**
   Separate createScheduledPost: providers [{"network":"youtube"}], media = [same raw mp4 URL], youtubeData {"title": "<CAPS hook
   word(s) + topic, ≤90 chars, ends with #shorts>", "type":"short", "privacy":"public", "madeForKids":false, "category":"PEOPLE_BLOGS",
-  "tags":[…filled to 500 chars by the TAGS rule in the «YouTube Shorts» section below: MUST tags + 3–5 topic tags + base pool…]}.
+  "tags":[the owner's FIXED tag list — see TAGS in the «YouTube Shorts» section below, unchanged]}.
   Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «Напиши в комментариях «обучение» — пришлю
   13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»; «Полный разбор и аналитика каждый день — Telegram
   @romchekcrypto»; «Instagram: @romchekcrypto»; «Не является финансовой рекомендацией.»; last line 3 hashtags
@@ -145,7 +145,7 @@ caption/hashtag rules below where they conflict.**
 - These 2 review Shorts are ON TOP of the daily 10:00 carousel and 18:00 education reel (owner reminded 2026-11-18);
   quality first: each must be a complete, valuable thought with a strong hook in the first 2 s.
 - YouTube: SHORT CAPS title of 2–4 words (e.g. «ГДЕ Я КУПЛЮ БИТКОИН»), 2–3 SEO sentences with «обзор биткоина»/«альтсезон»,
-  Telegram line, disclaimer, 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
+  Telegram line, disclaimer, 3–5 hashtags incl. #shorts; tags = the owner's FIXED list (TAGS rule below), unchanged.
   The «related video» link to the latest long video can't be set via Metricool — the owner sets it in YouTube Studio.
 - YouTube category for these Shorts = PEOPLE_BLOGS («Люди и блоги»), video language = Russian (owner's rule 2026-11-09).
 - **ALL Shorts/Reels on YouTube — education, news, review cuts — ALWAYS category PEOPLE_BLOGS («Люди и блоги») (owner's rule 2026-11-19).**
@@ -178,18 +178,14 @@ caption/hashtag rules below where they conflict.**
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
   youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
   "type":"short", "privacy":"public", "madeForKids": false, "category":"PEOPLE_BLOGS", "tags": [...]}.
-- TAGS (owner's requirement — fill the YouTube tags field COMPLETELY every time, up to YouTube's 500-character limit).
-  Count length the YouTube way: tags joined by commas, and every tag that contains a space counts +2 (quotes).
-  Build the list in this order and stop adding when the next tag would exceed 500:
-  1) MUST tags (always): биткоин, обзор биткоина, альтсезон, трейдинг, обучение трейдингу, криптовалюта, bitcoin
-  2) 3–5 topic-specific tags for this video (coins/events/terms: эфириум, ETF, ФРС, инфляция США, ордер блок,
-     ликвидность, smart money, технический анализ, альткоины …)
-  3) Owner's base pool of popular tags, in this priority order (replace 2026 with the current year when it changes):
-     биткоин прогноз, биткоин сегодня, биткоин новости, когда альтсезон, альткоины, биткоин цена, биткоин обзор,
-     биткоин когда рост, биткоин когда покупать, биткоин когда продавать, bitcoin прогноз, биткоин прогноз 2026,
-     биткоин 2026, криптовалюта 2026, альткоины 2026, альткоины сегодня, альткоины новости, альткоины для иксов,
-     альткоины на долгосрок, биткоин прямо сейчас, биткоин криптовалюта, криптовалюта bitcoin
-  Never add other channels' or people's names as tags (YouTube treats that as misleading metadata). No duplicates.
+- TAGS — OWNER'S FIXED LIST (owner's rule 2026-11-19: «не меняй мои теги, вставляй всегда те, которые я прислал»).
+  Every YouTube Short/video gets EXACTLY these tags, in this order — no additions, no topic tags, no removals, no reordering
+  (472 of 500 chars):
+  биткоин, криптовалюта, биткоин криптовалюта, биткоин обзор, биткоин цена, биткоин прогноз, биткоин когда рост,
+  биткоин когда покупать, биткоин когда продавать, bitcoin прогноз, bitcoin, криптовалюта bitcoin, альткоины,
+  альткоины для иксов, альткоины на долгосрок, биткоин сегодня, биткоин новости, биткоин прямо сейчас, альткоины новости,
+  криптовалюта 2026, биткоин 2026, биткоин прогноз 2026, альткоины 2026, альткоины сегодня, альтсезон, когда альтсезон
+  (only when the year changes, replace 2026 with the new year).
 - Description (text): 2–3 sentences on the topic that naturally include the key words «биткоин», «обзор биткоина»
   and «альтсезон» where it makes sense; then "Полный разбор и аналитика каждый день — Telegram @romchekcrypto",
   "Instagram: @romchekcrypto", "Не является финансовой рекомендацией.",

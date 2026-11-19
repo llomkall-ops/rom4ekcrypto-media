@@ -114,8 +114,7 @@ Rules (apply every time):
 5. YouTube description: first sentence = keyword + what the viewer learns (2–3 sentences total, no full script), CTA
    «обучение», Telegram/Instagram lines, disclaimer, then 3 hashtags (#shorts #трейдинг + 1 topic, or #биткоин when the
    video is about BTC) — 3 is enough, they show above the title.
-6. YouTube tags: owner wants the field filled (keep the 500-char rule), but they barely matter — never spend time on them
-   instead of the title/hook, and never add unrelated tags.
+6. YouTube tags: ALWAYS the owner's fixed list from CLAUDE.md (TAGS) exactly as is — never add, remove or reorder (owner 2026-11-19).
 7. Review in the weekly analysis: compare views/search traffic of videos with different title patterns and adjust these rules.
 
 ## Experiments queue
