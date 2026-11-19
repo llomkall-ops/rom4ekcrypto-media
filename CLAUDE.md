@@ -54,7 +54,7 @@ caption/hashtag rules below where they conflict.**
   media = [raw URL of the mp4], autoPublish true. NO audioConfiguration (music is inside the video).
 - **YouTube Short (owner's rule 2026-11-18): the SAME mp4 is also published as a YouTube Short at the same time (18:00).**
   Separate createScheduledPost: providers [{"network":"youtube"}], media = [same raw mp4 URL], youtubeData {"title": "<CAPS hook
-  word(s) + topic, ≤90 chars, ends with #shorts>", "type":"short", "privacy":"public", "madeForKids":false, "category":"EDUCATION",
+  word(s) + topic, ≤90 chars, ends with #shorts>", "type":"short", "privacy":"public", "madeForKids":false, "category":"PEOPLE_BLOGS",
   "tags":[…filled to 500 chars by the TAGS rule in the «YouTube Shorts» section below: MUST tags + 3–5 topic tags + base pool…]}.
   Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «Напиши в комментариях «обучение» — пришлю
   13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»; «Полный разбор и аналитика каждый день — Telegram
@@ -148,6 +148,7 @@ caption/hashtag rules below where they conflict.**
   Telegram line, disclaimer, 3–5 hashtags incl. #shorts; tags filled to 500 chars per the rule below.
   The «related video» link to the latest long video can't be set via Metricool — the owner sets it in YouTube Studio.
 - YouTube category for these Shorts = PEOPLE_BLOGS («Люди и блоги»), video language = Russian (owner's rule 2026-11-09).
+- **ALL Shorts/Reels on YouTube — education, news, review cuts — ALWAYS category PEOPLE_BLOGS («Люди и блоги») (owner's rule 2026-11-19).**
   Metricool has no language field: language comes from the channel's upload defaults (YouTube Studio → Настройки →
   Загрузка видео по умолчанию → Язык видео = русский); if a Short still shows no language, set it in Studio.
 - NO MUSIC in these Shorts (owner's rule 2026-11-14): voice only — run mkshort.py without the music argument and drop the «Музыка: …» line from the description.
@@ -176,7 +177,7 @@ caption/hashtag rules below where they conflict.**
 - Build: `python3 tools/add_music.py videos/<folder>.mp4 <assets>/music/<track>.mp3 shorts/<folder>.mp4`, commit/push the MP4.
 - Schedule with createScheduledPost: providers [{"network":"youtube"}], media = [raw URL of shorts/<folder>.mp4],
   youtubeData {"title": "<≤90 chars, intriguing, Russian, contains a key word like «биткоин», ends with #shorts>",
-  "type":"short", "privacy":"public", "madeForKids": false, "category":"EDUCATION", "tags": [...]}.
+  "type":"short", "privacy":"public", "madeForKids": false, "category":"PEOPLE_BLOGS", "tags": [...]}.
 - TAGS (owner's requirement — fill the YouTube tags field COMPLETELY every time, up to YouTube's 500-character limit).
   Count length the YouTube way: tags joined by commas, and every tag that contains a space counts +2 (quotes).
   Build the list in this order and stop adding when the next tag would exceed 500:
