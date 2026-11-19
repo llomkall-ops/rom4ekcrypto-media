@@ -1,0 +1,158 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#141414}
+body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f2eee6;position:relative}
+#bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 0% 0%,rgba(198,244,50,.16),transparent 60%),radial-gradient(900px 800px at 100% 100%,rgba(62,154,90,.16),transparent 60%),#141414}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:90px 90px}
+.a{position:absolute;will-change:transform,opacity,filter;opacity:0}
+.H{font-family:'Inter Display','Inter';font-weight:900;text-transform:uppercase;letter-spacing:-3px;line-height:.95;white-space:nowrap;transform-origin:left center}
+.L{color:#c6f432}.R{color:#e5484d}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:40px;padding:12px 30px;font-weight:800;font-size:34px;background:#232323;border:2px solid #3a3a3a;color:#efe9df}
+.chip{font-family:'Inter Display';font-weight:900;border-radius:24px;padding:12px 30px;font-size:64px;letter-spacing:-1px;white-space:nowrap}
+#sub{position:absolute;left:60px;width:840px;top:1385px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:62px;line-height:1.12;text-transform:uppercase;letter-spacing:-1px}
+#sub span{display:inline-block;padding:2px 12px;margin:4px 3px;border-radius:14px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sub span.on{background:#c6f432;color:#161616;text-shadow:none}
+#sub span.off{opacity:.55}
+.hdr{position:absolute;left:60px;top:250px;display:flex;gap:16px;align-items:center}
+.dots{display:flex;gap:10px;margin-left:10px}.dots i{width:44px;height:10px;border-radius:5px;background:#3a3a3a;display:block}.dots i.on{background:#c6f432}
+svg text{font-family:Inter;font-weight:800}
+</style><style>
+.card{background:#1e1e1e;border:3px solid #333;border-radius:30px;padding:28px 36px}
+.card .v{white-space:nowrap;font-family:'Inter Display';font-weight:900;font-size:96px;letter-spacing:-4px;color:#c6f432;line-height:1}
+.card .t{font-size:38px;font-weight:700;color:#bdb6aa;margin-top:10px}
+.krow{left:60px;width:960px;display:flex;gap:34px;align-items:center;background:#1e1e1e;border:3px solid #333;border-radius:30px;padding:30px 36px}
+.krow b{font-family:'Inter Display';font-weight:900;font-size:120px;color:#c6f432;line-height:1;width:90px;text-align:center}
+.krow span{font-family:'Inter Display';font-weight:900;font-size:58px;text-transform:uppercase;letter-spacing:-1px;line-height:1.05}
+.krow em{font-style:normal;color:#c6f432}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<div id="brand" class="a pill" style="left:60px;top:250px;opacity:1">📰 Крипто-новости · 19 ноября</div>
+<svg id="chart" class="a" style="left:0;top:760px;opacity:1" width="1080" height="560"></svg>
+<div id="h1" class="a H" style="left:60px;top:370px;font-size:132px">IPO Anthropic</div>
+<div id="h2" class="a H L" style="left:60px;top:500px;font-size:94px">ударит по биткоину?</div>
+<div id="c1" class="a card" style="left:60px;top:370px;width:960px"><div class="v">$81 млрд</div><div class="t">крупнейшее IPO в истории США</div></div>
+<div id="c2" class="a card" style="left:60px;top:560px;width:465px"><div class="v">$1,5 трлн</div><div class="t">оценка</div></div>
+<div id="c3" class="a card" style="left:555px;top:560px;width:465px"><div class="v">17:30</div><div class="t">МСК · Nasdaq · ANT</div></div>
+<div id="b1" class="a H R" style="left:50px;top:340px;font-size:300px;letter-spacing:-12px">−26%</div>
+<div id="b2" class="a H" style="left:60px;top:640px;font-size:72px">BTC ≈ <span class="L">$63 000</span></div>
+<div id="q1" class="a H" style="left:60px;top:370px;font-size:150px">Почему?</div>
+<div id="r1" class="a chip" style="left:60px;top:700px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:50px">🤖 распродажа ИИ-акций</div>
+<div id="r2" class="a chip" style="left:60px;top:820px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:50px">💸 отток из BTC-ETF</div>
+<div id="r3" class="a chip" style="left:60px;top:940px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:50px">🏦 ФРС: повышение ставки</div>
+<div id="r4" class="a chip" style="left:60px;top:580px;background:#c6f432;color:#161616;font-size:50px">🧲 деньги уходят из риска</div>
+<div id="s1" class="a H" style="left:60px;top:370px;font-size:104px">Как было</div>
+<div id="s2" class="a H L" style="left:60px;top:470px;font-size:104px">с IPO SpaceX</div>
+<div id="p1" class="a H" style="left:60px;top:370px;font-size:120px">Повторится</div>
+<div id="p2" class="a H L" style="left:60px;top:490px;font-size:120px">сценарий?</div>
+<div id="ph" class="a hdr" style="top:250px"><span class="pill" style="background:#c6f432;color:#161616;border-color:#c6f432">👀 Смотри на 3 вещи</span><div class="dots"><i id="d1"></i><i id="d2"></i><i id="d3"></i></div></div>
+<div id="k1" class="a krow" style="top:400px"><b>1</b><span>Первый день торгов<br><em>Anthropic (ANT)</em></span></div>
+<div id="k2" class="a krow" style="top:640px"><b>2</b><span>Удержит ли BTC<br><em>поддержку $62 000</em></span></div>
+<div id="k3" class="a krow" style="top:880px"><b>3</b><span>Отток из ETF:<br><em>продолжится или нет</em></span></div>
+<div id="v1" class="a H" style="left:60px;top:560px;font-size:150px;transform-origin:left">💾 Сохрани</div>
+<div id="v2" class="a H L" style="left:60px;top:740px;font-size:112px">📤 Перешли другу</div>
+<div id="sub"></div>
+<script>
+const VO=0.25;
+const W=/*W*/[].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=/*G*/[];
+const END=33.6;
+const norm=x=>x.toLowerCase().replace(/[«»?.,!—:;]/g,'');
+function I(txt,occ=0){const p=txt.split(' ');let k=0;for(let i=0;i<W.length;i++){let ok=true;for(let j=0;j<p.length;j++){if(!W[i+j]||norm(W[i+j][0])!==p[j]){ok=false;break}}if(ok){if(k===occ)return i;k++;}}throw 'no word '+txt;}
+const T=(w,o=0)=>W[typeof w==='string'?I(w,o):w][1]; const E=(w,o=0)=>W[typeof w==='string'?I(w,o):w][2];
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const cl=x=>Math.min(Math.max(x,0),1);
+const $=id=>document.getElementById(id);
+function show(el,t,tin,tout,o={}){
+  const dur=o.dur||.3, dy=o.dy??50, dx=o.dx??0, s0=o.s0??1, base=o.base||'';
+  let p=ease((t-tin)/dur), q=tout==null?0:easeIO((t-tout)/(o.odur||.22));
+  const op=p*(1-q), x=dx*(1-p)+(o.ex||0)*q, y=dy*(1-p)+(o.ey??-70)*q, s=s0+(1-s0)*p;
+  const bl=(1-p)*14+q*14;
+  el.style.opacity=op; el.style.transform=`translate(${x}px,${y}px) scale(${s}) ${base}`; el.style.filter=bl>.3?`blur(${bl}px)`:'none';
+}
+
+let T_now=0;
+const S2=T('крупнейшее'), S3=T('а биткоин'), S4=T('почему'), S5=T('но мы'), S6=T('после'), S7=T('а потом'), S8=T('повторится'), S9=T('смотри'), S10=T('сохрани');
+// dense catmull-rom
+function dense(pts,n=12){const out=[];for(let i=0;i<pts.length-1;i++){const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||pts[i+1];
+ for(let k=0;k<n;k++){const t=k/n,t2=t*t,t3=t2*t;out.push([0.5*((2*p1[0])+(-p0[0]+p2[0])*t+(2*p0[0]-5*p1[0]+4*p2[0]-p3[0])*t2+(-p0[0]+3*p1[0]-3*p2[0]+p3[0])*t3),
+ 0.5*((2*p1[1])+(-p0[1]+p2[1])*t+(2*p0[1]-5*p1[1]+4*p2[1]-p3[1])*t2+(-p0[1]+3*p1[1]-3*p2[1]+p3[1])*t3)])}}out.push(pts[pts.length-1]);return out}
+const day=s=>Date.parse(s)/864e5;
+function mk(anch,d0,d1,v0,v1){return anch.map(([d,v])=>[70+(day(d)-day(d0))/(day(d1)-day(d0))*870,40+(v1-v)/(v1-v0)*470])}
+function poly(P,frac,col,w,dash){const n=Math.max(2,Math.round(P.length*cl(frac)));if(frac<=0)return'';return `<polyline points="${P.slice(0,n).map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${dash?'stroke-dasharray="22 16"':''}/>`}
+function dot(p,c,op=1,r=14){return `<circle cx="${p[0]}" cy="${p[1]}" r="${r}" fill="${c}" stroke="#141414" stroke-width="5" opacity="${op}"/>`}
+function lbl(p,txt,dx,dy,c='#f2eee6',a='middle',fs=36,op=1){return `<text x="${p[0]+dx}" y="${p[1]+dy}" text-anchor="${a}" font-size="${fs}" font-weight="900" fill="${c}" opacity="${op}">${txt}</text>`}
+function plaque(x,y,txt,op,bg='#c6f432',fg='#141414',fs=30){const w=txt.length*fs*0.62+40;return `<g opacity="${op}"><rect x="${x-w/2}" y="${y}" width="${w}" height="${fs+26}" rx="${(fs+26)/2}" fill="${bg}"/><text x="${x}" y="${y+fs+6}" text-anchor="middle" font-size="${fs}" font-weight="900" fill="${fg}">${txt}</text></g>`}
+// data
+const BTCA=[['2026-09-30',81.9],['2026-10-04',86.5],['2026-10-20',79],['2026-10-27',76.5],['2026-11-05',70.5],['2026-11-12',66.5],['2026-11-19',63.0]];
+const SPX=[['2026-05-15',81.8],['2026-05-28',74.5],['2026-06-12',63.5],['2026-06-21',61.0],['2026-06-30',58.5],['2026-07-20',62.5],['2026-08-19',64.7],['2026-08-24',77.5],['2026-09-15',80.5],['2026-10-04',86.5],['2026-10-27',80.0]];
+const PRJ=[['2026-11-19',63.0],['2026-11-28',60.2],['2026-12-07',58.0],['2026-12-25',61.5],['2027-01-20',65.5],['2027-02-10',70.0]];
+const sA=mk(BTCA,'2026-09-28','2026-11-24',55,90), DA=dense(sA);
+const sS=mk(SPX,'2026-05-10','2026-10-30',52,92), DS=dense(sS);
+const sA2=mk(BTCA,'2026-09-25','2027-02-15',50,92), DA2=dense(sA2), sP=mk(PRJ,'2026-09-25','2027-02-15',50,92), DP=dense(sP);
+const iS=2, iL=4; // spacex ipo idx, low idx
+function segFrac(P,anchIdx,n=12){return (anchIdx*n)/(P.length-1)}
+function render(t){
+  T_now=t; let svg='';
+  // S1
+  show($('h1'),t,-1,S2-.05,{base:'scaleX(.86)'}); show($('h2'),t,-1,S2-.05,{base:'scaleX(.86)'});
+  // S1+S3 chart: BTC falling
+  if(t<S4+.25){
+    const op=t<S2-.05?1:(t<S3-.05?0:1)*(t<S4?1:Math.max(0,1-(t-S4)/.25));
+    const fr= t<S2? 0.35+0.65*ease(t/(S2-0.3)) : ease((t-S3)/1.6);
+    const end=DA[Math.max(1,Math.round((DA.length-1)*cl(fr)))];
+    svg+=`<g opacity="${op}">${poly(DA,fr,'#f2eee6',10)}${fr>=1?dot(end,'#e5484d'):''}${fr>=1?lbl(end,'≈ $63K',0,64,'#e5484d','middle',44):''}</g>`;
+  }
+  // S2 cards
+  show($('c1'),t,T('крупнейшее')-.05,S3-.05,{s0:.8,dy:30}); show($('c2'),t,T('оценка')-.05,S3-.05,{s0:.8,dy:30}); show($('c3'),t,T('оценка')+.5,S3-.05,{s0:.8,dy:30});
+  // S3
+  show($('b1'),t,T('процентов')-.6,S4-.05,{s0:.6,dy:0,base:'scaleX(.9)'}); show($('b2'),t,S3,S4-.05,{base:'scaleX(.9)'});
+  // S4
+  show($('q1'),t,S4,S5-.05,{base:'scaleX(.88)'});
+  show($('r1'),t,T('распродажа')-.05,S5-.05,{dx:-60,dy:0}); show($('r2'),t,T('отток')-.05,S5-.05,{dx:-60,dy:0});
+  show($('r3'),t,T('фрс')-.05,S5-.05,{dx:-60,dy:0}); show($('r4'),t,T('деньги')-.05,S5-.05,{dx:-60,dy:0,s0:.9});
+  // S5-S7 spacex chart
+  show($('s1'),t,S5,S8-.05,{base:'scaleX(.88)'}); show($('s2'),t,T('spacex')-.05,S8-.05,{base:'scaleX(.88)'});
+  if(t>=S5-.05&&t<S8+.25){
+    const op=t<S8?1:Math.max(0,1-(t-S8)/.25);
+    const f1=segFrac(DS,iS), f2=segFrac(DS,iL);
+    let fr= t<S6? f1*ease((t-T('летом'))/Math.max(.5,T('процента')-T('летом'))) : t<S7? f1+(f2-f1)*ease((t-S6)/Math.max(.5,T('дно')-S6+.4)) : f2+(1-f2)*ease((t-S7)/2.2);
+    const ip=sS[iS], lw=sS[iL], en=sS[sS.length-1];
+    let g=`<line x1="${ip[0]}" x2="${ip[0]}" y1="70" y2="540" stroke="#c6f432" stroke-width="4" stroke-dasharray="14 10"/>`+plaque(ip[0],8,'IPO SPACEX',1);
+    g+=poly(DS,fr,'#f2eee6',10);
+    g+=dot(sS[0],'#f2eee6');
+    const a1=cl((t-T('процента'))/.25); g+=dot(ip,'#e5484d',a1)+lbl(ip,'−22% к IPO',26,-14,'#e5484d','start',40,a1);
+    const a2=cl((t-T('дно'))/.25); g+=dot(lw,'#e5484d',a2)+lbl(lw,'дно ≈ $58,5K',24,58,'#f2eee6','start',38,a2)+lbl(lw,'+18 дней',24,100,'#bdb6aa','start',32,a2);
+    const a3=cl((t-T('плюс'))/.25); g+=dot(en,'#c6f432',a3)+plaque(en[0]-60,en[1]+30,'+26%',a3,'#c6f432','#141414',44);
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // S8 anthropic scenario
+  show($('p1'),t,S8,S9-.05,{base:'scaleX(.88)'}); show($('p2'),t,S8+.3,S9-.05,{base:'scaleX(.88)'});
+  if(t>=S8-.05&&t<S9+.25){
+    const op=t<S9?1:Math.max(0,1-(t-S9)/.25);
+    const fr=ease((t-S8)/.7), fp=ease((t-S8-.8)/1.6);
+    const nw=sA2[sA2.length-1], y62=40+(92-62)/(92-50)*470;
+    let g=`<line x1="70" x2="1010" y1="${y62}" y2="${y62}" stroke="#e5484d" stroke-width="4" stroke-dasharray="12 10" opacity="${fr}"/>`+lbl([1010,y62],'поддержка $62K',0,44,'#e5484d','end',30,fr);
+    g+=`<line x1="${nw[0]}" x2="${nw[0]}" y1="70" y2="540" stroke="#c6f432" stroke-width="4" stroke-dasharray="14 10"/>`+plaque(nw[0],8,'IPO ANTHROPIC',1);
+    g+=poly(DA2,fr,'#f2eee6',10)+poly(DP,fp,'#c6f432',9,true);
+    g+=dot(nw,'#e5484d',fr)+lbl(nw,'$63K',-24,-26,'#f2eee6','end',38,fr);
+    const lo=sP[2], en=sP[sP.length-1]; const a=cl((t-S8-1.4)/.3), b=cl((t-S8-2.2)/.3);
+    g+=dot(lo,'#e5484d',a)+lbl(lo,'лои?',0,64,'#f2eee6','middle',34,a)+dot(en,'#c6f432',b)+lbl(en,'разворот?',-10,-30,'#c6f432','end',40,b);
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // S9 checklist
+  show($('ph'),t,S9,S10-.05,{dy:-30}); $('brand').style.opacity=t<S9?1:(t<S10?0:0);
+  [['d1',T('первое')],['d2',T('второе')],['d3',T('третье')]].forEach(([d,s])=>$(d).className=t>=s?'on':'');
+  show($('k1'),t,T('первое')-.05,S10-.05,{dx:-60,dy:0}); show($('k2'),t,T('второе')-.05,S10-.05,{dx:-60,dy:0}); show($('k3'),t,T('третье')-.05,S10-.05,{dx:-60,dy:0});
+  // S10
+  show($('v1'),t,S10-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'}); show($('v2'),t,T('перешли')-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'});
+  $('chart').innerHTML=svg;
+  // subtitles
+  let gi=-1; for(let g=0;g<GROUPS.length;g++){const [a,b]=GROUPS[g];const st=W[a][1]-.05,en=g+1<GROUPS.length?W[GROUPS[g+1][0]][1]-.05:W[b-1][2]+.3;if(t>=st&&t<en)gi=g;}
+  const sub=$('sub');
+  if(gi<0){sub.innerHTML='';}else{const [a,b]=GROUPS[gi];let h='';for(let i=a;i<b;i++){const on=t>=W[i][1]-.03&&(i+1<b?t<W[i+1][1]-.03:true);const past=t>=W[i][1];h+=`<span class="${on?'on':past?'':'off'}">${W[i][0]}</span>`}sub.innerHTML=h;}
+}
+window.render=render;
+</script></body></html>
