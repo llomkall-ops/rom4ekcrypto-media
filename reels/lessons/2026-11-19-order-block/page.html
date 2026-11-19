@@ -1,0 +1,213 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#141414}
+body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f2eee6;position:relative}
+#bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 0% 0%,rgba(198,244,50,.16),transparent 60%),radial-gradient(900px 800px at 100% 100%,rgba(62,154,90,.16),transparent 60%),#141414}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:90px 90px}
+.a{position:absolute;will-change:transform,opacity,filter;opacity:0}
+.H{font-family:'Inter Display','Inter';font-weight:900;text-transform:uppercase;letter-spacing:-3px;line-height:.95;white-space:nowrap;transform-origin:left center}
+.L{color:#c6f432}.R{color:#e5484d}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:40px;padding:12px 30px;font-weight:800;font-size:34px;background:#232323;border:2px solid #3a3a3a;color:#efe9df}
+.chip{font-family:'Inter Display';font-weight:900;border-radius:24px;padding:12px 30px;font-size:64px;letter-spacing:-1px;white-space:nowrap}
+#sub{position:absolute;left:60px;width:840px;top:1385px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:62px;line-height:1.12;text-transform:uppercase;letter-spacing:-1px}
+#sub span{display:inline-block;padding:2px 12px;margin:4px 3px;border-radius:14px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sub span.on{background:#c6f432;color:#161616;text-shadow:none}
+#sub span.off{opacity:.55}
+.hdr{position:absolute;left:60px;top:250px;display:flex;gap:16px;align-items:center}
+.dots{display:flex;gap:10px;margin-left:10px}.dots i{width:44px;height:10px;border-radius:5px;background:#3a3a3a;display:block}.dots i.on{background:#c6f432}
+svg text{font-family:Inter;font-weight:800}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<div id="brand" class="a pill" style="left:60px;top:250px;opacity:1">🎓 Урок трейдинга · <span class="L">ордер блок</span></div>
+<svg id="chart" class="a" style="left:0;top:760px;opacity:1" width="1080" height="560"></svg>
+
+<!-- S1 hook -->
+<div id="h1" class="a H" style="left:60px;top:370px;font-size:150px">Разворот</div>
+<div id="h2" class="a H L" style="left:60px;top:520px;font-size:150px">из пустоты?</div>
+<!-- S2 -->
+<div id="s2a" class="a H" style="left:60px;top:380px;font-size:150px">Это</div>
+<div id="s2b" class="a H L" style="left:60px;top:530px;font-size:150px">ордер блок</div>
+<div id="s2c" class="a chip" style="left:60px;top:700px;background:#c6f432;color:#161616;font-size:46px">🐋 зона, где крупный набирал позицию</div>
+<!-- S3 -->
+<div id="s3a" class="a H" style="left:60px;top:370px;font-size:112px">Последняя</div>
+<div id="s3b" class="a H" style="left:60px;top:485px;font-size:112px"><span class="R">красная</span> свеча</div>
+<div id="s3c" class="a chip" style="left:60px;top:620px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:44px">🐋 крупные покупали</div>
+<div id="s3d" class="a chip" style="left:60px;top:705px;background:#232323;border:3px solid #3a3a3a;color:#f2eee6;font-size:44px">⏳ набрали не всё</div>
+<!-- S4 -->
+<div id="s4a" class="a H" style="left:60px;top:370px;font-size:112px">Возврат</div>
+<div id="s4b" class="a H L" style="left:60px;top:485px;font-size:112px">в зону</div>
+<div id="s4c" class="a chip" style="left:60px;top:620px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:44px">их ордера снова срабатывают</div>
+<!-- S5 -->
+<div id="s5h" class="a H" style="left:60px;top:370px;font-size:112px">Для тебя:</div>
+<div id="s5a" class="a chip" style="left:60px;top:560px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:60px">✕ не догоняй импульс</div>
+<div id="s5b" class="a chip" style="left:60px;top:700px;background:#c6f432;color:#161616;font-size:60px">✓ жди возврата в блок</div>
+<div id="s5c" class="a chip" style="left:60px;top:840px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:60px">🛡 стоп понятен заранее</div>
+<!-- Q -->
+<div id="q5" class="a H" style="left:60px;top:520px;font-size:140px">Как найти</div><div id="q5b" class="a H L" style="left:60px;top:665px;font-size:124px">рабочий блок?</div>
+<div id="ph" class="a hdr"><span class="pill" style="background:#c6f432;color:#161616;border-color:#c6f432">🔎 Рабочий ордер блок</span><div class="dots"><i id="d1"></i><i id="d2"></i><i id="d3"></i></div></div>
+<div id="p1" class="a H" style="left:60px;top:370px;font-size:104px">#1 Импульс</div>
+<div id="p1b" class="a H L" style="left:60px;top:475px;font-size:104px">со сломом</div>
+<div id="p1c" class="a chip" style="left:60px;top:620px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:44px">без слома = просто свеча <span class="R">✕</span></div>
+<div id="p2" class="a H" style="left:60px;top:370px;font-size:104px">#2 Нетронутый</div>
+<div id="p2b" class="a H L" style="left:60px;top:475px;font-size:104px">блок</div>
+<div id="p3" class="a H" style="left:60px;top:370px;font-size:104px">#3 Стоп за</div>
+<div id="p3b" class="a H L" style="left:60px;top:478px;font-size:86px">дальней границей</div>
+<div id="p3c" class="a chip" style="left:60px;top:600px;background:#232323;border:3px solid #c6f432;color:#f2eee6;font-size:42px"><span class="L">✓</span> стоп за границей блока</div>
+<div id="p3d" class="a chip" style="left:60px;top:690px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:42px"><span class="R">✕</span> стоп внутри — выбьет</div>
+<div id="sv1" class="a H" style="left:60px;top:500px;font-size:150px">💾 Сохрани</div>
+<div id="sv2" class="a H L" style="left:60px;top:680px;font-size:112px">📤 Перешли другу</div>
+<div id="sv3" class="a chip" style="left:60px;top:870px;background:#232323;border:3px solid #e5484d;color:#f2eee6;font-size:48px">который покупает на хаях 🙈</div>
+<div id="sub"></div>
+
+<script>
+const VO=0.25;
+const W=[["x", 0, 1]].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=[[0, 1]];
+const END=33.6;
+const norm=x=>x.toLowerCase().replace(/[«»?.,!—:;]/g,'');
+function I(txt,occ=0){const p=txt.split(' ');let k=0;for(let i=0;i<W.length;i++){let ok=true;for(let j=0;j<p.length;j++){if(!W[i+j]||norm(W[i+j][0])!==p[j]){ok=false;break}}if(ok){if(k===occ)return i;k++;}}throw 'no word '+txt;}
+const T=(w,o=0)=>W[typeof w==='string'?I(w,o):w][1]; const E=(w,o=0)=>W[typeof w==='string'?I(w,o):w][2];
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const cl=x=>Math.min(Math.max(x,0),1);
+const $=id=>document.getElementById(id);
+function show(el,t,tin,tout,o={}){
+  const dur=o.dur||.3, dy=o.dy??50, dx=o.dx??0, s0=o.s0??1, base=o.base||'';
+  let p=ease((t-tin)/dur), q=tout==null?0:easeIO((t-tout)/(o.odur||.22));
+  const op=p*(1-q), x=dx*(1-p)+(o.ex||0)*q, y=dy*(1-p)+(o.ey??-70)*q, s=s0+(1-s0)*p;
+  const bl=(1-p)*14+q*14;
+  el.style.opacity=op; el.style.transform=`translate(${x}px,${y}px) scale(${s}) ${base}`; el.style.filter=bl>.3?`blur(${bl}px)`:'none';
+}
+// scene boundaries
+const S2=T('это'), S2b=T('смотри'), S3=T('перед'), S4=T('поэтому'), S5=T('для'), SQ=T('как'), P1=T('первое'), P2=T('второе'), P3=T('третье'), S8=T('сохрани');
+// candle chart helper. cs=[[o,h,l,c],...], appear from t0 every st sec
+function candles(cs,t0,st,mn,mx,opt={}){
+  const H=560,top=30,bot=530,sy=v=>top+(mx-v)/(mx-mn)*(bot-top);
+  const left=opt.left||70, sp=opt.sp||40, cw=opt.cw||24; let h='';
+  cs.forEach((c,i)=>{const ta=t0+i*st; const age=cl((T_now-ta)/.14); if(age<=0)return;
+    const [o,hi,lo,cc]=c; const x=left+i*sp; const col=c[4]||(cc>=o?'#3e9a5a':'#e5484d');
+    const y1=Math.min(sy(o),sy(cc)),y2=Math.max(sy(o),sy(cc)),mid=(y1+y2)/2,hh=Math.max(y2-y1,5)*age;
+    h+=`<line x1="${x}" x2="${x}" y1="${mid-(mid-sy(hi))*age}" y2="${mid+(sy(lo)-mid)*age}" stroke="${col}" stroke-width="5"/>`;
+    h+=`<rect x="${x-cw/2}" y="${mid-hh/2}" width="${cw}" height="${hh}" rx="3" fill="${col}"/>`;});
+  return {h,sy,left,sp};
+}
+function line(y,x1,x2,col,dash,label,lx,ly,op=1){return `<g opacity="${op}"><line x1="${x1}" x2="${x2}" y1="${y}" y2="${y}" stroke="${col}" stroke-width="5" ${dash?'stroke-dasharray="16 11"':''}/>${label?`<text x="${lx??x2}" y="${ly??y-14}" text-anchor="end" font-size="30" fill="${col}">${label}</text>`:''}</g>`}
+let T_now=0;
+// main OB schematic: down, OB candle (idx 3), impulse, return into zone, bounce
+const OB=[[110,111,104,105],[105,106,100,101],[101,102,97,98],[98,99,94.5,95],[95,103,94.8,102.5],[102.5,110,102,109],[109,116,108,115],[115,118,113,114],[114,115,108,109],[109,110,101,102],[102,103,96.5,98.5],[98.5,106,98,105],[105,113,104,112]];
+const zoneBox=(r,i,hi,lo,op,col='#c6f432',x2=1010)=>{const x=r.left+i*r.sp-30;return `<rect x="${x}" y="${r.sy(hi)}" width="${x2-x}" height="${r.sy(lo)-r.sy(hi)}" rx="10" fill="${col}" fill-opacity="${.16*op}" stroke="${col}" stroke-opacity="${op}" stroke-width="4" stroke-dasharray="14 10"/>`};
+const tag=(x,y,txt,bg,fg,op,fs=30,w)=>{w=w||txt.length*fs*.62+40;return `<g opacity="${op}"><rect x="${x-w/2}" y="${y-fs-10}" width="${w}" height="${fs+30}" rx="16" fill="${bg}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="${fs}" fill="${fg}">${txt}</text></g>`};
+function render(t){
+  T_now=t; let svg='';
+  // ---- S1 hook
+  show($('h1'),t,-1,S2-.05,{base:'scaleX(.84)'});
+  show($('h2'),t,-1,S2-.05,{base:'scaleX(.84)'});
+  if(t<S2+.2){
+    const op=t<S2?1:Math.max(0,1-(t-S2)/.2);
+    const r=candles(OB,-2.0,.2,90,120,{left:90,sp:66,cw:34});
+    let g=r.h; const bi=10, bx=r.left+bi*r.sp, by=r.sy(96.5);
+    const qp=cl((t-0.8)/.25);
+    g+=`<g opacity="${qp}"><circle cx="${bx}" cy="${by+10}" r="46" fill="none" stroke="#c6f432" stroke-width="6"/><text x="${bx}" y="${by+110}" text-anchor="middle" font-size="64" fill="#c6f432">?</text></g>`;
+    g+=`<text x="${bx}" y="${r.sy(118)}" text-anchor="middle" font-size="34" fill="#bdb6aa" opacity="${qp}">уровня нет…</text>`;
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // ---- S2
+  show($('s2a'),t,S2,S3-.08,{base:'scaleX(.86)'});
+  show($('s2b'),t,T('ордер')-.05,S3-.08,{base:'scaleX(.86)',s0:.8});
+  show($('s2c'),t,T('зона')-.05,S3-.08,{s0:.5,dy:0,dur:.28});
+  if(t>=S2-.05&&t<S3+.2){
+    const op=t<S3?1:Math.max(0,1-(t-S3)/.2);
+    const r=candles(OB,S2-3,.01,90,120,{left:90,sp:66,cw:34});
+    const zp=cl((t-T('ордер'))/.3);
+    svg+=`<g opacity="${op}">${zoneBox(r,3,99,94.5,zp)}${r.h}${tag(r.left+3*r.sp,r.sy(92)+40,'ОРДЕР БЛОК','#c6f432','#161616',zp,32)}</g>`;
+  }
+  // ---- S3 + S4 shared chart
+  show($('s3a'),t,S3,S4-.05,{base:'scaleX(.86)'});
+  show($('s3b'),t,T('красная')-.05,S4-.05,{base:'scaleX(.86)'});
+  show($('s3c'),t,T('именно')-.05,S4-.05,{s0:.6,dy:0});
+  show($('s3d'),t,T('не',1)-.05,S4-.05,{s0:.6,dy:0});
+  show($('s4a'),t,S4,S5-.05,{base:'scaleX(.86)'});
+  show($('s4b'),t,T('возвращается')-.05,S5-.05,{base:'scaleX(.86)'});
+  show($('s4c'),t,T('ордера')-.05,S5-.05,{s0:.6,dy:0});
+  if(t>=S3-.05&&t<S5+.2){
+    const op=t<S5?1:Math.max(0,1-(t-S5)/.2);
+    const st=(T('импульсом')-S3)/4;
+    let cs=OB.slice(0,4).concat(OB.slice(4,8));
+    const r=candles(cs,S3,st*.8,90,120,{left:90,sp:66,cw:34});
+    let g='';
+    const zp=cl((t-T('красная'))/.3);
+    // highlight OB candle
+    g+=zoneBox(r,3,99,94.5,zp)+`<g opacity="${zp}"><circle cx="${r.left+3*r.sp}" cy="${r.sy(96.7)}" r="52" fill="none" stroke="#c6f432" stroke-width="5"/></g>`;
+    g+=r.h;
+    if(t>=S4-.05){const r2=candles(OB.slice(8),S4,(T('эту')-S4+.4)/3,90,120,{left:90+8*66,sp:66,cw:34});g+=r2.h;
+      const r3=candles(OB.slice(11),T('отскакивает')-.1,.18,90,120,{left:90+11*66,sp:66,cw:34});g+=r3.h;
+      const bp=cl((t-T('ордера'))/.3);
+      for(let i=0;i<6;i++){const ap=cl((t-T('ордера')-i*.08)/.15);if(ap<=0)continue;const cx=110+3*66+i*92, cy=r.sy(96.7);
+        g+=`<g opacity="${ap}" transform="translate(${cx},${cy}) scale(${.6+.4*ap})"><rect x="-40" y="-20" width="80" height="40" rx="12" fill="#3e9a5a"/><text x="0" y="11" text-anchor="middle" font-size="22" fill="#fff">BUY</text></g>`;}
+      g+=tag(90+12*66-40,r.sy(119),'отскок ✓','#c6f432','#161616',cl((t-T('отскакивает'))/.25),34);
+    }
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // ---- S5
+  show($('s5h'),t,S5,SQ-.05,{base:'scaleX(.86)'});
+  show($('s5a'),t,T('догоняй')-.1,SQ-.05,{dx:-60,dy:0});
+  show($('s5b'),t,T('жди')-.1,SQ-.05,{dx:-60,dy:0});
+  show($('s5c'),t,T('понятным')-.1,SQ-.05,{dx:-60,dy:0});
+  if(t>=S5-.05&&t<SQ+.2){
+    const op=t<SQ?1:Math.max(0,1-(t-SQ)/.2);
+    const r=candles(OB,S5-5,.01,88,120,{left:90,sp:66,cw:34});
+    // shift chart lower part: draw small version under chips
+    let g=`<g transform="translate(0,230) scale(1,.55)">${zoneBox(r,3,99,94.5,1)}${r.h}</g>`;
+    svg+=`<g opacity="${op*.9}">${g}</g>`;
+  }
+  // ---- Q + tips header
+  $('brand').style.opacity=t<SQ?1:Math.max(0,1-(t-SQ)/.2);
+  show($('q5'),t,SQ,P1-.1,{base:'scaleX(.86)'});show($('q5b'),t,T('рабочий')-.05,P1-.1,{base:'scaleX(.86)',s0:.8});
+  show($('ph'),t,P1-.05,S8-.05,{dy:-30});
+  [['d1',P1],['d2',P2],['d3',P3]].forEach(([d,s])=>$(d).className=t>=s?'on':'');
+  // #1
+  show($('p1'),t,P1-.05,P2-.05,{});show($('p1b'),t,T('сломал')-.1,P2-.05,{});
+  show($('p1c'),t,T('без')-.05,P2-.05,{s0:.6,dy:0});
+  if(t>=P1-.05&&t<P2+.2){
+    const op=t<P2?1:Math.max(0,1-(t-P2)/.2);
+    const cs=[[104,106,100,101],[101,108.5,100,107.5],[107.5,109,103,104],[104,105,99,100],[100,101,96,97],[97,104,96.5,103.5],[103.5,111,103,110],[110,115,109,114],[114,118,113,117]];
+    const r=candles(cs,P1,(T('сломал')-P1)/8,92,120,{left:110,sp:100,cw:46});
+    const yl=r.sy(108.8); const bp=cl((t-T('сломал'))/.3);
+    let g=line(yl,60,1010,'#f2eee6',true,'хай структуры',600,yl-16)+zoneBox(r,4,101,96,cl((t-T('после'))/.3))+r.h;
+    g+=tag(110+5*100,yl-70,'BOS ✓ слом','#c6f432','#161616',bp,32);
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // #2
+  show($('p2'),t,P2-.05,P3-.05,{});show($('p2b'),t,T('блок',3)-.05,P3-.05,{});
+  if(t>=P2-.05&&t<P3+.2){
+    const op=t<P3?1:Math.max(0,1-(t-P2)/.2*0)*(t<P3?1:Math.max(0,1-(t-P3)/.2));
+    let g='';
+    const rows=[['1-й возврат',1,'#c6f432','сильный ✓',T('первый')],['2-й касание',.55,'#8a8a8a','слабее',T('каждое')],['3-й касание',.22,'#e5484d','почти пусто ✕',T('ослабляет')]];
+    rows.forEach(([lb,v,col,res,ta],i)=>{const ap=cl((t-P2-.3-i*.25)/.3);const y=40+i*165;
+      g+=`<g opacity="${ap}"><text x="60" y="${y+40}" font-size="40" fill="#f2eee6">${lb}</text><rect x="60" y="${y+62}" width="900" height="64" rx="20" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="3"/><rect x="60" y="${y+62}" width="${900*v*ease((t-ta)/.5)}" height="64" rx="20" fill="${col}"/><text x="960" y="${y+40}" text-anchor="end" font-size="36" fill="${col}">${res}</text></g>`;});
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  // #3
+  show($('p3'),t,P3-.05,S8-.05,{});show($('p3b'),t,T('дальнюю')-.1,S8-.05,{});
+  if(t>=P3-.05&&t<S8+.2){
+    const op=t<S8?1:Math.max(0,1-(t-S8)/.2);
+    const r=candles(OB,P3,(T('границу')-P3)/13,86,120,{left:90,sp:66,cw:34});
+    let g=zoneBox(r,3,99,94.5,1)+r.h;
+    const gp=cl((t-T('границу'))/.3), bp=cl((t-T('внутрь'))/.3);
+    g+=line(r.sy(92.8),60,1010,'#c6f432',false,'',0,0,gp);
+    g+=line(r.sy(96.7),60,1010,'#e5484d',true,'',0,0,bp);
+    svg+=`<g opacity="${op}">${g}</g>`;
+  }
+  show($('p3c'),t,T('границу')-.05,S8-.05,{s0:.6,dy:0});show($('p3d'),t,T('внутрь')-.05,S8-.05,{s0:.6,dy:0});
+  show($('sv1'),t,S8-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'});show($('sv2'),t,T('перешли')-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'});
+  show($('sv3'),t,T('покупает')-.1,null,{s0:.6,dy:0});
+  $('chart').innerHTML=svg;
+  // subtitles
+  let gi=-1; for(let g=0;g<GROUPS.length;g++){const [a,b]=GROUPS[g];const st=W[a][1]-.05,en=g+1<GROUPS.length?W[GROUPS[g+1][0]][1]-.05:W[b-1][2]+.3;if(t>=st&&t<en)gi=g;}
+  const sub=$('sub');
+  if(gi<0){sub.innerHTML='';}else{const [a,b]=GROUPS[gi];let h='';for(let i=a;i<b;i++){const on=t>=W[i][1]-.03&&(i+1<b?t<W[i+1][1]-.03:true);const past=t>=W[i][1];h+=`<span class="${on?'on':past?'':'off'}">${W[i][0]}</span>`}sub.innerHTML=h;}
+}
+window.render=render;
+</script></body></html>
