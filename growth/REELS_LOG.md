@@ -8,5 +8,6 @@ Columns: date | slug | topic | hook (first sentence) | length s | IG views 24h /
 | date | slug | topic | hook | len | IG views 24h/7d | IG reach | shares | saves | follows | «обучение» | YT views 24h/7d | YT avg % | YT subs | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-18 | liquidity-hunt | охота за ликвидностью, стоп-лосс | «Стоп выбило — а цена сразу пошла в твою сторону?» | 67 | | | | | | | | | | first education reel, IG + YT 18:00 |
+| 2026-11-19 | anthropic-ipo-short (YouTube only, 10:00, news) | IPO Anthropic vs SpaceX, BTC | «Сегодня на биржу выходит Anthropic — и это может ударить по биткоину» | 70 | — | — | — | — | — | | | | | owner's one-off news Short; YT title «IPO Anthropic и биткоин: повторится ли сценарий SpaceX?» |
 
 ## Lessons (short, dated; promote confirmed ones to CLAUDE.md «Educational Reels»)
