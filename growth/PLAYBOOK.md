@@ -112,6 +112,21 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
     h) **Signature on every slide = just «@romchekcrypto»** (owner 2026-11-20) — no name, no avatar, no channel name.
     i) Fill the slide: no empty bottom third — enlarge the hero/diagram or add the explanation line instead.
 
+17. **Publishing checklist for Reels/Shorts (researched 2026-11-20):**
+    - Scheduling via Metricool does NOT cut reach (Mosseri, incl. Reels specifically, Aug 2026). Keep auto-publishing.
+    - Recommendation eligibility: no foreign watermarks (TikTok/CapCut), audio present, original (no reposts),
+      account status clean (checked 2026-11-20: all green). Never delete-and-repost a reel; don't re-upload the same video.
+    - Instagram first shows a reel to a test group; the first ~60–90 min decide expansion → publish at audience peak
+      (Metricool best time: 10–12 and 15–18 MSK on weekdays; 18:00 is fine) and get early signals:
+      **first comment** with an easy question (Metricool `firstCommentText`), owner/Claude reply to every comment fast.
+    - **Cover frame** (`videoCoverMilliseconds`): pick the most contrasting, self-explanatory frame (e.g. $0 vs +3%),
+      it is what profile visitors see in the grid.
+    - Rates matter, not counts: sends/reach, likes/reach, watch time. Design every reel to be forwarded.
+    - Owner-side levers (manual, suggested): share each reel to Instagram Stories and post the link in the Telegram channel
+      right after publishing — early views/sends from fans start the test strongly; collabs (collaborators) with
+      relevant accounts reach their audience too; Trial Reels from 200 followers.
+    - Engagement pods / bought views → removal from recommendations. Never.
+
 ## Titles, captions, hashtags, keywords — Instagram Reels & YouTube Shorts (researched 2026-11-18; owner: «не борщи с хэштегами, не повторяй весь текст ролика»)
 Facts:
 - Instagram: max 5 hashtags per post/Reel since 2025-12-19; hashtags only help categorise, they barely affect reach (Mosseri).
