@@ -7,6 +7,7 @@ and are passed by URL to Metricool, which publishes them to Instagram.
 
 Only post images go here (plus the growth notes in `growth/`). Nothing else.
 
+**Safety first: every caption, description, script and first comment must follow `growth/SAFETY.md` (ban / shadow-ban rules for the trading niche) and pass `python3 tools/check_text.py`.**
 **Before making any post, read `growth/PLAYBOOK.md` and apply its "Current rules" — they override the older
 caption/hashtag rules below where they conflict.**
 
