@@ -190,3 +190,13 @@ formats, covers, hooks, posting frequency. Fill from research; owner can also ad
 - 2026-11-18 — baseline recorded; rules 1–8 introduced; hashtags cut to 5; schedule set to 10:00 / 18:00 (FVG post moved to 18:00).
 - 2026-11-18 — owner set the goal ≈100 followers/week; recommendation research added; rules 12–15 added; Урок #1 = FVG (18.11).
 - 2026-11-18 — owner named @therea.ai as competitor; analysed its grid; rules 9–11 added (hook formulas, first-person voice, psychology/stories).
+
+## 18. Методика из instagram-agent-skill (2026-11-20, MIT) — см. growth/HOOKS_RU.md
+- Каждый рилс: 3 крючка по 3 разным формулам → оценка по 5 признакам → лучший; формулу пишем в REELS_LOG.
+- Обещание крючка выполняем до середины ролика; последняя фраза повторяет слово из крючка (петля).
+- Еженедельный разбор: ранжировать ролики по удержанию на 3 с (1 − skip), пересылкам/охват, подпискам/охват и кратности
+  к медиане аккаунта, а не по просмотрам. Просмотры без подписок → чинить профиль, а не крючок.
+- Раз в месяц — разбор конкурентов по кратности (> 3× медианы их аккаунта), аккаунты в пределах ~10× нашего размера,
+  YouTube Shorts как открытый источник. Только чтение, ничего не лайкать и не комментировать.
+- Профиль (делает владелец): в поле «Имя» — имя + ключевые слова (например «Ромчек | Трейдинг и биткоин»),
+  первая строка био — кому и что даёт, 3 закреплённых поста — лучшие по пересылкам.
