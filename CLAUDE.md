@@ -20,6 +20,8 @@ caption/hashtag rules below where they conflict.**
   Run: `python3 tools/example_carousel_build.py <out_dir>`.
 - `posts/2026-10-10-btc-ma50w/` — approved reference carousel. Match its look.
 
+## ⏸ ALL AUTO-POSTING PAUSED by the owner on 2026-11-21 (carousels, reels, Shorts — «не набирают просмотры»). Do not build or schedule anything until he re-enables. Scheduled tasks (10:00, 18:00, weekly review) are disabled.
+
 ## Schedule (owner's rule since 2026-11-18 evening: 1 carousel + 1 reel per day)
 - Published automatically (no review by the owner):
   - **10:00 MSK** — crypto market news digest CAROUSEL (folder `posts/YYYY-MM-DD-1000-<slug>`).
