@@ -1,0 +1,120 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#141414}
+body{font-family:'Inter','Noto Color Emoji',sans-serif;color:#f2eee6;position:relative}
+#bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 0% 0%,rgba(198,244,50,.16),transparent 60%),radial-gradient(900px 800px at 100% 100%,rgba(62,154,90,.16),transparent 60%),#141414}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:90px 90px}
+.a{position:absolute;will-change:transform,opacity,filter;opacity:0}
+.H{font-family:'Inter Display','Inter';font-weight:900;text-transform:uppercase;letter-spacing:-3px;line-height:.95;white-space:nowrap;transform-origin:left center}
+.L{color:#c6f432}.R{color:#e5484d}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:40px;padding:12px 30px;font-weight:800;font-size:34px;background:#232323;border:2px solid #3a3a3a;color:#efe9df}
+.chip{font-family:'Inter Display';font-weight:900;border-radius:24px;padding:12px 30px;font-size:64px;letter-spacing:-1px;white-space:nowrap}
+#sub{position:absolute;left:60px;width:840px;top:1385px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:62px;line-height:1.12;text-transform:uppercase;letter-spacing:-1px}
+#sub span{display:inline-block;padding:2px 12px;margin:4px 3px;border-radius:14px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sub span.on{background:#c6f432;color:#161616;text-shadow:none}
+#sub span.off{opacity:.55}
+.hdr{position:absolute;left:60px;top:250px;display:flex;gap:16px;align-items:center}
+.dots{display:flex;gap:10px;margin-left:10px}.dots i{width:44px;height:10px;border-radius:5px;background:#3a3a3a;display:block}.dots i.on{background:#c6f432}
+svg text{font-family:Inter;font-weight:800}
+</style><style>
+#hdr{position:absolute;left:40px;top:200px;width:1000px;height:200px;background:#0d0d0d;border:3px solid #2c2c2c;border-radius:30px;display:flex;flex-direction:column;justify-content:center;padding:0 36px;opacity:1}
+#hdr .l1,#hdr .l2{font-family:'Inter Display';font-weight:900;text-transform:uppercase;letter-spacing:-2px;line-height:1;white-space:nowrap;transform:scaleX(.9);transform-origin:left}
+#hdr .l1{font-size:60px;color:#f2eee6}#hdr .l2{font-size:84px;margin-top:8px}
+.pnl{position:absolute;top:430px;width:470px;height:900px;border-radius:30px;background:#1a1a1a;border:4px solid #333;overflow:hidden;opacity:1}
+.pnl .lb{position:absolute;left:0;right:0;top:22px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:50px;letter-spacing:-1px}
+.pnl .bal{position:absolute;left:0;right:0;top:92px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:96px;letter-spacing:-3px}
+.pnl .st{position:absolute;left:20px;right:20px;bottom:24px;text-align:center;border-radius:20px;padding:14px 8px;font-weight:900;font-size:34px}
+.pnl svg{position:absolute;left:15px;top:230px}
+.flash{position:absolute;inset:0;background:#e5484d;opacity:0}
+.krow{left:60px;width:960px;display:flex;gap:30px;align-items:center;background:#1e1e1e;border:3px solid #333;border-radius:30px;padding:28px 34px}
+.krow b{font-family:'Inter Display';font-weight:900;font-size:110px;color:#c6f432;line-height:1;width:80px;text-align:center}
+.krow span{font-family:'Inter Display';font-weight:900;font-size:54px;text-transform:uppercase;letter-spacing:-1px;line-height:1.05}
+.krow em{font-style:normal;color:#c6f432}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<div id="hdr"><div class="l1">Один график — одна сделка</div><div class="l2"><span style="color:#e5484d">Игрок</span> <span style="color:#f2eee6">vs</span> <span style="color:#c6f432">трейдер</span></div></div>
+<div id="pA" class="pnl a" style="left:40px;border-color:#e5484d"><div class="flash" id="flA"></div><div class="lb" style="color:#e5484d">🎰 ИГРОК</div><div class="bal" id="balA">$1 000</div><svg id="cA" width="440" height="560"></svg><div class="st" id="stA" style="background:#2a2a2a;color:#f2eee6">ждёт сигнала</div></div>
+<div id="pB" class="pnl a" style="left:570px;border-color:#c6f432"><div class="lb" style="color:#c6f432">🧠 ТРЕЙДЕР</div><div class="bal" id="balB">$1 000</div><svg id="cB" width="440" height="560"></svg><div class="st" id="stB" style="background:#2a2a2a;color:#f2eee6">ждёт уровень</div></div>
+<div id="q0" class="a chip" style="left:290px;top:1000px;background:#c6f432;color:#161616;font-size:58px;font-family:'Inter Display';font-weight:900;padding:18px 34px;border-radius:24px;white-space:nowrap">КТО ИЗ НИХ ТЫ?</div>
+<div id="k0" class="a H" style="left:60px;top:450px;font-size:78px;width:960px;white-space:normal">Разница — в <span class="L">3 правилах</span></div>
+<div id="k1" class="a krow" style="top:600px"><b>1</b><span>Вход только<br><em>от уровня</em></span></div>
+<div id="k2" class="a krow" style="top:830px"><b>2</b><span>Стоп ставится<br><em>до входа</em></span></div>
+<div id="k3" class="a krow" style="top:1060px"><b>3</b><span>Риск<br><em>≤ 1–2% на сделку</em></span></div>
+<div id="v1" class="a H" style="left:60px;top:560px;font-size:150px">💾 Сохрани</div>
+<div id="v2" class="a H L" style="left:60px;top:740px;font-size:106px">📤 Перешли другу</div>
+<div id="v3" class="a H" style="left:60px;top:880px;font-size:62px;white-space:normal;width:960px">который торгует <span class="R">как игрок</span></div>
+<div id="sub"></div>
+<script>
+const VO=0.25;
+const W=/*W*/[].map(w=>[w[0],w[1]+VO,w[2]+VO]);
+const GROUPS=/*G*/[];
+const END=33.6;
+const norm=x=>x.toLowerCase().replace(/[«»?.,!—:;]/g,'');
+function I(txt,occ=0){const p=txt.split(' ');let k=0;for(let i=0;i<W.length;i++){let ok=true;for(let j=0;j<p.length;j++){if(!W[i+j]||norm(W[i+j][0])!==p[j]){ok=false;break}}if(ok){if(k===occ)return i;k++;}}throw 'no word '+txt;}
+const T=(w,o=0)=>W[typeof w==='string'?I(w,o):w][1]; const E=(w,o=0)=>W[typeof w==='string'?I(w,o):w][2];
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const easeIO=x=>{x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const cl=x=>Math.min(Math.max(x,0),1);
+const $=id=>document.getElementById(id);
+function show(el,t,tin,tout,o={}){
+  const dur=o.dur||.3, dy=o.dy??50, dx=o.dx??0, s0=o.s0??1, base=o.base||'';
+  let p=ease((t-tin)/dur), q=tout==null?0:easeIO((t-tout)/(o.odur||.22));
+  const op=p*(1-q), x=dx*(1-p)+(o.ex||0)*q, y=dy*(1-p)+(o.ey??-70)*q, s=s0+(1-s0)*p;
+  const bl=(1-p)*14+q*14;
+  el.style.opacity=op; el.style.transform=`translate(${x}px,${y}px) scale(${s}) ${base}`; el.style.filter=bl>.3?`blur(${bl}px)`:'none';
+}
+
+const S_RULES=T('разница'), S_END=T('сохрани');
+const C=[[100,101,99.5,100.6],[100.6,101.5,100,101.2],[101.2,102,100.8,101.6],[101.6,102.2,101,101.4],[101.4,102,101,101.8],
+ [101.8,106,101.6,105.6],[105.6,105.8,103,103.4],[103.4,103.6,101.2,101.6],[101.6,101.9,100.2,100.4],[100.4,102.2,100.2,102],[102,103.6,101.8,103.4],[103.4,104.8,103.2,104.6]];
+const mn=98.6,mx=107.2,sy=v=>20+(mx-v)/(mx-mn)*520, X=i=>30+i*34;
+function ap(i){ // appear time of candle i
+  if(i<5) return i<2?-1:(i-2)*0.15;
+  if(i==5) return T('зелёную');
+  if(i<=8) return T('падает')+ (i-6)*((T('процентов')-T('падает'))/3);
+  return T('разворот')+(i-9)*((T('забирает')+.4-T('разворот'))/3);
+}
+function cands(t){let h='';C.forEach((c,i)=>{const a=cl((t-ap(i))/.18);if(a<=0)return;const [o,hi,lo,cc]=c,col=cc>=o?'#3e9a5a':'#e5484d',x=X(i);
+ const y1=Math.min(sy(o),sy(cc)),y2=Math.max(sy(o),sy(cc)),m=(y1+y2)/2,hh=Math.max(y2-y1,4)*a;
+ h+=`<line x1="${x}" x2="${x}" y1="${m-(m-sy(hi))*a}" y2="${m+(sy(lo)-m)*a}" stroke="${col}" stroke-width="4"/><rect x="${x-10}" y="${m-hh/2}" width="20" height="${hh}" rx="3" fill="${col}"/>`});return h}
+function hl(v,col,txt,op,dash=true,anchor='end',xx=430){return `<g opacity="${op}"><line x1="0" x2="440" y1="${sy(v)}" y2="${sy(v)}" stroke="${col}" stroke-width="4" ${dash?'stroke-dasharray="12 8"':''}/><text x="${xx}" y="${sy(v)-10}" text-anchor="${anchor}" font-size="26" font-weight="900" fill="${col}">${txt}</text></g>`}
+function mk(x,y,txt,bg,fg,op){const w=txt.length*17+34;return `<g opacity="${op}"><rect x="${x-w/2}" y="${y}" width="${w}" height="44" rx="22" fill="${bg}"/><text x="${x}" y="${y+31}" text-anchor="middle" font-size="28" font-weight="900" fill="${fg}">${txt}</text></g>`}
+const fmt=n=>'$'+Math.round(n).toLocaleString('ru-RU').replace(/\u00a0/g,' ');
+function render(t){
+  const panOp = t<S_RULES-.05?1:Math.max(0,1-(t-S_RULES)/.3);
+  ['pA','pB'].forEach(id=>{$(id).style.opacity=panOp;});
+  show($('q0'),t,0.15,T('смотри')-.05,{s0:.4,dy:0,dur:.25});
+  // gambler
+  let a=cands(t);
+  const eA=cl((t-T('заходит'))/.2); a+=hl(105.6,'#f2eee6','вход ×20',eA,false,'start',10);
+  a+=mk(X(5),sy(106)-62,'НА ВЕСЬ ДЕП',  '#e5484d','#fff',eA);
+  const nS=cl((t-T('стоп'))/.2)*(t<T('цена')?1:0); a+=mk(220,470,'стоп? не нужен 🤡','#2a2a2a','#f2eee6',nS);
+  const liq=t>=T('ликвидация');
+  if(liq) a+=mk(X(8),sy(100.2)+20,'ЛИКВИДАЦИЯ ✕','#e5484d','#fff',cl((t-T('ликвидация'))/.2));
+  $('cA').innerHTML=a;
+  const pl=cl((t-T('минус'))/.6); $('balA').textContent=fmt(1000*(1-pl)*ease(t/.6)); $('balA').style.color=pl>0?'#e5484d':'#f2eee6';
+  $('flA').style.opacity = (t>T('минус')&&t<T('минус')+.35)?0.35*(1-(t-T('минус'))/.35):0;
+  const stA=$('stA'); if(liq){stA.textContent='−100% депозита';stA.style.background='#e5484d';stA.style.color='#fff'} else if(t>=T('заходит')){stA.textContent='×20, без стопа';stA.style.background='#3a2020';stA.style.color='#f2eee6'} else {stA.textContent='ждёт сигнала';stA.style.background='#2a2a2a';stA.style.color='#f2eee6'}
+  // trader
+  let b=cands(t);
+  const lv=cl((t-T('уровень'))/.25); b+=hl(100.8,'#c6f432','уровень',lv,true,'start',10);
+  const lm=cl((t-T('лимитный'))/.25)*(t<T('входит')?1:0); b+=mk(330,sy(100.8)-60,'лимитка ⏳','#c6f432','#141414',lm);
+  const en=cl((t-T('входит'))/.2); b+=mk(X(8)+10,sy(100.8)-62,'ВХОД ✓','#c6f432','#141414',en);
+  const sl=cl((t-T('стоп',1))/.2); b+=hl(99.6,'#e5484d','стоп −1%',sl,true,'end',430);
+  const tp=cl((t-T('забирает'))/.25); b+=hl(104.4,'#c6f432','тейк 3:1 ✓',tp,true,'start',10);
+  $('cB').innerHTML=b;
+  const gp=cl((t-T('плюс'))/.6); $('balB').textContent=fmt((1000+30*gp)*ease(t/.6)); $('balB').style.color=gp>0?'#c6f432':'#f2eee6';
+  const stB=$('stB'); if(t>=T('плюс')){stB.textContent='+3% к депозиту';stB.style.background='#c6f432';stB.style.color='#141414'} else if(t>=T('входит')){stB.textContent='в сделке, риск 1%';stB.style.background='#22301a';stB.style.color='#f2eee6'} else if(t>=T('уровень')){stB.textContent='ждёт цену у уровня';stB.style.background='#2a2a2a';stB.style.color='#f2eee6'} else {stB.textContent='ждёт уровень';stB.style.background='#2a2a2a';stB.style.color='#f2eee6'}
+  // rules
+  show($('k0'),t,S_RULES,S_END-.05,{base:'scaleX(.9)'});
+  show($('k1'),t,T('первое')-.05,S_END-.05,{dx:-60,dy:0}); show($('k2'),t,T('второе')-.05,S_END-.05,{dx:-60,dy:0}); show($('k3'),t,T('третье')-.05,S_END-.05,{dx:-60,dy:0});
+  show($('v1'),t,S_END-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'}); show($('v2'),t,T('перешли')-.05,null,{s0:.6,dy:0,base:'scaleX(.86)'}); show($('v3'),t,T('который')-.05,null,{dy:30,base:'scaleX(.9)'});
+  // subtitles
+  let gi=-1; for(let g=0;g<GROUPS.length;g++){const [a,b]=GROUPS[g];const st=W[a][1]-.05,en=g+1<GROUPS.length?W[GROUPS[g+1][0]][1]-.05:W[b-1][2]+.3;if(t>=st&&t<en)gi=g;}
+  const sub=$('sub');
+  if(gi<0){sub.innerHTML='';}else{const [a,b]=GROUPS[gi];let h='';for(let i=a;i<b;i++){const on=t>=W[i][1]-.03&&(i+1<b?t<W[i+1][1]-.03:true);const past=t>=W[i][1];h+=`<span class="${on?'on':past?'':'off'}">${W[i][0]}</span>`}sub.innerHTML=h;}
+}
+window.render=render;
+</script></body></html>
