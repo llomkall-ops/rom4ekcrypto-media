@@ -43,6 +43,7 @@ caption/hashtag rules below where they conflict.**
   lesson (2 lines, white + accent keyword, e.g. «ОДИН ГРАФИК — ОДНА СДЕЛКА / ИГРОК VS ТРЕЙДЕР») over a rich visual (chart,
   split-screen comparison, counters); curiosity claim in the bar («90% трейдеров…», «Этот индикатор…»). Reference:
   reels/lessons/2026-11-20-gambler-vs-trader/page.html. Keep using it unless REELS_LOG shows it does worse.
+- **Hooks: follow growth/HOOKS_RU.md** — write 3 hooks from 3 different formulas (spoken line + on-screen ≤6 words), score them on the 5 checks, use the best, log the formula id in REELS_LOG; deliver the hook's promise before the halfway mark; last line loops back to a word from the hook.
 - Script structure: 1) hook = pain of the viewer in 1 sentence (+ «Знакомо?»); 2) the twist/name of the concept;
   3) how it works on a candle schematic (animated); 4) consequence for the viewer; 5) «Как защититься / Как использовать?»
   with 3 numbered tips (#1/#2/#3 header with progress dots), each with its own animated schematic; 6) «Сохрани… и перешли
