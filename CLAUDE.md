@@ -34,6 +34,11 @@ caption/hashtag rules below where they conflict.**
   the safe zone (x 60–1010, headline from y≈360, subtitles at y≈1385). Word-by-word subtitles (current word on lime). Copy
   `reels/lessons/2026-11-18-liquidity-hunt/page.html`, keep the engine (W, GROUPS, I/T/E, show, candles, line, subtitles),
   rewrite the scenes. T('word') / T('two words', occurrence) finds the time of a spoken word.
+- **FIRST 2 SECONDS (data 2026-11-20: skip rate 33–47%, reels not pushed beyond followers; account status is clean, so it is
+  the content):** frame 0 already in motion (no static title card); 3–5 huge words of pain/curiosity, not 2 long lines;
+  a visual change every ≤1 s in the first 3 s (candle drop, plaque slam, zoom); the voice starts at once with a question or a
+  bold claim the viewer wants resolved («90% трейдеров ставят стоп вот сюда — и вот почему их выбивает»); never open with
+  a definition. Build shareability in: ✕ «не делай так» / ✓ «делай так» blocks and one concrete rule worth forwarding.
 - Script structure: 1) hook = pain of the viewer in 1 sentence (+ «Знакомо?»); 2) the twist/name of the concept;
   3) how it works on a candle schematic (animated); 4) consequence for the viewer; 5) «Как защититься / Как использовать?»
   with 3 numbered tips (#1/#2/#3 header with progress dots), each with its own animated schematic; 6) «Сохрани… и перешли
