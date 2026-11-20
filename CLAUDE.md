@@ -170,6 +170,7 @@ caption/hashtag rules below where they conflict.**
 - TikTok stays off.
 
 ## Long review editing — quality rules (owner's feedback 2026-11-13)
+- **END of every long review (owner's rule 2026-11-20):** append the horizontal how-to clip «как забрать обучение и доступ в чат» — file on the owner's Mac `~/Movies/romchek_obuchenie_konec_1920x1080.mp4` (37.8 s, 1920×1080, 30 fps, voice + music + SFX; on-screen «ссылка — в описании ↓»). Insert it after the last spoken sentence, before the end screen. Do not blur the UID/links in it (owner's request). Vertical version for Telegram: kak_zabrat_obuchenie.mp4 (not for Instagram/YouTube Shorts — exchange referral flow, see growth/SAFETY.md).
 - Re-recorded thoughts: when the owner says the same idea twice (often with different numbers, e.g. "-10%… / -7%…"),
   he is re-recording it — keep ONLY the last take and cut the earlier one completely. Read the transcript for such
   restatements, not just word-level stutters, before rendering.
