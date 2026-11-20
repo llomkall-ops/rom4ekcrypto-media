@@ -109,8 +109,7 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
        one short line of explanation each + one practical number. Use it for mistakes/rules topics.
     g) **Contrast-pair cover** works: two opposing states with badges (e.g. «СТОП ВЫБИЛО ❌ vs ВХОД ПО ПЛАНУ ✅»,
        «−40% vs +12%»), a «листай 👉» chip on the divider, subtitle with the promise («5 отличий: как не надо и как надо»).
-    h) **Author signature on every slide** (bottom centre): small round avatar + «Ромчек» + «РОМЧЕК И КРИПТА · @romchekcrypto».
-       Until the owner provides an avatar image, use the text signature with a small ₿ badge.
+    h) **Signature on every slide = just «@romchekcrypto»** (owner 2026-11-20) — no name, no avatar, no channel name.
     i) Fill the slide: no empty bottom third — enlarge the hero/diagram or add the explanation line instead.
 
 ## Titles, captions, hashtags, keywords — Instagram Reels & YouTube Shorts (researched 2026-11-18; owner: «не борщи с хэштегами, не повторяй весь текст ролика»)
