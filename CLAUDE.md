@@ -39,6 +39,10 @@ caption/hashtag rules below where they conflict.**
   a visual change every ≤1 s in the first 3 s (candle drop, plaque slam, zoom); the voice starts at once with a question or a
   bold claim the viewer wants resolved («90% трейдеров ставят стоп вот сюда — и вот почему их выбивает»); never open with
   a definition. Build shareability in: ✕ «не делай так» / ✓ «делай так» blocks and one concrete rule worth forwarding.
+- **Format under test since 2026-11-20 (from @therea.ai's top reels 147K/100K): a PERSISTENT top headline bar for the whole
+  lesson (2 lines, white + accent keyword, e.g. «ОДИН ГРАФИК — ОДНА СДЕЛКА / ИГРОК VS ТРЕЙДЕР») over a rich visual (chart,
+  split-screen comparison, counters); curiosity claim in the bar («90% трейдеров…», «Этот индикатор…»). Reference:
+  reels/lessons/2026-11-20-gambler-vs-trader/page.html. Keep using it unless REELS_LOG shows it does worse.
 - Script structure: 1) hook = pain of the viewer in 1 sentence (+ «Знакомо?»); 2) the twist/name of the concept;
   3) how it works on a candle schematic (animated); 4) consequence for the viewer; 5) «Как защититься / Как использовать?»
   with 3 numbered tips (#1/#2/#3 header with progress dots), each with its own animated schematic; 6) «Сохрани… и перешли
