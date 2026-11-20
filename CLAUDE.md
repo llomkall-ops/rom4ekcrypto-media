@@ -48,7 +48,7 @@ caption/hashtag rules below where they conflict.**
 - Script structure: 1) hook = pain of the viewer in 1 sentence (+ «Знакомо?»); 2) the twist/name of the concept;
   3) how it works on a candle schematic (animated); 4) consequence for the viewer; 5) «Как защититься / Как использовать?»
   with 3 numbered tips (#1/#2/#3 header with progress dots), each with its own animated schematic; 6) «Сохрани… и перешли
-  другу, который…». Then the standard outro (appended automatically: «напиши „обучение“ — 13 видеоуроков + чат»).
+  другу, который…». Then the standard outro (appended automatically, NEW since 2026-11-20 by owner: «…13 авторских видеоуроков и доступ в чат трейдеров уже ждут тебя в моём Телеграм-канале @romchekcrypto. Забирай — ссылка в шапке профиля»; old «напиши „обучение“» CTA is retired everywhere).
   No promises of income, no invented experience/results of Ромчик, schematic charts have no price numbers.
 - Voice: ElevenLabs creative_generate_speech, model eleven_v4, voice_id dePhkRzAG2xmWcT92bn3 («romchek»),
   generations_count 1, prompt starts with «[confident, energetic] ». Then creative_transcribe_audio (eleven_scribe_v1,
@@ -67,8 +67,8 @@ caption/hashtag rules below where they conflict.**
   Separate createScheduledPost: providers [{"network":"youtube"}], media = [same raw mp4 URL], youtubeData {"title": "<CAPS hook
   word(s) + topic, ≤90 chars, ends with #shorts>", "type":"short", "privacy":"public", "madeForKids":false, "category":"PEOPLE_BLOGS",
   "tags":[the owner's FIXED tag list — see TAGS in the «YouTube Shorts» section below, unchanged]}.
-  Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «Напиши в комментариях «обучение» — пришлю
-  13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»; «Полный разбор и аналитика каждый день — Telegram
+  Description: 2–3 SEO sentences with «биткоин», «обзор биткоина», «альтсезон»; «🎓 13 авторских видеоуроков по трейдингу и доступ в чат трейдеров — забирай в Telegram-канале
+  @romchekcrypto (ссылка в шапке профиля).»; «Полный разбор и аналитика каждый день — Telegram
   @romchekcrypto»; «Instagram: @romchekcrypto»; «Не является финансовой рекомендацией.»; last line 3 hashtags
   (#shorts #трейдинг + 1 topic, see PLAYBOOK). No «Музыка:» line (music is our own ElevenLabs track). Check getScheduledPosts so
   the Short is not scheduled twice.
@@ -76,7 +76,7 @@ caption/hashtag rules below where they conflict.**
   below): one primary keyword first in title/caption + on screen + in voice; short caption, never retell the script;
   Instagram 3–5 hashtags; YouTube title 40–70 chars without hashtags, description 2–3 sentences + 3 hashtags.**
 - Reel caption: title line with emoji + keywords, hook, 2 short paragraphs, «💾 Сохрани…», «📤 Перешли другу, который…»,
-  «💬 Напиши «обучение» — пришлю 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества», «Подписывайся…»,
+  «🎓 13 авторских видеоуроков + доступ в чат трейдеров — забирай в Telegram-канале @romchekcrypto (ссылка в шапке профиля)» (first comment = an easy question to the audience), «Подписывайся…»,
   Telegram line, «Не является финансовой рекомендацией.», max 5 hashtags (#биткоин #альтсезон #трейдинг + 1–2 topic; NO #обзорбиткоина in education reels — owner 2026-11-18).
 
 ## Visual style (approved by the owner; accent changed to LIME on 2026-11-18 — owner finds red off-putting)

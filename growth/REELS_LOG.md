@@ -3,9 +3,9 @@
 One row per video. The evening reel task fills in stats of the previous days' videos before making a new one;
 the weekly review draws conclusions. Goal: max views and follows from reels (Instagram) and Shorts (YouTube).
 
-Columns: date | slug | topic | hook (first sentence) | length s | IG views 24h / 7d | IG reach | shares | saves | follows | «обучение» comments | YT views 24h / 7d | YT avg view % | YT subs | note (why good/bad)
+Columns: date | slug | topic | hook (first sentence) | length s | IG views 24h / 7d | IG reach | shares | saves | follows | TG clicks (profile link) | YT views 24h / 7d | YT avg view % | YT subs | note (why good/bad)
 
-| date | slug | topic | hook | len | IG views 24h/7d | IG reach | shares | saves | follows | «обучение» | YT views 24h/7d | YT avg % | YT subs | note |
+| date | slug | topic | hook | len | IG views 24h/7d | IG reach | shares | saves | follows | TG clicks | YT views 24h/7d | YT avg % | YT subs | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-18 | liquidity-hunt | охота за ликвидностью, стоп-лосс | «Стоп выбило — а цена сразу пошла в твою сторону?» | 67 | 5 (≈24ч) / | 3 | 0 | 0 | 0 | 0 | нет в Metricool на 19.11 16:45 | | | first education reel, IG + YT 18:00. IG: только 5 просмотров, ср. просмотр 25.8 с (~38%) — почти не показан неподписчикам; первый кадр = длинная 3-строчная фраза, ключевое слово «ликвидность» появилось только на 7 с. Для сравнения: review-Shorts на YT с «биткоин» в CAPS-заголовке набирают 360–1440 |
 | 2026-11-19 | anthropic-ipo-short (YouTube only, 10:00, news) | IPO Anthropic vs SpaceX, BTC | «Сегодня на биржу выходит Anthropic — и это может ударить по биткоину» | 70 | — | — | — | — | — | | | | | owner's one-off news Short; YT title «IPO Anthropic и биткоин: повторится ли сценарий SpaceX?» |

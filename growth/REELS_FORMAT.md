@@ -9,8 +9,9 @@ STATUS: not started. Do NOT make or schedule Reels until the owner says so.
   red stays only for falling candles. Carousels keep their current colors until the owner decides.
 - `reels/outro/romchek_outro.mp4` (13.3 s, 1080×1920, voice + subtitles + SFX, NO music — the reel's music runs under it
   at final assembly so it stays continuous). Source: `reels/outro/outro.html` (window.render(t)), frames via
-  `tools/render_frames.py`, voice = ElevenLabs "romchek", text: «Хочешь научиться торговать или усилить свои навыки? Напиши в комментариях
-  слово „обучение“ — и я пришлю тебе 13 авторских видеоуроков по трейдингу и добавлю в чат сообщества.»
+  `tools/render_frames.py`, voice = ElevenLabs "romchek", text: (since 2026-11-20) «Хочешь научиться торговать или прокачать свои навыки? Тринадцать авторских видеоуроков и доступ в чат
+  трейдеров уже ждут тебя в моём Телеграм-канале @romchekcrypto. Забирай — ссылка в шапке профиля.» (voice: outro_voice.mp3/outro_words.json;
+  previous version kept as outro_v1_napishi.html / romchek_outro_v1_napishi.mp4)
 - Append it to the end of EVERY reel.
 - Getting ElevenLabs audio out: container and Mac shell can't reach elevenlabsusercontent.com; working path =
   open the content_url in the built-in browser on the owner's Mac, fetch → blob → <a download> into ~/Downloads,
