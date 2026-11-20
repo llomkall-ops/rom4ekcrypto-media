@@ -85,6 +85,8 @@ caption/hashtag rules below where they conflict.**
 - **Last slide — ALWAYS:** "ВСТУПАЙ В ТГ-КАНАЛ" CTA with @romchekcrypto and "ССЫЛКА В ПРОФИЛЕ",
   four round icons row, rising candle chart (copy slide 5 from the example as is).
 - Charts that are illustrative (not real data) must not show fake price axis numbers.
+- **Design rules from the owner's viral-carousel reference (2026-11-20): growth/PLAYBOOK.md «Current rules» #16 —
+  one big thought per slide, contrast ≥4.5:1, numbered story, images overlapping text, ✕/✓ split slides, author signature.**
 
 ## Caption format
 1. Line 1: post title with emoji (e.g. "📈 Биткоин и 50-недельная средняя")

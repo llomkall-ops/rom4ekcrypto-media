@@ -88,6 +88,31 @@ sends/shares per reach (IGPO27 ÷ IGPO14) — the #1 signal for non-follower rea
 15. **Designed for sending**: every post has one line/slide that is natural to forward
     ("Отправь тому, кто торгует с плечом x50") — a checklist, a mistake, a myth vs fact.
 
+16. **Carousel DESIGN rules — owner's reference @alexandro_ai «Карусель слабая vs вирусная» (2026-11-20; 230 likes,
+    363 shares, 14 reposts). Apply to EVERY carousel (copy principles, never text/brand):**
+    a) **Hierarchy — one main thought per slide, BIG.** Reading order must be obvious in 1 second: huge headline →
+       one supporting line → small details. Never a grid of 4–6 equal cards competing for attention; if there are many
+       facts, make ONE of them the hero (huge number/word) and the rest small. Below the hero: calmer, smaller text.
+    b) **Vertical 4:5, 1080×1350 (already).** The profile grid crops to 3:4 → keep text, numbers and key graphics
+       ≥ 35 px from the left/right edges (practically: our 80 px padding) and centred enough to survive the crop.
+    c) **Contrast ≥ 4.5:1 for all text.** No grey-on-black or light-grey-on-cream small text; secondary text on dark
+       ≥ #bdb6aa, on cream ≥ #4a4642; footer/sources too. White/black text + ONE accent (lime; red only for negative).
+    d) **One story, cover → payoff → steps → call.** Cover hooks, middle teaches in a numbered sequence
+       («1.», «2.», «3.» in the headline, number in the accent), last content slide calls to action. Every slide
+       continues the previous one; no random standalone slides. A carousel that is a list of N points says N on the
+       cover («5 причин…», «3 ошибки…») and numbers the slides.
+    e) **Images are part of the slide, not stickers.** Objects (coin, chart, phone, candles) overlap the headline
+       letters or break out of the card, with a soft shadow under them; no photo pasted in a box with a frame.
+       Our SVG charts/coins may cross into the headline area and bleed past card edges.
+    f) **«✕ НЕ ДЕЛАЙ ТАК / ✓ ДЕЛАЙ ТАК» split slide** — strong, shareable format for education: top half = wrong
+       (red ✕, dashed red frame mock-up), bottom half = right (✓, clean mock-up in our style), divider line between,
+       one short line of explanation each + one practical number. Use it for mistakes/rules topics.
+    g) **Contrast-pair cover** works: two opposing states with badges (e.g. «СТОП ВЫБИЛО ❌ vs ВХОД ПО ПЛАНУ ✅»,
+       «−40% vs +12%»), a «листай 👉» chip on the divider, subtitle with the promise («5 отличий: как не надо и как надо»).
+    h) **Author signature on every slide** (bottom centre): small round avatar + «Ромчек» + «РОМЧЕК И КРИПТА · @romchekcrypto».
+       Until the owner provides an avatar image, use the text signature with a small ₿ badge.
+    i) Fill the slide: no empty bottom third — enlarge the hero/diagram or add the explanation line instead.
+
 ## Titles, captions, hashtags, keywords — Instagram Reels & YouTube Shorts (researched 2026-11-18; owner: «не борщи с хэштегами, не повторяй весь текст ролика»)
 Facts:
 - Instagram: max 5 hashtags per post/Reel since 2025-12-19; hashtags only help categorise, they barely affect reach (Mosseri).
