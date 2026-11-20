@@ -12,4 +12,5 @@ Columns: date | slug | topic | hook (first sentence) | length s | IG views 24h /
 | 2026-11-19 | order-block | ордер блок (SMC): что это, как найти рабочий, где стоп | «Цена развернулась ровно там, где на графике не было никакого уровня? Знакомо?» | 67 | | | | | | | | | | keyword «ордер блок» на экране с 0 с (пилюля) и в голосе на 5 с; крючок 2 строки «РАЗВОРОТ / ИЗ ПУСТОТЫ?» + схема с 0 с; YT title «Ордер блок: почему биткоин разворачивается там, где пусто?» |
 
 ## Lessons (short, dated; promote confirmed ones to CLAUDE.md «Educational Reels»)
+- 2026-11-20: first 2 reels: reach 24 and 4 (≈ only followers; 70 followers). Skip rate 33–47%, 0 shares, avg watch ~22–24 s of 65 s. Fix first: the first 1–2 s (stronger visual hook), shareability, test TRIAL_REEL (non-followers only) if the owner agrees; check account «Статус аккаунта → рекомендации».
 - 2026-11-19: YouTube Shorts с «биткоин» в заголовке (review cuts) дают 360–1440 просмотров, IG reels 5–28 → в заголовок YT education-Short добавлять «биткоин» рядом с главным ключом; ключевое слово показывать на экране с первого кадра (пилюля), крючок — 2 короткие строки. Проверить на 2026-11-19 order-block.
