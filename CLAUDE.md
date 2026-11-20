@@ -7,6 +7,7 @@ and are passed by URL to Metricool, which publishes them to Instagram.
 
 Only post images go here (plus the growth notes in `growth/`). Nothing else.
 
+**Methods (adapted from instagram-agent-skill): hooks & reel shape → `growth/HOOKS_RU.md`; viral research, carousels, human-sounding text, review cuts, weekly plan, stories, comments, profile → `growth/IG_METHODS_RU.md`.**
 **Safety first: every caption, description, script and first comment must follow `growth/SAFETY.md` (ban / shadow-ban rules for the trading niche) and pass `python3 tools/check_text.py`.**
 **Before making any post, read `growth/PLAYBOOK.md` and apply its "Current rules" — they override the older
 caption/hashtag rules below where they conflict.**
@@ -155,6 +156,7 @@ caption/hashtag rules below where they conflict.**
   (first Short at the review time): YouTube Short + the same file as an Instagram Reel (showReelOnFeed true;
   avoid the daily slots: never within ±60 min of the 10:00 carousel or the 18:00 education reel/Short on EITHER platform —
   if a slot collides, shift that review Short to the next free time ≥60 min away; check getScheduledPosts first).
+- Pick the 2 moments by growth/IG_METHODS_RU.md §4 (claims / numbers / stories / mechanisms / mistakes; each Short fully standalone, two different hook formulas).
 - These 2 review Shorts are ON TOP of the daily 10:00 carousel and 18:00 education reel (owner reminded 2026-11-18);
   quality first: each must be a complete, valuable thought with a strong hook in the first 2 s.
 - YouTube: SHORT CAPS title of 2–4 words (e.g. «ГДЕ Я КУПЛЮ БИТКОИН»), 2–3 SEO sentences with «обзор биткоина»/«альтсезон»,
